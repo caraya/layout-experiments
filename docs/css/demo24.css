@@ -1,0 +1,93 @@
+body {
+  background-color: #fbfbf6;
+  padding: 1em;
+  font-size: var(--p-font-size-max);
+  line-height: var(--p-line-height-min);
+  hyphens: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 200px;
+  grid-gap: 1em 1em;
+  margin: 0 auto;
+}
+
+.content {
+  grid-column: 2/6;
+  grid-row: 1/10;
+  padding: 1em;
+}
+
+.article-title {
+  --text-wght: 700;
+  --text-wdth: 100;
+  --text-slnt: 0;
+  font-weight: 250;
+  font-stretch: extra-condensed;
+  font-style: normal;
+}
+@supports (font-variation-settings: none) {
+  .article-title {
+    font-variation-settings: "wght" var(--text-wght), "wdth" var(--text-wdth), "slnt" var(--text-slnt);
+  }
+}
+
+p:first-of-type::first-letter {
+  color: #fe742f;
+  float: left;
+  font-size: 5em;
+  font-weight: bold;
+  margin: 0 0.15em 0 0;
+}
+
+@supports (initial-letter: 4) or (-webkit-initial-letter: 4) {
+  p:first-of-type::first-letter {
+    -webkit-initial-letter: 4;
+    initial-letter: 4;
+    color: #fe742f;
+    font-weight: bold;
+    margin-right: 0.5em;
+  }
+}
+p:not(:first-of-type) {
+  text-indent: 2em;
+}
+
+.float-left {
+  float: left;
+  width: 242px;
+  height: auto;
+  padding-right: 1em;
+}
+
+.byline {
+  color: #666;
+  font-size: var(--p-font-size-min);
+}
+
+@media (max-width: 50rem) {
+  .float-left {
+    float: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  p:first-of-type::first-letter {
+    color: #000;
+    float: left;
+    font-size: 1em;
+    margin: 0;
+  }
+
+  @supports (initial-letter: 4) or (-webkit-initial-letter: 4) {
+    p:first-of-type::first-letter {
+      -webkit-initial-letter: 1;
+      initial-letter: 1;
+      color: #000;
+      margin-right: 0;
+    }
+  }
+}
+
+/*# sourceMappingURL=demo24.css.map */

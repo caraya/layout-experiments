@@ -1,0 +1,52 @@
+body {
+  background-color: #fbfbf6;
+  padding: 1em;
+  font-size: var(--p-font-size-max);
+  line-height: var(--p-line-height-max);
+  hyphens: auto;
+}
+
+.small {
+  font-size: 0.9rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.columns {
+  columns: 2;
+  column-gap: 2em;
+}
+
+.columns3 {
+  columns: 3;
+  column-gap: 2em;
+}
+
+figure {
+  margin: 3em 0;
+}
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 640px) {
+  .columns,
+.columns3 {
+    columns: 1;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 800px) {
+  .columns {
+    columns: 1;
+  }
+
+  .columns3 {
+    columns: 2;
+  }
+}
+
+/*# sourceMappingURL=demo23.css.map */

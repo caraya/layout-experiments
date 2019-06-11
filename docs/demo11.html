@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Do font attributes and line height affect reading?</title>
+  <link rel="stylesheet" href="css/demo11.css">
+  <script defer src="js/demo11_es6.js"></script>
+</head>
+
+<body>
+  <div id="settings">
+    <fieldset>
+      <legend>Font Settings: Roboto</legend>
+
+      <label for="robotoWeight">Weight</label>
+      <input type="range" id="robotoWeight" name="robotoWeight" min="1" max="900" value="250" step="0.1">
+      <p><strong>Weight</strong>: <span class="weightSlider"></span></p>
+
+      <label for="robotoWidth">Width</label>
+      <input type="range" id="robotoWidth" min="75" max="100" value="90" step="0.1">
+      <p><strong>Width</strong>: <span class="widthSlider"></span></p>
+
+      <label for="lineHeight">Line Height</label>
+      <input type="range" id="lineHeight" min="1" max="3" value="1" step="0.001" />
+      <p><strong>Line Height</strong>: <span class="lineHeightSlider"></span></p>
+    </fieldset>
+  </div>
+
+
+
+  <div class="container">
+    <h1>Does font and line height affect reading?</h1>
+    <p>I've created a small exercise to answer the question: Does font and line height affect reading? I'm working with three
+      different blocks of text:</p>
+
+    <p>The first block of text is narrow, 15em wide, block.</p>
+
+    <div class="vfdemo narrow">
+      <p>WHEN I SKETCHED THE FIRST IDEAS for PolitiFact’s home page in 2007, I included a “Truth-O-Meter” to rate politicians’
+        statements from true to false.</p>
+
+      <p>The meter became an iconic feature of our fact-checking website that was highlighted on The Daily Show with Jon Stewart,
+        the Today show, and hundreds of segments on cable news channels. I appeared so often on CNN and MSNBC that a lady
+        once came up to me in an airport and said, “You’re the Truth-O-Meter guy!”</p>
+
+      <p>PolitiFact was among the first news sites dedicated to fact-checking, along with Snopes and FactCheck.org. The meter
+        was innovative because it summarized our conclusions in handy ratings. (We were soon joined by The Washington Post
+        Fact Checker, which used a system of up to four Pinocchios to rate truthfulness.) Today, about 70 percent of the
+        world’s 149 fact-checking organizations use rating systems like the Truth-O-Meter.</p>
+    </div>
+
+    <p>The second block is an approximation of Blinghurst's 66 character page width explained in Elements of Typographical Style.</p>
+
+    <div class="vfdemo default">
+      <p>But I’ve evolved. It’s been 11 years since we launched PolitiFact, and I think it’s time to move beyond my beloved
+        meter. I am heading a project at Duke University that is developing ways to automate fact-checking—including new
+        ways to present the conclusions. I think the Truth-O-Meter’s ratings (which now range from True to Pants on Fire)
+        are still effective for many readers. But I have come to realize that in our polarized environment, the meter I invented
+        is not reaching everyone, and not reaching conservatives in particular.</p>
+
+      <p>Studies show a sharp partisan divide over our unique form of journalism. A 2016 study by Brendan Nyhan and Jason Reifler
+        found Republicans have less favorable views of fact-checking than Democrats. A 2017 Duke Reporters’ Lab study that
+        I co-authored with Rebecca Iannucci found a similar split: Liberal publications were likely to cite fact-checking
+        favorably and use positive descriptions like “nonpartisan” and “watchdogs” while conservative outlets tended to be
+        critical and use terms such as “left-leaning” and “biased.” We found conservatives often put the phrase in snarky
+        quotes — “fact-checking” — to suggest it is not legitimate.</p>
+    </div>
+
+    <p>The third block is wide (60em), closer to what I would use in a content site/app.
+    </p>
+
+    <div class="vfdemo wide">
+      <p>I conceived PolitiFact’s Truth-O-Meter as a convenient summary of in-depth journalism. The idea was that casual readers
+        could glance at the politician, statement, and rating and get all they needed. Others could use the meter as an entry
+        point to dig a little deeper and read the full article.</p>
+
+      <p>The meter I invented is not reaching everyone, and not reaching conservatives in particular.</p>
+
+      <p>But we found that a large share of our audience fixated on the meter, no matter how thorough the article was. That
+        was especially true when they disagreed with the rating. The meter was so effective that people used it to hate us.</p>
+    </div>
+    <p>&nbsp;</p>
+
+    <div class="vfdemo columns">
+      <p>To understand the partisan divide, PolitiFact’s top editors recently visited Alabama, Oklahoma and West Virginia to
+        talk with conservative readers about the Truth-O-Meter and how the process works. “In our one-on-one conversations,
+        the stumbling blocks were always the ratings,” says Aaron Sharockman, PolitiFact’s executive director.</p>
+
+      <p>I suspect conservative readers’ concern about ratings is magnified by their long-held suspicion of the news media.
+        The political fact-checking movement was born in the 1990s and picked up steam over the past decade when conservatives
+        became increasingly distrustful of the mainstream media, a group they often reduced to an abbreviated snarl, “the
+        MSM.” In the eyes of many conservatives, fact-checkers are no longer just lefties providing the news, they’re now
+        self-proclaimed authorities deciding who is lying.</p>
+
+      <p>Needless to say, fact-checkers can’t afford to alienate conservatives—our nation can’t have a healthy political discourse
+        if the two sides can’t agree on facts.</p>
+
+      <p>I left PolitiFact five years ago and came to Duke, where I teach journalism and lead the Tech & Check Cooperative,
+        an ambitious research project. We’ve gotten funding from the Knight Foundation, the Facebook Journalism Project,
+        and the Craig Newmark Foundation to build apps for live fact-checking and to create bots that automate the tedious
+        work of journalists.
+      </p>
+
+      <p>One of the projects we’re funding is Truth Goggles, which will experiment with new ways to present corrective information.
+        After some initial experiments on the web, the developers plan to build apps for phones and video platforms as well
+        as features that publishers can incorporate into their websites.</p>
+
+      <p>Including Truth Goggles in our project represents a big leap for me. For the past eight years, I’ve carried a PowerPoint
+        on my laptop that showed my simple vision of the future of fact-checking. It had a guy watching a TV show that is
+        interrupted by a campaign commercial. The Truth-O-Meter then pops up: False! In 2010, that’s what I thought the future
+        would look like: The Truth-O-Meter would set people straight. But I now realize that the meter doesn’t work for everyone.</p>
+
+      <p>Dan Schultz, a partner of the Bad Idea Factory, the unorthodox company developing Truth Goggles (they describe themselves
+        as “a collective of chaotic creatives using technology to make people thinking face emoji”), says it’s important
+        to remember that when people consume information, they are often struggling to maintain their identity. That means
+        they will become defensive if they think their political beliefs or core values are being attacked.</p>
+
+      <p>“When people feel defensive, they become less thoughtful,” says Schultz, who believes the Truth-O-Meter can sometimes
+        be too blunt an instrument.</p>
+
+      <p>When people consume information, they are often struggling to maintain their identity.</p>
+
+      <p>To counter that, Schultz says Truth Goggles will be like customized lenses for each user. The Bad Idea Factory is developing
+        questions to calculate a user’s needs: What are their biases? What makes them upset? Where are their blind spots—the
+        information they may be ignoring, consciously or subconsciously? The answers will provide clues about how to present
+        fact-checks so users won’t feel attacked, dismissed, or that their values are being disrespected.</p>
+
+      <p>The next step is to tailor the fact-check to the situation. Is the user watching a live speech of their favorite politician?
+        Are they reading a trusted news source? Knowing the circumstances can help Truth Goggles adjust the “intervention”
+        so it can be more effective.</p>
+
+      <p>For example, the presentation of the fact-check could be tailored to use or avoid certain phrases or evidence that
+        the user is likely to viscerally dismiss. It might recognize the user’s shorter attention span during a speech or
+        live event by keeping the information brief; it might respond to a user’s frustration by using humor or images. The
+        user might react differently to fact-checks on their favorite politicians than to their least-favorite ones.</p>
+
+      <p>There are potential pitfalls to this approach. Schultz says the Truth Goggles team is working to avoid inadvertently
+        creating echo chambers. “There is a clear line between empathy and pandering,” he said. “We are trying to create
+        experiences where readers feel motivated to actually inspect their own beliefs. We absolutely need to challenge people’s
+        worldviews but in a way that minimizes the risk of triggering defensiveness.”</p>
+
+      <p>Looking ahead to the future of automated fact-checking, I haven’t stopped loving my invention. I still believe the
+        Truth-O-Meter will be valuable for many people. But I recognize it doesn’t work for everyone, and I’m open to other
+        ways of telling the truth.</p>
+    </div> -->
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+node_modules/
+.sass-cache/
+**/.DS_STORE
+firebase.json
+sass/
+fonts
+WIP/
+firebase-debug.log
+.firebase
+scratch-sources/
+.vscode
+misc
+greensock-js-with-customease/**/*.*

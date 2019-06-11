@@ -1,0 +1,146 @@
+/* header */
+*, :after, :before {
+  box-sizing: border-box;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+html {
+  font-size: 1.25em;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #424242;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+a {
+  color: #e5127d;
+}
+
+a:focus, a:hover {
+  color: #b60e63;
+}
+
+p,
+ul {
+  margin-bottom: 1.2rem;
+}
+
+::selection {
+  background: #b4d5ff;
+}
+
+::-moz-selection {
+  background: #b4d5ff;
+}
+
+.entry-box {
+  width: 100%;
+  z-index: 0;
+}
+
+.entry-box__body {
+  padding-top: 16px;
+}
+
+.entry-box__body {
+  padding-top: 0;
+}
+
+@media (min-width: 600px) {
+  .entry-box__body {
+    padding: 0;
+  }
+}
+.entry-box__title {
+  margin-bottom: 8px;
+}
+
+.entry-box__summary {
+  font-size: 0.75em;
+  margin-bottom: 0;
+}
+
+.list {
+  margin: 16px 0;
+}
+
+.list__entries {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 16px;
+}
+
+.list__entry {
+  margin: -8px 16px 16px 16px;
+  padding: 0 0 32px 16px;
+  position: relative;
+  width: 50%;
+}
+
+.list__entry:before {
+  background-color: #393092;
+  border-radius: 100%;
+  content: "";
+  height: 15px;
+  left: -23px;
+  margin-top: 2px;
+  position: absolute;
+  width: 15px;
+  z-index: 1;
+}
+
+.list__entry:after {
+  border-left: 1px dotted #6A6A6A;
+  bottom: -5px;
+  content: "";
+  left: -16px;
+  position: absolute;
+  top: 5px;
+  width: 1px;
+}
+
+.list__entry:last-of-type {
+  padding-bottom: 0;
+}
+
+/*# sourceMappingURL=demo33.css.map */

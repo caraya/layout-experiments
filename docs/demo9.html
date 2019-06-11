@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    CSS.registerProperty({
+      name: "--stop-color",
+      syntax: "<color>",
+      inherits: false,
+      initialValue: "rgba(0,0,0,0)"
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+
+  <link rel="stylesheet" href="css/shared/typography.css">
+  <style>
+    .button {
+      width: 500px;
+      height: 100px
+    }
+
+    .red-blue {
+      --stop-color: red;
+      background: linear-gradient(var(--stop-color), blue);
+      transition: --stop-color 1s;
+    }
+
+    .red-blue:hover {
+      --stop-color: green;
+    }
+
+    .purple-white {
+      --stop-color: rebeccapurple;
+      background: linear-gradient(var(--stop-color), white);
+      transition: --stop-color 1s;
+    }
+
+    .purple-white:hover {
+      --stop-color: magenta;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Animated Gradients using Houdini</h1>
+
+    <p>These are examples of animating gradients using Houdini APIs</p>
+
+    <h2>Red to Blue with Green Hover</h2>
+    <div class="button red-blue"></div>
+
+    <h2>Rebecca Purple to White with Magenta Hover</h2>
+    <div class="button purple-white"></div>
+  </div>
+</body>
+
+</html>

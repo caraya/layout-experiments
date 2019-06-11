@@ -1,0 +1,11 @@
+.container {
+  margin: 0 auto;
+  width: 60%;
+}
+
+ul li {
+  font-size: calc(var(--p-font-size-min) * 1.25rem);
+  line-height: var(--p-line-height-min);
+}
+
+/*# sourceMappingURL=demo19.css.map */

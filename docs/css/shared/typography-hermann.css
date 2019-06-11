@@ -1,0 +1,511 @@
+@font-face {
+  font-family: "Hermann";
+  src: url("../../fonts/hermann-regular.woff2") format("woff2"), url("../../fonts/hermann-regular.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Hermann";
+  src: url("../../fonts/hermann-italic.woff2") format("woff2"), url("../../fonts/hermann-italic.woff") format("woff");
+  font-display: swap;
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Hermann";
+  src: url("../../fonts/hermann-bold.woff2") format("woff2"), url("../../fonts/hermann-bold.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Hermann";
+  src: url("../../fonts/hermann-bold-italic.woff2") format("woff2"), url("../../fonts/hermann-bold-italic.woff") format("woff");
+  font-display: swap;
+  font-style: italic;
+  font-weight: bold;
+}
+:root {
+  /* Breakpoint variables */
+  --bp-small: 24.15;
+  --bp-medium: 43.75;
+  --bp-large: 60.25;
+  --bp-xlarge: 75;
+  /* initial values ital */
+  --text-wght: 350;
+  --text-ital: 0;
+  /* Paragraph variables */
+  --p-line-height-min: 1.15;
+  --p-line-height-max: 1.5;
+  --p-font-size-min: 1.0;
+  --p-font-size-max: 1.25;
+  --p-vf-wght: var(--text-wght);
+  /* H1 variables */
+  --h1-line-height-min: 1.05;
+  --h1-line-height-max: 1.1;
+  --h1-font-size-min: 3;
+  --h1-font-size-max: 6;
+  --h1-vf-wght-multiplier-s: .33;
+  --h1-vf-wght-multiplier-m: .33;
+  --h1-vf-wght-multiplier-l: .33;
+  /* H2 variables */
+  --h2-line-height-min: 1.15;
+  --h2-line-height-max: 1.25;
+  --h2-font-size-min: 1.75;
+  --h2-font-size-max: 2.5;
+  --h2-vf-wght-multiplier-s: 1.25;
+  --h2-vf-wght-multiplier-m: 1.5;
+  --h2-vf-wght-multiplier-l: 1.75;
+  /* H3 variables */
+  --h3-line-height-min: 1.15;
+  --h3-line-height-max: 1.25;
+  --h3-font-size-min: 1.75;
+  --h3-font-size-max: 2.5;
+  --h3-vf-wght-multiplier-s: .5;
+  --h3-vf-wght-multiplier-m: .5;
+  --h3-vf-wght-multiplier-l: .5;
+  /* Dropcap variables */
+  --dc-line-height-min: .9;
+  --dc-line-height-max: .95;
+  --dc-font-size-min: 2.7;
+  --dc-font-size-max: 5.25;
+  /* Blockquote variables */
+  --bq-line-height-min: 1.1;
+  --bq-line-height-max: 1.1;
+  --bq-font-size-min: 2.7;
+  --bq-font-size-max: 5;
+  --hermann-aalt: "aalt"off;
+  --hermann-c2sc: "c2sc"off;
+  --hermann-case: "case"off;
+  --hermann-dlig: "dlig"off;
+  --hermann-dnom: "dnom"off;
+  --hermann-frac: "frac"off;
+  --hermann-hlig: "hlig"off;
+  --hermann-lnum: "lnum"off;
+  --hermann-numr: "numr"off;
+  --hermann-onum: "onum"off;
+  --hermann-ordn: "ordn"off;
+  --hermann-pnum: "pnum"off;
+  --hermann-salt: "salt"off;
+  --hermann-sinf: "sinf"off;
+  --hermann-smcp: "smcp"off;
+  --hermann-ss01: "ss01"off;
+  --hermann-ss02: "ss02"off;
+  --hermann-ss03: "ss03"off;
+  --hermann-ss04: "ss04"off;
+  --hermann-ss05: "ss05"off;
+  --hermann-ss06: "ss06"off;
+  --hermann-ss07: "ss07"off;
+  --hermann-ss08: "ss08"off;
+  --hermann-sups: "sups"off;
+  --hermann-tnum: "tnum"off;
+  --hermann-zero: "zero"off;
+}
+
+.clear {
+  clear: both;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: #fbfbf6;
+  color: #3c3d31;
+  font-size: 1rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:link {
+  color: #555577;
+  text-decoration: underline;
+}
+a:visited {
+  color: #555577;
+  text-decoration: underline;
+}
+a:hover {
+  color: #bb4444;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+body {
+  font-family: "Hermann", serif;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
+}
+
+div,
+p,
+th,
+td,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+figcaption,
+cite,
+i,
+em,
+b,
+strong,
+button,
+p:first-line,
+p:first-letter {
+  font-family: "Hermann", serif;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
+}
+
+ul li {
+  font-size: calc( var(--p-font-size-min) * 1rem);
+  line-height: var(--p-line-height-min);
+}
+
+p {
+  --text-ital: 0;
+  transition: all linear 0.2s;
+  hyphens: auto;
+}
+
+/* Variations and variables */
+p {
+  font-size: calc( var(--p-font-size-min) * 1rem);
+  line-height: var(--p-line-height-min);
+}
+@media screen and (min-width: 24.15em) {
+  p {
+    line-height: calc(( var(--p-line-height-min) * 1em) + ( var(--p-line-height-max) - var(--p-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-large) - var(--bp-small))));
+  }
+}
+@media (min-width: 60.25em) {
+  p {
+    font-size: calc(( var(--p-font-size-min) * 1em) + ( var(--p-font-size-max) - var(--p-font-size-min)) * ((100vw - ( var(--bp-large) * 1em)) / ( var(--bp-xlarge) - var(--bp-large))));
+    line-height: var(--p-line-height-max);
+  }
+}
+@media (min-width: 75em) {
+  p {
+    font-size: calc( var(--p-font-size-max) * 1em);
+  }
+}
+
+/* Generic header styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Hermann", serif;
+  font-weight: normal;
+  transition: all linear 0.2s;
+  --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
+}
+
+h1 {
+  /* Set --text-wght value multiplier */
+  --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
+  --text-ital: 0;
+  font-family: "Hermann", serif;
+  font-size: calc( var(--h1-font-size-min) * 1em);
+  line-height: var(--h1-line-height-min);
+}
+@media screen and (min-width: 24.15em) {
+  h1 {
+    line-height: calc(( var(--h1-line-height-min) * 1em) + ( var(--h1-line-height-max) - var(--h1-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
+    font-size: calc(( var(--h1-font-size-min) * 1em) + ( var(--h1-font-size-max) - var(--h1-font-size-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
+  }
+}
+@media screen and (min-width: 43.75em) {
+  h1 {
+    --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m));
+  }
+}
+@media screen and (min-width: 60.25em) {
+  h1 {
+    --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l));
+    line-height: var(--h1-line-height-max);
+  }
+}
+@media (min-width: 75em) {
+  h1 {
+    font-size: calc( var(--h1-font-size-max) * 1em);
+    line-height: var(--h1-line-height-max);
+  }
+}
+
+h2 {
+  /* Set --text-wght value multiplier */
+  --text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-s));
+  --text-ital: 0;
+  font-family: "Hermann", serif;
+  font-size: calc( var(--h2-font-size-min) * 1em);
+  line-height: var(--h2-line-height-min);
+}
+@media screen and (min-width: 24.15em) {
+  h2 {
+    line-height: calc(( var(--h2-line-height-min) * 1em) + ( var(--h2-line-height-max) - var(--h2-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
+    font-size: calc(( var(--h2-font-size-min) * 1em) + ( var(--h2-font-size-max) - var(--h2-font-size-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
+  }
+}
+@media screen and (min-width: 43.75em) {
+  h2 {
+    --text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-m));
+  }
+}
+@media (min-width: 75em) {
+  h2 {
+    --text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-l));
+    font-size: calc( var(--h2-font-size-max) * 1em);
+    line-height: var(--h2-line-height-max);
+  }
+}
+
+h3 {
+  /* Set --text-wght value multiplier */
+  --text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-s));
+  --text-ital: 1;
+  font-family: "Hermann", serif;
+  font-size: calc( var(--h2-font-size-min) * 1em);
+  line-height: var(--h2-line-height-min);
+  text-align: center;
+}
+@media screen and (min-width: 24.15em) {
+  h3 {
+    line-height: calc(( var(--h3-line-height-min) * 1em) + ( var(--h3-line-height-max) - var(--h3-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
+    font-size: calc(( var(--h3-font-size-min) * 1em) + ( var(--h3-font-size-max) - var(--h3-font-size-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
+  }
+}
+@media screen and (min-width: 43.75em) {
+  h3 {
+    --text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-m));
+  }
+}
+@media (min-width: 75em) {
+  h3 {
+    --text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-l));
+    font-size: calc( var(--h3-font-size-max) * 1em);
+    line-height: var(--h3-line-height-max);
+  }
+}
+
+/* If class is applied, update custom property and
+   apply modern font-variant-* when supported */
+.hermann-aalt {
+  --hermann-aalt: "aalt"on;
+}
+
+.hermann-c2sc {
+  --hermann-c2sc: "c2sc"on;
+}
+
+.hermann-case {
+  --hermann-case: "case"on;
+}
+
+.hermann-dlig {
+  --hermann-dlig: "dlig"on;
+}
+
+@supports (font-variant-ligatures: discretionary-ligatures) {
+  .hermann-dlig {
+    --hermann-dlig: "____";
+    font-variant-ligatures: discretionary-ligatures;
+  }
+}
+.hermann-dnom {
+  --hermann-dnom: "dnom"on;
+}
+
+.hermann-frac {
+  --hermann-frac: "frac"on;
+}
+
+@supports (font-variant-numeric: diagonal-fractions) {
+  .hermann-frac {
+    --hermann-frac: "____";
+    font-variant-numeric: diagonal-fractions;
+  }
+}
+.hermann-hlig {
+  --hermann-hlig: "hlig"on;
+}
+
+@supports (font-variant-ligatures: historical-ligatures) {
+  .hermann-hlig {
+    --hermann-hlig: "____";
+    font-variant-ligatures: historical-ligatures;
+  }
+}
+.hermann-lnum {
+  --hermann-lnum: "lnum"on;
+}
+
+@supports (font-variant-numeric: lining-nums) {
+  .hermann-lnum {
+    --hermann-lnum: "____";
+    font-variant-numeric: lining-nums;
+  }
+}
+.hermann-numr {
+  --hermann-numr: "numr"on;
+}
+
+.hermann-onum {
+  --hermann-onum: "onum"on;
+}
+
+@supports (font-variant-numeric: oldstyle-nums) {
+  .hermann-onum {
+    --hermann-onum: "____";
+    font-variant-numeric: oldstyle-nums;
+  }
+}
+.hermann-ordn {
+  --hermann-ordn: "ordn"on;
+}
+
+@supports (font-variant-numeric: ordinal) {
+  .hermann-ordn {
+    --hermann-ordn: "____";
+    font-variant-numeric: ordinal;
+  }
+}
+.hermann-pnum {
+  --hermann-pnum: "pnum"on;
+}
+
+@supports (font-variant-numeric: proportional-nums) {
+  .hermann-pnum {
+    --hermann-pnum: "____";
+    font-variant-numeric: proportional-nums;
+  }
+}
+.hermann-salt {
+  --hermann-salt: "salt"on;
+}
+
+.hermann-sinf {
+  --hermann-sinf: "sinf"on;
+}
+
+.hermann-smcp {
+  --hermann-smcp: "smcp"on;
+}
+
+@supports (font-variant-caps: small-caps) {
+  .hermann-smcp {
+    --hermann-smcp: "____";
+    font-variant-caps: small-caps;
+  }
+}
+.hermann-ss01 {
+  --hermann-ss01: "ss01"on;
+}
+
+.hermann-ss02 {
+  --hermann-ss02: "ss02"on;
+}
+
+.hermann-ss03 {
+  --hermann-ss03: "ss03"on;
+}
+
+.hermann-ss04 {
+  --hermann-ss04: "ss04"on;
+}
+
+.hermann-ss05 {
+  --hermann-ss05: "ss05"on;
+}
+
+.hermann-ss06 {
+  --hermann-ss06: "ss06"on;
+}
+
+.hermann-ss07 {
+  --hermann-ss07: "ss07"on;
+}
+
+.hermann-ss08 {
+  --hermann-ss08: "ss08"on;
+}
+
+.hermann-sups {
+  --hermann-sups: "sups"on;
+}
+
+@supports (font-variant-position: super) {
+  .hermann-sups {
+    --hermann-sups: "____";
+    font-variant-position: super;
+  }
+}
+.hermann-tnum {
+  --hermann-tnum: "tnum"on;
+}
+
+@supports (font-variant-numeric: tabular-nums) {
+  .hermann-tnum {
+    --hermann-tnum: "____";
+    font-variant-numeric: tabular-nums;
+  }
+}
+.hermann-zero {
+  --hermann-zero: "zero"on;
+}
+
+@supports (font-variant-numeric: slashed-zero) {
+  .hermann-zero {
+    --hermann-zero: "____";
+    font-variant-numeric: slashed-zero;
+  }
+}
+/* Apply current state of all custom properties
+   whenever a class is being applied */
+.hermann-aalt,
+.hermann-c2sc,
+.hermann-case,
+.hermann-dlig,
+.hermann-dnom,
+.hermann-frac,
+.hermann-hlig,
+.hermann-lnum,
+.hermann-numr,
+.hermann-onum,
+.hermann-ordn,
+.hermann-pnum,
+.hermann-salt,
+.hermann-sinf,
+.hermann-smcp,
+.hermann-ss01,
+.hermann-ss02,
+.hermann-ss03,
+.hermann-ss04,
+.hermann-ss05,
+.hermann-ss06,
+.hermann-ss07,
+.hermann-ss08,
+.hermann-sups,
+.hermann-tnum,
+.hermann-zero {
+  font-feature-settings: var(--hermann-aalt), var(--hermann-c2sc), var(--hermann-case), var(--hermann-dlig), var(--hermann-dnom), var(--hermann-frac), var(--hermann-hlig), var(--hermann-lnum), var(--hermann-numr), var(--hermann-onum), var(--hermann-ordn), var(--hermann-pnum), var(--hermann-salt), var(--hermann-sinf), var(--hermann-smcp), var(--hermann-ss01), var(--hermann-ss02), var(--hermann-ss03), var(--hermann-ss04), var(--hermann-ss05), var(--hermann-ss06), var(--hermann-ss07), var(--hermann-ss08), var(--hermann-sups), var(--hermann-tnum), var(--hermann-zero);
+}
+
+/*# sourceMappingURL=typography-hermann.css.map */

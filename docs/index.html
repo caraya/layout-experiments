@@ -13,16 +13,16 @@
 
   <title>Layout Experiments</title>
 
-  <script>performance.mark('begin preload');</script>
+  <!-- <script>performance.mark('begin preload');</script> -->
   <!-- DNS pre-fetch analytics -->
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <!-- Preload assets -->
-  <link as="style" crossorigin="anonymous" href="css/shared/typography-roboto-2.css" rel="preload" type="text/css">
-  <link as="style" crossorigin="anonymous" href="css/index.css" rel="preload" type="text/css">
-  <link as="font" crossorigin="anonymous" href="fonts/Roboto-min-VF.woff2" rel="preload" type="font/woff2">
-  <link as="script" crossorigin="anonymous" href="js/zenscroll.min.js" rel="preload" type="text/javascript">
-  <script>performance.mark('end preload');</script>
-  <script>performance.measure('preload', 'begin preload', 'end preload');</script>
+  <!-- <link rel="preload" crossorigin="anonymous" href="css/shared/typography-roboto-2.css"  as="style"  type="text/css"> -->
+  <!-- <link rel="preload" crossorigin="anonymous" href="css/index.css" as="style" type="text/css"> -->
+  <!-- <link rel="preload" crossorigin="anonymous" href="fonts/Roboto-min-VF.woff2" as="font" type="font/woff2"> -->
+  <!-- <link rel="preload" crossorigin="anonymous" href="js/zenscroll.min.js"  as="script" type="text/javascript"> -->
+  <!-- <script>performance.mark('end preload');</script>
+  <script>performance.measure('preload', 'begin preload', 'end preload');</script> -->
 
   <script>performance.mark('stylesheets start blocking');</script>
   <!-- Stylesheets -->

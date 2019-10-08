@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Bungee");
-
 @font-face {
   font-family: 'Recoleta';
   src: url("../../fonts/RecoletaMedium.woff2") format("woff2"), url("../../fonts/RecoletaMedium.woff") format("woff");
@@ -66,32 +65,32 @@
   --bq-line-height-max: 1.1;
   --bq-font-size-min: 2.7;
   --bq-font-size-max: 5;
-  --medium-aalt: "aalt"off;
-  --medium-case: "case"off;
-  --medium-frac: "frac"off;
-  --medium-ordn: "ordn"off;
-  --medium-salt: "salt"off;
-  --medium-ss01: "ss01"off;
-  --bold-aalt: "aalt"off;
-  --bold-case: "case"off;
-  --bold-frac: "frac"off;
-  --bold-ordn: "ordn"off;
-  --bold-salt: "salt"off;
-  --bold-ss01: "ss01"off;
+  --medium-aalt: "aalt" off;
+  --medium-case: "case" off;
+  --medium-frac: "frac" off;
+  --medium-ordn: "ordn" off;
+  --medium-salt: "salt" off;
+  --medium-ss01: "ss01" off;
+  --bold-aalt: "aalt" off;
+  --bold-case: "case" off;
+  --bold-frac: "frac" off;
+  --bold-ordn: "ordn" off;
+  --bold-salt: "salt" off;
+  --bold-ss01: "ss01" off;
 }
 
 /* If class is applied, update custom property and
    apply modern font-variant-* when supported */
 .medium-aalt {
-  --medium-aalt: "aalt"on;
+  --medium-aalt: "aalt" on;
 }
 
 .medium-case {
-  --medium-case: "case"on;
+  --medium-case: "case" on;
 }
 
 .medium-frac {
-  --medium-frac: "frac"on;
+  --medium-frac: "frac" on;
 }
 
 @supports (font-variant-numeric: diagonal-fractions) {
@@ -102,7 +101,7 @@
 }
 
 .medium-ordn {
-  --medium-ordn: "ordn"on;
+  --medium-ordn: "ordn" on;
 }
 
 @supports (font-variant-numeric: ordinal) {
@@ -113,11 +112,11 @@
 }
 
 .medium-salt {
-  --medium-salt: "salt"on;
+  --medium-salt: "salt" on;
 }
 
 .medium-ss01 {
-  --medium-ss01: "ss01"on;
+  --medium-ss01: "ss01" on;
 }
 
 /* Apply current state of all custom properties
@@ -134,15 +133,15 @@
 /* If class is applied, update custom property and
    apply modern font-variant-* when supported */
 .bold-aalt {
-  --bold-aalt: "aalt"on;
+  --bold-aalt: "aalt" on;
 }
 
 .bold-case {
-  --bold-case: "case"on;
+  --bold-case: "case" on;
 }
 
 .bold-frac {
-  --bold-frac: "frac"on;
+  --bold-frac: "frac" on;
 }
 
 @supports (font-variant-numeric: diagonal-fractions) {
@@ -153,7 +152,7 @@
 }
 
 .bold-ordn {
-  --bold-ordn: "ordn"on;
+  --bold-ordn: "ordn" on;
 }
 
 @supports (font-variant-numeric: ordinal) {
@@ -164,11 +163,11 @@
 }
 
 .bold-salt {
-  --bold-salt: "salt"on;
+  --bold-salt: "salt" on;
 }
 
 .bold-ss01 {
-  --bold-ss01: "ss01"on;
+  --bold-ss01: "ss01" on;
 }
 
 /* Apply current state of all custom properties
@@ -218,7 +217,7 @@ img {
   width: 100%;
 }
 
-h2+p {
+h2 + p {
   margin-top: 1em;
 }
 
@@ -226,7 +225,7 @@ body {
   font-family: "Recoleta", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght"var(--text-wght), "ital"var(--text-ital);
+  font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
 }
 
 div,
@@ -254,42 +253,44 @@ p:first-letter {
   font-family: "Recoleta", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght"var(--text-wght), "ital"var(--text-ital);
+  font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
 }
 
 ul li {
-  font-size: calc(var(--p-font-size-min) * 1rem);
+  font-size: calc(  var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
 }
 
 p {
   --text-ital: 0;
   transition: all linear 0.2s;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 /* Variations and variables */
 p {
-  font-size: calc(var(--p-font-size-min) * 1em);
+  font-size: calc( var(--p-font-size-min) * 1em);
   line-height: var(--p-line-height-min);
 }
 
 @media screen and (min-width: 24.15em) {
   p {
-    line-height: calc((var(--p-line-height-min) * 1em) + (var(--p-line-height-max) - var(--p-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-large) - var(--bp-small))));
+    line-height: calc(( var(--p-line-height-min) * 1em) + ( var(--p-line-height-max) - var(--p-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-large) - var(--bp-small))));
   }
 }
 
 @media (min-width: 60.25em) {
   p {
-    font-size: calc((var(--p-font-size-min) * 1em) + (var(--p-font-size-max) - var(--p-font-size-min)) * ((100vw - (var(--bp-large) * 1em)) / (var(--bp-xlarge) - var(--bp-large))));
+    font-size: calc(( var(--p-font-size-min) * 1em) + ( var(--p-font-size-max) - var(--p-font-size-min)) * ((100vw - ( var(--bp-large) * 1em)) / ( var(--bp-xlarge) - var(--bp-large))));
     line-height: var(--p-line-height-max);
   }
 }
 
 @media (min-width: 75em) {
   p {
-    font-size: calc(var(--p-font-size-max) * 1em);
+    font-size: calc( var(--p-font-size-max) * 1em);
   }
 }
 
@@ -300,7 +301,7 @@ h3 {
   font-family: 'Bungee', Helvetica, Arial, sans-serif;
   font-weight: normal;
   transition: all linear 0.2s;
-  --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
+  --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
 }
 
 h4,
@@ -309,102 +310,102 @@ h6 {
   font-family: 'Bungee', Helvetica, Arial, sans-serif;
   font-weight: normal;
   transition: all linear 0.2s;
-  --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
+  --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
 }
 
 h1 {
   /* Set --text-wght value multiplier */
-  --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
+  --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
   --text-ital: 0;
   font-family: 'Bungee', Helvetica, Arial, sans-serif;
-  font-size: calc(var(--h1-font-size-min) * 1em);
+  font-size: calc( var(--h1-font-size-min) * 1em);
   line-height: var(--h1-line-height-min);
 }
 
 @media screen and (min-width: 24.15em) {
   h1 {
-    line-height: calc((var(--h1-line-height-min) * 1em) + (var(--h1-line-height-max) - var(--h1-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
-    font-size: calc((var(--h1-font-size-min) * 1em) + (var(--h1-font-size-max) - var(--h1-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
+    line-height: calc(( var(--h1-line-height-min) * 1em) + ( var(--h1-line-height-max) - var(--h1-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
+    font-size: calc(( var(--h1-font-size-min) * 1em) + ( var(--h1-font-size-max) - var(--h1-font-size-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
   }
 }
 
 @media screen and (min-width: 43.75em) {
   h1 {
-    --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m));
+    --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m));
   }
 }
 
 @media screen and (min-width: 60.25em) {
   h1 {
-    --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l));
+    --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l));
     line-height: var(--h1-line-height-max);
   }
 }
 
 @media (min-width: 75em) {
   h1 {
-    font-size: calc(var(--h1-font-size-max) * 1em);
+    font-size: calc( var(--h1-font-size-max) * 1em);
     line-height: var(--h1-line-height-max);
   }
 }
 
 h2 {
   /* Set --text-wght value multiplier */
-  --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-s));
+  --text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-s));
   --text-ital: 0;
   font-family: 'Bungee', Helvetica, Arial, sans-serif;
-  font-size: calc(var(--h2-font-size-min) * 1em);
+  font-size: calc( var(--h2-font-size-min) * 1em);
   line-height: var(--h2-line-height-min);
 }
 
 @media screen and (min-width: 24.15em) {
   h2 {
-    line-height: calc((var(--h2-line-height-min) * 1em) + (var(--h2-line-height-max) - var(--h2-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
-    font-size: calc((var(--h2-font-size-min) * 1em) + (var(--h2-font-size-max) - var(--h2-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
+    line-height: calc(( var(--h2-line-height-min) * 1em) + ( var(--h2-line-height-max) - var(--h2-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
+    font-size: calc(( var(--h2-font-size-min) * 1em) + ( var(--h2-font-size-max) - var(--h2-font-size-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
   }
 }
 
 @media screen and (min-width: 43.75em) {
   h2 {
-    --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-m));
+    --text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-m));
   }
 }
 
 @media (min-width: 75em) {
   h2 {
-    --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-l));
-    font-size: calc(var(--h2-font-size-max) * 1em);
+    --text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-l));
+    font-size: calc( var(--h2-font-size-max) * 1em);
     line-height: var(--h2-line-height-max);
   }
 }
 
 h3 {
   /* Set --text-wght value multiplier */
-  --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-s));
+  --text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-s));
   --text-ital: 1;
   font-family: 'Bungee', Helvetica, Arial, sans-serif;
-  font-size: calc(var(--h2-font-size-min) * 1em);
+  font-size: calc( var(--h2-font-size-min) * 1em);
   line-height: var(--h2-line-height-min);
   text-align: center;
 }
 
 @media screen and (min-width: 24.15em) {
   h3 {
-    line-height: calc((var(--h3-line-height-min) * 1em) + (var(--h3-line-height-max) - var(--h3-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
-    font-size: calc((var(--h3-font-size-min) * 1em) + (var(--h3-font-size-max) - var(--h3-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
+    line-height: calc(( var(--h3-line-height-min) * 1em) + ( var(--h3-line-height-max) - var(--h3-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
+    font-size: calc(( var(--h3-font-size-min) * 1em) + ( var(--h3-font-size-max) - var(--h3-font-size-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
   }
 }
 
 @media screen and (min-width: 43.75em) {
   h3 {
-    --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-m));
+    --text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-m));
   }
 }
 
 @media (min-width: 75em) {
   h3 {
-    --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-l));
-    font-size: calc(var(--h3-font-size-max) * 1em);
+    --text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-l));
+    font-size: calc( var(--h3-font-size-max) * 1em);
     line-height: var(--h3-line-height-max);
   }
 }

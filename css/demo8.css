@@ -1,5 +1,5 @@
 body {
-  font-size: 0.8em;
+  font-size: .8em;
   line-height: 1;
 }
 
@@ -13,9 +13,10 @@ body {
 }
 
 .masthead {
-  grid-column: 1/6;
-  grid-row: 1/1;
+  grid-column: 1 / 6;
+  grid-row: 1 / 1;
 }
+
 .masthead h1 {
   z-index: 10;
   margin-left: 1em;
@@ -23,20 +24,22 @@ body {
 }
 
 .image {
-  grid-column: 2/6;
-  grid-row: 2/4;
+  grid-column: 2 / 6;
+  grid-row: 2 / 4;
 }
 
 .content {
-  grid-column: 1/6;
+  grid-column: 1 / 6;
   grid-row: 4;
 }
+
 .content .columns {
-  columns: 2;
+  -moz-columns: 2;
+       columns: 2;
 }
 
 .credits {
-  grid-column: 2/2;
+  grid-column: 2 / 2;
   grid-row: 5;
 }
 

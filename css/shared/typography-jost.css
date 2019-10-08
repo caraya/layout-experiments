@@ -1,10 +1,11 @@
 @font-face {
-  font-family: "Jost";
+  font-family: 'Jost';
   src: url("../../fonts/jost-VF.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 :root {
   /* Breakpoint variables */
   --bp-small: 24.15;
@@ -80,10 +81,12 @@ a:link {
   color: #555577;
   text-decoration: underline;
 }
+
 a:visited {
   color: #555577;
   text-decoration: underline;
 }
+
 a:hover {
   color: #bb4444;
 }
@@ -105,12 +108,14 @@ h2 + p {
   /* Apply current state of all custom properties
     whenever a class is being applied */
 }
+
 .fonts-loaded body {
   font-family: "Jost", sans-serif;
   font-weight: normal;
   font-style: normal;
   font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
 }
+
 .fonts-loaded div,
 .fonts-loaded p,
 .fonts-loaded th,
@@ -138,46 +143,57 @@ h2 + p {
   font-style: normal;
   font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
 }
+
 .fonts-loaded ul li {
   font-size: calc(var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
 }
+
 .fonts-loaded p {
   --text-ital: 0;
   transition: all linear 0.2s;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
+
 .fonts-loaded p {
   font-size: calc(var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-loaded p {
     line-height: calc((var(--p-line-height-min) * 1em) + (var(--p-line-height-max) - var(--p-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-large) - var(--bp-small))));
   }
 }
+
 @media (min-width: 60.25em) {
   .fonts-loaded p {
     font-size: calc((var(--p-font-size-min) * 1em) + (var(--p-font-size-max) - var(--p-font-size-min)) * ((100vw - (var(--bp-large) * 1em)) / (var(--bp-xlarge) - var(--bp-large))));
     line-height: var(--p-line-height-max);
   }
 }
+
 @media (min-width: 75em) {
   .fonts-loaded p {
     font-size: calc(var(--p-font-size-max) * 1em);
   }
 }
+
 .fonts-loaded .italic,
 .fonts-loaded i,
 .fonts-loaded em {
   --text-ital: 1;
   font-style: var(--text-ital);
 }
+
 .fonts-loaded b,
 .fonts-loaded strong {
   --text-wght: 700;
   font-weight: var(--text-wght);
 }
+
 .fonts-loaded h1,
 .fonts-loaded h2,
 .fonts-loaded h3,
@@ -189,6 +205,7 @@ h2 + p {
   transition: all linear 0.2s;
   --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
 }
+
 .fonts-loaded h1 {
   /* Set --text-wght value multiplier */
   --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
@@ -197,29 +214,34 @@ h2 + p {
   font-size: calc(var(--h1-font-size-min) * 1em);
   line-height: var(--h1-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-loaded h1 {
     line-height: calc((var(--h1-line-height-min) * 1em) + (var(--h1-line-height-max) - var(--h1-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
     font-size: calc((var(--h1-font-size-min) * 1em) + (var(--h1-font-size-max) - var(--h1-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   .fonts-loaded h1 {
     --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m));
   }
 }
+
 @media screen and (min-width: 60.25em) {
   .fonts-loaded h1 {
     --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l));
     line-height: var(--h1-line-height-max);
   }
 }
+
 @media (min-width: 75em) {
   .fonts-loaded h1 {
     font-size: calc(var(--h1-font-size-max) * 1em);
     line-height: var(--h1-line-height-max);
   }
 }
+
 .fonts-loaded h2 {
   /* Set --text-wght value multiplier */
   --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-s));
@@ -228,17 +250,20 @@ h2 + p {
   font-size: calc(var(--h2-font-size-min) * 1em);
   line-height: var(--h2-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-loaded h2 {
     line-height: calc((var(--h2-line-height-min) * 1em) + (var(--h2-line-height-max) - var(--h2-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
     font-size: calc((var(--h2-font-size-min) * 1em) + (var(--h2-font-size-max) - var(--h2-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   .fonts-loaded h2 {
     --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-m));
   }
 }
+
 @media (min-width: 75em) {
   .fonts-loaded h2 {
     --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-l));
@@ -246,6 +271,7 @@ h2 + p {
     line-height: var(--h2-line-height-max);
   }
 }
+
 .fonts-loaded h3 {
   /* Set --text-wght value multiplier */
   --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-s));
@@ -255,17 +281,20 @@ h2 + p {
   line-height: var(--h2-line-height-min);
   text-align: center;
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-loaded h3 {
     line-height: calc((var(--h3-line-height-min) * 1em) + (var(--h3-line-height-max) - var(--h3-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
     font-size: calc((var(--h3-font-size-min) * 1em) + (var(--h3-font-size-max) - var(--h3-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   .fonts-loaded h3 {
     --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-m));
   }
 }
+
 @media (min-width: 75em) {
   .fonts-loaded h3 {
     --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-l));
@@ -273,18 +302,22 @@ h2 + p {
     line-height: var(--h3-line-height-max);
   }
 }
+
 .fonts-loaded .jost-it-book-ss01 {
   --jost-it-book-ss01: "ss01"on;
 }
+
 .fonts-loaded .jost-it-book-tnum {
   --jost-it-book-tnum: "tnum"on;
 }
+
 @supports (font-variant-numeric: tabular-nums) {
   .fonts-loaded .jost-it-book-tnum {
     --jost-it-book-tnum: "____";
     font-variant-numeric: tabular-nums;
   }
 }
+
 .fonts-loaded .jost-it-book-ss01,
 .fonts-loaded .jost-it-book-tnum {
   font-feature-settings: var(--jost-it-book-ss01), var(--jost-it-book-tnum);
@@ -294,12 +327,14 @@ h2 + p {
   /* Variations and variables */
   /* Generic header styles */
 }
+
 .fonts-failed body {
   font-family: sans-serif;
   font-weight: normal;
   font-style: normal;
   font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
 }
+
 .fonts-failed div,
 .fonts-failed p,
 .fonts-failed th,
@@ -327,35 +362,44 @@ h2 + p {
   font-style: normal;
   font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
 }
+
 .fonts-failed ul li {
   font-size: calc(var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
 }
+
 .fonts-failed p {
   --text-ital: 0;
   transition: all linear 0.2s;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
+
 .fonts-failed p {
   font-size: calc(var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-failed p {
     line-height: calc((var(--p-line-height-min) * 1em) + (var(--p-line-height-max) - var(--p-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-large) - var(--bp-small))));
   }
 }
+
 @media (min-width: 60.25em) {
   .fonts-failed p {
     font-size: calc((var(--p-font-size-min) * 1em) + (var(--p-font-size-max) - var(--p-font-size-min)) * ((100vw - (var(--bp-large) * 1em)) / (var(--bp-xlarge) - var(--bp-large))));
     line-height: var(--p-line-height-max);
   }
 }
+
 @media (min-width: 75em) {
   .fonts-failed p {
     font-size: calc(var(--p-font-size-max) * 1em);
   }
 }
+
 .fonts-failed h1,
 .fonts-failed h2,
 .fonts-failed h3,
@@ -367,6 +411,7 @@ h2 + p {
   transition: all linear 0.2s;
   --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
 }
+
 .fonts-failed h1 {
   /* Set --text-wght value multiplier */
   --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
@@ -375,29 +420,34 @@ h2 + p {
   font-size: calc(var(--h1-font-size-min) * 1em);
   line-height: var(--h1-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-failed h1 {
     line-height: calc((var(--h1-line-height-min) * 1em) + (var(--h1-line-height-max) - var(--h1-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
     font-size: calc((var(--h1-font-size-min) * 1em) + (var(--h1-font-size-max) - var(--h1-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   .fonts-failed h1 {
     --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m));
   }
 }
+
 @media screen and (min-width: 60.25em) {
   .fonts-failed h1 {
     --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l));
     line-height: var(--h1-line-height-max);
   }
 }
+
 @media (min-width: 75em) {
   .fonts-failed h1 {
     font-size: calc(var(--h1-font-size-max) * 1em);
     line-height: var(--h1-line-height-max);
   }
 }
+
 .fonts-failed h2 {
   /* Set --text-wght value multiplier */
   --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-s));
@@ -406,17 +456,20 @@ h2 + p {
   font-size: calc(var(--h2-font-size-min) * 1em);
   line-height: var(--h2-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-failed h2 {
     line-height: calc((var(--h2-line-height-min) * 1em) + (var(--h2-line-height-max) - var(--h2-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
     font-size: calc((var(--h2-font-size-min) * 1em) + (var(--h2-font-size-max) - var(--h2-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   .fonts-failed h2 {
     --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-m));
   }
 }
+
 @media (min-width: 75em) {
   .fonts-failed h2 {
     --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-l));
@@ -424,6 +477,7 @@ h2 + p {
     line-height: var(--h2-line-height-max);
   }
 }
+
 .fonts-failed h3 {
   /* Set --text-wght value multiplier */
   --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-s));
@@ -433,17 +487,20 @@ h2 + p {
   line-height: var(--h2-line-height-min);
   text-align: center;
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-failed h3 {
     line-height: calc((var(--h3-line-height-min) * 1em) + (var(--h3-line-height-max) - var(--h3-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
     font-size: calc((var(--h3-font-size-min) * 1em) + (var(--h3-font-size-max) - var(--h3-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   .fonts-failed h3 {
     --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-m));
   }
 }
+
 @media (min-width: 75em) {
   .fonts-failed h3 {
     --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-l));

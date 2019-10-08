@@ -1,8 +1,10 @@
 body {
   background-color: #fbfbf6;
   padding: 1em;
-  hyphens: auto;
-  line-height: 0.75;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  line-height: .75;
 }
 
 .grid-container {

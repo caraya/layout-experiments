@@ -1,7 +1,9 @@
 body {
   background-color: #fbfbf6;
   padding: 1em;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 p {
@@ -30,6 +32,7 @@ p {
   font-stretch: extra-condensed;
   font-style: normal;
 }
+
 @supports (font-variation-settings: none) {
   .article-title {
     font-variation-settings: "wght" var(--text-wght), "wdth" var(--text-wdth), "slnt" var(--text-slnt);
@@ -37,7 +40,9 @@ p {
 }
 
 h1 {
-  hyphens: none;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
 }
 
 p:not(:first-of-type) {
@@ -52,21 +57,17 @@ p:not(:first-of-type) {
     grid-gap: 1em 1em;
     margin: 0 auto;
   }
-
   .content {
     grid-column: 1/4;
     padding: 1em;
   }
-
   .float-left {
     float: none;
   }
-
   blockquote {
     font-size: 1rem;
     line-height: 1.2;
   }
-
   p {
     font-size: calc(var(--p-font-size-max) * 1rem);
   }

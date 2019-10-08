@@ -4,12 +4,13 @@
  * by Roel Nieskens/PixelAmbacht - https://pixelambacht.nl
  */
 @font-face {
-  font-family: "SourceSerif";
+  font-family: 'SourceSerif';
   src: url("../../fonts/VennVF_W.woff2") format("woff2"), url("../../fonts/VennVF_W.woff2") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 /*
 * Global CSS Variables.
 */
@@ -96,10 +97,12 @@ a:link {
   color: #555577;
   text-decoration: underline;
 }
+
 a:visited {
   color: #555577;
   text-decoration: underline;
 }
+
 a:hover {
   color: #bb4444;
 }
@@ -122,12 +125,14 @@ h2 + p {
     whenever a class is being applied */
   /* Variable instances */
 }
+
 .fonts-loaded body {
   font-family: "Venn", sans-serif;
   font-weight: normal;
   font-style: normal;
   font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
 }
+
 .fonts-loaded div,
 .fonts-loaded p,
 .fonts-loaded th,
@@ -155,35 +160,44 @@ h2 + p {
   font-style: normal;
   font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
 }
+
 .fonts-loaded ul li {
   font-size: calc(var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
 }
+
 .fonts-loaded p {
   --text-ital: 0;
   transition: all linear 0.2s;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
+
 .fonts-loaded p {
   font-size: calc(var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-loaded p {
     line-height: calc((var(--p-line-height-min) * 1em) + (var(--p-line-height-max) - var(--p-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-large) - var(--bp-small))));
   }
 }
+
 @media (min-width: 60.25em) {
   .fonts-loaded p {
     font-size: calc((var(--p-font-size-min) * 1em) + (var(--p-font-size-max) - var(--p-font-size-min)) * ((100vw - (var(--bp-large) * 1em)) / (var(--bp-xlarge) - var(--bp-large))));
     line-height: var(--p-line-height-max);
   }
 }
+
 @media (min-width: 75em) {
   .fonts-loaded p {
     font-size: calc(var(--p-font-size-max) * 1em);
   }
 }
+
 .fonts-loaded h1,
 .fonts-loaded h2,
 .fonts-loaded h3,
@@ -195,6 +209,7 @@ h2 + p {
   transition: all linear 0.2s;
   --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
 }
+
 .fonts-loaded h1 {
   /* Set --text-wght value multiplier */
   --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
@@ -203,29 +218,34 @@ h2 + p {
   font-size: calc(var(--h1-font-size-min) * 1em);
   line-height: var(--h1-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-loaded h1 {
     line-height: calc((var(--h1-line-height-min) * 1em) + (var(--h1-line-height-max) - var(--h1-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
     font-size: calc((var(--h1-font-size-min) * 1em) + (var(--h1-font-size-max) - var(--h1-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   .fonts-loaded h1 {
     --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m));
   }
 }
+
 @media screen and (min-width: 60.25em) {
   .fonts-loaded h1 {
     --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l));
     line-height: var(--h1-line-height-max);
   }
 }
+
 @media (min-width: 75em) {
   .fonts-loaded h1 {
     font-size: calc(var(--h1-font-size-max) * 1em);
     line-height: var(--h1-line-height-max);
   }
 }
+
 .fonts-loaded h2 {
   /* Set --text-wght value multiplier */
   --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-s));
@@ -234,17 +254,20 @@ h2 + p {
   font-size: calc(var(--h2-font-size-min) * 1em);
   line-height: var(--h2-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-loaded h2 {
     line-height: calc((var(--h2-line-height-min) * 1em) + (var(--h2-line-height-max) - var(--h2-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
     font-size: calc((var(--h2-font-size-min) * 1em) + (var(--h2-font-size-max) - var(--h2-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   .fonts-loaded h2 {
     --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-m));
   }
 }
+
 @media (min-width: 75em) {
   .fonts-loaded h2 {
     --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-l));
@@ -252,6 +275,7 @@ h2 + p {
     line-height: var(--h2-line-height-max);
   }
 }
+
 .fonts-loaded h3 {
   /* Set --text-wght value multiplier */
   --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-s));
@@ -261,17 +285,20 @@ h2 + p {
   line-height: var(--h2-line-height-min);
   text-align: center;
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-loaded h3 {
     line-height: calc((var(--h3-line-height-min) * 1em) + (var(--h3-line-height-max) - var(--h3-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
     font-size: calc((var(--h3-font-size-min) * 1em) + (var(--h3-font-size-max) - var(--h3-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   .fonts-loaded h3 {
     --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-m));
   }
 }
+
 @media (min-width: 75em) {
   .fonts-loaded h3 {
     --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-l));
@@ -279,90 +306,112 @@ h2 + p {
     line-height: var(--h3-line-height-max);
   }
 }
+
 .fonts-loaded a:link {
   color: #555577;
   text-decoration: underline;
 }
+
 .fonts-loaded a:visited {
   color: #555577;
   text-decoration: underline;
 }
+
 .fonts-loaded a:hover {
   color: #bb4444;
 }
+
 .fonts-loaded img {
   height: auto;
   width: 100%;
 }
+
 .fonts-loaded h2 + p {
   margin-top: 1em;
 }
+
 .fonts-loaded .case {
   --case: "case"on;
 }
+
 .fonts-loaded .dnom {
   --dnom: "dnom"on;
 }
+
 .fonts-loaded .frac {
   --frac: "frac"on;
 }
+
 @supports (font-variant-numeric: diagonal-fractions) {
   .fonts-loaded .frac {
     --frac: "____";
     font-variant-numeric: diagonal-fractions;
   }
 }
+
 .fonts-loaded .numr {
   --numr: "numr"on;
 }
+
 .fonts-loaded .ordn {
   --ordn: "ordn"on;
 }
+
 @supports (font-variant-numeric: ordinal) {
   .fonts-loaded .ordn {
     --ordn: "____";
     font-variant-numeric: ordinal;
   }
 }
+
 .fonts-loaded .pnum {
   --pnum: "pnum"on;
 }
+
 @supports (font-variant-numeric: proportional-nums) {
   .fonts-loaded .pnum {
     --pnum: "____";
     font-variant-numeric: proportional-nums;
   }
 }
+
 .fonts-loaded .sinf {
   --sinf: "sinf"on;
 }
+
 .fonts-loaded .subs {
   --subs: "subs"on;
 }
+
 @supports (font-variant-position: sub) {
   .fonts-loaded .subs {
     --subs: "____";
     font-variant-position: sub;
   }
 }
+
 .fonts-loaded .sups {
   --sups: "sups"on;
 }
+
 @supports (font-variant-position: super) {
   .fonts-loaded .sups {
     --sups: "____";
     font-variant-position: super;
   }
 }
+
 .fonts-loaded .tnum {
   --tnum: "tnum"on;
 }
+
 @supports (font-variant-numeric: tabular-nums) {
   .fonts-loaded .tnum {
     --tnum: "____";
     font-variant-numeric: tabular-nums;
   }
 }
+
 .fonts-loaded .case,
 .fonts-loaded .dnom,
 .fonts-loaded .frac,
@@ -375,78 +424,103 @@ h2 + p {
 .fonts-loaded .tnum {
   font-feature-settings: var(--case), var(--dnom), var(--frac), var(--numr), var(--ordn), var(--pnum), var(--sinf), var(--subs), var(--sups), var(--tnum);
 }
+
 .fonts-loaded .ex-xbold {
   font-variation-settings: "wght" 800, "wdth" 125;
 }
+
 .fonts-loaded .semiex-xbold {
   font-variation-settings: "wght" 800, "wdth" 112.5;
 }
+
 .fonts-loaded .xbold {
   font-variation-settings: "wght" 800, "wdth" 100;
 }
+
 .fonts-loaded .semicd-xbold {
   font-variation-settings: "wght" 800, "wdth" 87.5;
 }
+
 .fonts-loaded .cd-xbold {
   font-variation-settings: "wght" 800, "wdth" 75;
 }
+
 .fonts-loaded .ex-bold {
   font-variation-settings: "wght" 700, "wdth" 125;
 }
+
 .fonts-loaded .semiex-bold {
   font-variation-settings: "wght" 700, "wdth" 112.5;
 }
+
 .fonts-loaded .bold {
   font-variation-settings: "wght" 700, "wdth" 100;
 }
+
 .fonts-loaded .semicd-bold {
   font-variation-settings: "wght" 700, "wdth" 87.5;
 }
+
 .fonts-loaded .cd-bold {
   font-variation-settings: "wght" 700, "wdth" 75;
 }
+
 .fonts-loaded .ex-medium {
   font-variation-settings: "wght" 500, "wdth" 125;
 }
+
 .fonts-loaded .semiex-medium {
   font-variation-settings: "wght" 500, "wdth" 112.5;
 }
+
 .fonts-loaded .medium {
   font-variation-settings: "wght" 500, "wdth" 100;
 }
+
 .fonts-loaded .semicd-medium {
   font-variation-settings: "wght" 500, "wdth" 87.5;
 }
+
 .fonts-loaded .cd-medium {
   font-variation-settings: "wght" 500, "wdth" 75;
 }
+
 .fonts-loaded .ex-regular {
   font-variation-settings: "wght" 400, "wdth" 125;
 }
+
 .fonts-loaded .semiex-regular {
   font-variation-settings: "wght" 400, "wdth" 112.5;
 }
+
 .fonts-loaded .regular {
   font-variation-settings: "wght" 400, "wdth" 100;
 }
+
 .fonts-loaded .semicd-regular {
   font-variation-settings: "wght" 400, "wdth" 87.5;
 }
+
 .fonts-loaded .cd-regular {
   font-variation-settings: "wght" 400, "wdth" 75;
 }
+
 .fonts-loaded .ex-light {
   font-variation-settings: "wght" 300, "wdth" 125;
 }
+
 .fonts-loaded .semiex-light {
   font-variation-settings: "wght" 300, "wdth" 112.5;
 }
+
 .fonts-loaded .light {
   font-variation-settings: "wght" 300, "wdth" 100;
 }
+
 .fonts-loaded .semicd-light {
   font-variation-settings: "wght" 300, "wdth" 87.5;
 }
+
 .fonts-loaded .cd-light {
   font-variation-settings: "wght" 300, "wdth" 75;
 }
@@ -455,11 +529,13 @@ h2 + p {
   /* Variations and variables */
   /* Generic header styles */
 }
+
 .fonts-failed body {
   font-family: sans-serif;
   font-weight: normal;
   font-style: normal;
 }
+
 .fonts-failed div,
 .fonts-failed p,
 .fonts-failed th,
@@ -486,45 +562,56 @@ h2 + p {
   font-weight: normal;
   font-style: normal;
 }
+
 .fonts-failed ul li {
   font-size: calc(var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
 }
+
 .fonts-failed p {
   --text-ital: 0;
   transition: all linear 0.2s;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
+
 .fonts-failed p {
   font-size: calc(var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-failed p {
     line-height: calc((var(--p-line-height-min) * 1em) + (var(--p-line-height-max) - var(--p-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-large) - var(--bp-small))));
   }
 }
+
 @media (min-width: 60.25em) {
   .fonts-failed p {
     font-size: calc((var(--p-font-size-min) * 1em) + (var(--p-font-size-max) - var(--p-font-size-min)) * ((100vw - (var(--bp-large) * 1em)) / (var(--bp-xlarge) - var(--bp-large))));
     line-height: var(--p-line-height-max);
   }
 }
+
 @media (min-width: 75em) {
   .fonts-failed p {
     font-size: calc(var(--p-font-size-max) * 1em);
   }
 }
+
 .fonts-failed .italic,
 .fonts-failed i,
 .fonts-failed em {
   font-style: italic;
   --text-ital: 1;
 }
+
 .fonts-failed b,
 .fonts-failed strong {
   font-weight: calc(var(--text-wght) + 125);
 }
+
 .fonts-failed h1,
 .fonts-failed h2,
 .fonts-failed h3,
@@ -536,6 +623,7 @@ h2 + p {
   transition: all linear 0.2s;
   --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
 }
+
 .fonts-failed h1 {
   /* Set --text-wght value multiplier */
   --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
@@ -544,29 +632,34 @@ h2 + p {
   font-size: calc(var(--h1-font-size-min) * 1em);
   line-height: var(--h1-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-failed h1 {
     line-height: calc((var(--h1-line-height-min) * 1em) + (var(--h1-line-height-max) - var(--h1-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
     font-size: calc((var(--h1-font-size-min) * 1em) + (var(--h1-font-size-max) - var(--h1-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   .fonts-failed h1 {
     --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m));
   }
 }
+
 @media screen and (min-width: 60.25em) {
   .fonts-failed h1 {
     --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l));
     line-height: var(--h1-line-height-max);
   }
 }
+
 @media (min-width: 75em) {
   .fonts-failed h1 {
     font-size: calc(var(--h1-font-size-max) * 1em);
     line-height: var(--h1-line-height-max);
   }
 }
+
 .fonts-failed h2 {
   /* Set --text-wght value multiplier */
   --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-s));
@@ -575,17 +668,20 @@ h2 + p {
   font-size: calc(var(--h2-font-size-min) * 1em);
   line-height: var(--h2-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-failed h2 {
     line-height: calc((var(--h2-line-height-min) * 1em) + (var(--h2-line-height-max) - var(--h2-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
     font-size: calc((var(--h2-font-size-min) * 1em) + (var(--h2-font-size-max) - var(--h2-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   .fonts-failed h2 {
     --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-m));
   }
 }
+
 @media (min-width: 75em) {
   .fonts-failed h2 {
     --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-l));
@@ -593,6 +689,7 @@ h2 + p {
     line-height: var(--h2-line-height-max);
   }
 }
+
 .fonts-failed h3 {
   /* Set --text-wght value multiplier */
   --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-s));
@@ -602,17 +699,20 @@ h2 + p {
   line-height: var(--h2-line-height-min);
   text-align: center;
 }
+
 @media screen and (min-width: 24.15em) {
   .fonts-failed h3 {
     line-height: calc((var(--h3-line-height-min) * 1em) + (var(--h3-line-height-max) - var(--h3-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
     font-size: calc((var(--h3-font-size-min) * 1em) + (var(--h3-font-size-max) - var(--h3-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   .fonts-failed h3 {
     --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-m));
   }
 }
+
 @media (min-width: 75em) {
   .fonts-failed h3 {
     --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-l));

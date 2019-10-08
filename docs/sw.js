@@ -6,28 +6,7 @@ importScripts(
 workbox.googleAnalytics.initialize();
 
 // Place holder for precached assets
-workbox.precaching.precacheAndRoute([
-  {
-    "url": "index.html",
-    "revision": "dce22cd1939e23bdfae183fd042b2faf"
-  },
-  {
-    "url": "css/index.css",
-    "revision": "ed2bcbb36fdc49e336b6b89f86737047"
-  },
-  {
-    "url": "js/zenscroll.min.js",
-    "revision": "b6075f76c2f71bae72e7a544f61a0919"
-  },
-  {
-    "url": "pages/404.html",
-    "revision": "40acdc63b1e48c67fd1e32be262d6cc4"
-  },
-  {
-    "url": "pages/offline.html",
-    "revision": "f761dd08b66768c2d9a20131b080f457"
-  }
-]);
+workbox.precaching.precacheAndRoute([]);
 
 // Cache strategies definitions
 // HTML caching strategy

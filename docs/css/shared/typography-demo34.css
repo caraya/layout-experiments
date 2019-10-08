@@ -1,40 +1,45 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("https://hello.myfonts.net/count/3849cd");
 @font-face {
-  font-family: "Stone Humanist";
+  font-family: 'Stone Humanist';
   src: url("../../fonts/3849CD_0_0.woff2") format("woff2"), url("../../fonts/3849CD_0_0.woff") format("woff");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
 }
+
 @font-face {
-  font-family: "Stone Humanist";
+  font-family: 'Stone Humanist';
   src: url("../../fonts/3849CD_1_0.woff2") format("woff2"), url("../../fonts/3849CD_1_0.woff") format("woff");
   font-style: italic;
   font-weight: bold;
   font-display: swap;
 }
+
 @font-face {
-  font-family: "Stone Humanist";
+  font-family: 'Stone Humanist';
   src: url("../../fonts/3849CD_2_0.woff2") format("woff2"), url("../../fonts/3849CD_2_0.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
 }
+
 @font-face {
-  font-family: "Stone Humanist";
+  font-family: 'Stone Humanist';
   src: url("../../fonts/3849CD_3_0.woff2") format("woff2"), url("../../fonts/3849CD_3_0.woff") format("woff");
   font-style: italic;
   font-weight: normal;
   font-display: swap;
 }
+
 @font-face {
-  font-family: "Marvin Visions";
+  font-family: 'Marvin Visions';
   src: url("../../fonts/MarvinVisionsBig-Bold.woff2"), url("../../fonts/MarvinVisionsBig-Bold.woff");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
 }
+
 /* Set custom properties for each layout feature */
 :root {
   /* Breakpoint variables */
@@ -145,6 +150,7 @@
     font-variant-numeric: diagonal-fractions;
   }
 }
+
 .medium-lnum {
   --stonehumanistitcstd-medium-lnum: "lnum" on;
 }
@@ -155,6 +161,7 @@
     font-variant-numeric: lining-nums;
   }
 }
+
 .medium-onum {
   --stonehumanistitcstd-medium-onum: "onum" on;
 }
@@ -165,6 +172,7 @@
     font-variant-numeric: oldstyle-nums;
   }
 }
+
 .medium-ordn {
   --stonehumanistitcstd-medium-ordn: "ordn" on;
 }
@@ -175,6 +183,7 @@
     font-variant-numeric: ordinal;
   }
 }
+
 .medium-smcp {
   --stonehumanistitcstd-medium-smcp: "smcp" on;
 }
@@ -185,6 +194,7 @@
     font-variant-caps: small-caps;
   }
 }
+
 .medium-sups {
   --stonehumanistitcstd-medium-sups: "sups" on;
 }
@@ -195,6 +205,7 @@
     font-variant-position: super;
   }
 }
+
 /* Apply current state of all custom properties
    whenever a class is being applied */
 .medium-aalt,
@@ -229,6 +240,7 @@
     font-variant-numeric: diagonal-fractions;
   }
 }
+
 .bold-lnum {
   --stonehumanistitcstd-bold-lnum: "lnum" on;
 }
@@ -239,6 +251,7 @@
     font-variant-numeric: lining-nums;
   }
 }
+
 .bold-onum {
   --stonehumanistitcstd-bold-onum: "onum" on;
 }
@@ -249,6 +262,7 @@
     font-variant-numeric: oldstyle-nums;
   }
 }
+
 .bold-ordn {
   --stonehumanistitcstd-bold-ordn: "ordn" on;
 }
@@ -259,6 +273,7 @@
     font-variant-numeric: ordinal;
   }
 }
+
 .bold-sups {
   --stonehumanistitcstd-bold-sups: "sups" on;
 }
@@ -269,6 +284,7 @@
     font-variant-position: super;
   }
 }
+
 /* Apply current state of all custom properties
    whenever a class is being applied */
 .bold-aalt,
@@ -301,6 +317,7 @@
     font-variant-numeric: diagonal-fractions;
   }
 }
+
 .bolditalic-lnum {
   --stonehumanistitcstd-bolditalic-lnum: "lnum" on;
 }
@@ -311,6 +328,7 @@
     font-variant-numeric: lining-nums;
   }
 }
+
 .bolditalic-onum {
   --stonehumanistitcstd-bolditalic-onum: "onum" on;
 }
@@ -321,6 +339,7 @@
     font-variant-numeric: oldstyle-nums;
   }
 }
+
 .bolditalic-ordn {
   --stonehumanistitcstd-bolditalic-ordn: "ordn" on;
 }
@@ -331,6 +350,7 @@
     font-variant-numeric: ordinal;
   }
 }
+
 .bolditalic-sups {
   --stonehumanistitcstd-bolditalic-sups: "sups" on;
 }
@@ -341,6 +361,7 @@
     font-variant-position: super;
   }
 }
+
 /* Apply current state of all custom properties
    whenever a class is being applied */
 .bolditalic-aalt,
@@ -373,6 +394,7 @@
     font-variant-numeric: diagonal-fractions;
   }
 }
+
 .mediumita-lnum {
   --stonehumanistitcstd-mediumita-lnum: "lnum" on;
 }
@@ -383,6 +405,7 @@
     font-variant-numeric: lining-nums;
   }
 }
+
 .mediumita-onum {
   --stonehumanistitcstd-mediumita-onum: "onum" on;
 }
@@ -393,6 +416,7 @@
     font-variant-numeric: oldstyle-nums;
   }
 }
+
 .mediumita-ordn {
   --stonehumanistitcstd-mediumita-ordn: "ordn" on;
 }
@@ -403,6 +427,7 @@
     font-variant-numeric: ordinal;
   }
 }
+
 .mediumita-sups {
   --stonehumanistitcstd-mediumita-sups: "sups" on;
 }
@@ -413,6 +438,7 @@
     font-variant-position: super;
   }
 }
+
 /* Apply current state of all custom properties
    whenever a class is being applied */
 .mediumita-aalt,
@@ -446,10 +472,12 @@ a:link {
   color: #555577;
   text-decoration: underline;
 }
+
 a:visited {
   color: #555577;
   text-decoration: underline;
 }
+
 a:hover {
   color: #bb4444;
 }
@@ -499,14 +527,16 @@ p:first-letter {
 }
 
 ul li {
-  font-size: calc( var(--p-font-size-min) * 1rem);
+  font-size: calc(  var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
 }
 
 p {
   --text-ital: 0;
   transition: all linear 0.2s;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 /* Variations and variables */
@@ -514,17 +544,20 @@ p {
   font-size: calc( var(--p-font-size-min) * 1em);
   line-height: var(--p-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   p {
     line-height: calc(( var(--p-line-height-min) * 1em) + ( var(--p-line-height-max) - var(--p-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-large) - var(--bp-small))));
   }
 }
+
 @media (min-width: 60.25em) {
   p {
     font-size: calc(( var(--p-font-size-min) * 1em) + ( var(--p-font-size-max) - var(--p-font-size-min)) * ((100vw - ( var(--bp-large) * 1em)) / ( var(--bp-xlarge) - var(--bp-large))));
     line-height: var(--p-line-height-max);
   }
 }
+
 @media (min-width: 75em) {
   p {
     font-size: calc( var(--p-font-size-max) * 1em);
@@ -554,27 +587,31 @@ h1 {
   /* Set --text-wght value multiplier */
   --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
   --text-ital: 0;
-  font-family: "Marvin Visions", Helvetica, Arial, sans-serif;
+  font-family: 'Marvin Visions', Helvetica, Arial, sans-serif;
   font-size: calc( var(--h1-font-size-min) * 1em);
   line-height: var(--h1-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   h1 {
     line-height: calc(( var(--h1-line-height-min) * 1em) + ( var(--h1-line-height-max) - var(--h1-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
     font-size: calc(( var(--h1-font-size-min) * 1em) + ( var(--h1-font-size-max) - var(--h1-font-size-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   h1 {
     --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m));
   }
 }
+
 @media screen and (min-width: 60.25em) {
   h1 {
     --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l));
     line-height: var(--h1-line-height-max);
   }
 }
+
 @media (min-width: 75em) {
   h1 {
     font-size: calc( var(--h1-font-size-max) * 1em);
@@ -590,17 +627,20 @@ h2 {
   font-size: calc( var(--h2-font-size-min) * 1em);
   line-height: var(--h2-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   h2 {
     line-height: calc(( var(--h2-line-height-min) * 1em) + ( var(--h2-line-height-max) - var(--h2-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
     font-size: calc(( var(--h2-font-size-min) * 1em) + ( var(--h2-font-size-max) - var(--h2-font-size-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   h2 {
     --text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-m));
   }
 }
+
 @media (min-width: 75em) {
   h2 {
     --text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-l));
@@ -618,17 +658,20 @@ h3 {
   line-height: var(--h2-line-height-min);
   text-align: center;
 }
+
 @media screen and (min-width: 24.15em) {
   h3 {
     line-height: calc(( var(--h3-line-height-min) * 1em) + ( var(--h3-line-height-max) - var(--h3-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
     font-size: calc(( var(--h3-font-size-min) * 1em) + ( var(--h3-font-size-max) - var(--h3-font-size-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   h3 {
     --text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-m));
   }
 }
+
 @media (min-width: 75em) {
   h3 {
     --text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-l));

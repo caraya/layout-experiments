@@ -1,5 +1,5 @@
 .container {
-  padding: 0.5vw;
+  padding: .5vw;
   width: 80%;
   margin: 0 auto;
 }
@@ -8,14 +8,12 @@
   width: 100%;
   height: auto;
   -moz-filter: grayscale(1);
-  -webkit-filter: grayscale(1);
   -ms-filter: grayscale(1);
   filter: grayscale(1);
 }
 
 .photo:hover {
   -moz-filter: grayscale(0);
-  -webkit-filter: grayscale(0);
   -ms-filter: grayscale(0);
   filter: grayscale(0);
 }

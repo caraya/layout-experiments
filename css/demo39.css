@@ -8,9 +8,6 @@ body {
 .container {
   margin-top: -1.25em;
   background-color: #212342;
-  background: -webkit-gradient(linear, left top, left bottom, from(#212342), to(#fff));
-  background: -webkit-linear-gradient(top, #212342, #fff);
-  background: -moz-linear-gradient(top, #212342, #fff);
   background: linear-gradient(to bottom, #212342 0%, #fff 100%);
   color: white;
   height: 100%;
@@ -21,10 +18,10 @@ body {
 }
 
 h1 {
-  font-family: "bebas-neue", sans-serif;
+  font-family: 'bebas-neue', sans-serif;
   text-transform: uppercase;
-  line-height: 0.65em;
-  padding: 0.05em;
+  line-height: .65em;
+  padding: .05em;
 }
 
 span {

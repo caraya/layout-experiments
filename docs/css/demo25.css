@@ -3,7 +3,9 @@ body {
   padding: 1em;
   font-size: var(--p-font-size-max);
   line-height: var(--p-line-height-max);
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 .grid-container {
@@ -28,6 +30,7 @@ body {
   font-stretch: extra-condensed;
   font-style: normal;
 }
+
 @supports (font-variation-settings: none) {
   .article-title {
     font-variation-settings: "wght" var(--text-wght), "wdth" var(--text-wdth), "slnt" var(--text-slnt);
@@ -50,7 +53,6 @@ body {
   .float-left {
     float: none;
   }
-
   blockquote {
     font-size: 1rem;
     line-height: 1.2;

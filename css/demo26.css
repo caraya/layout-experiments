@@ -3,7 +3,9 @@ body {
   padding: 1em;
   font-size: var(--p-font-size-max);
   line-height: var(--p-line-height-max);
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 .container {
@@ -13,6 +15,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .container p {
   white-space: pre-line;
 }
@@ -29,6 +32,7 @@ body {
   font-stretch: extra-condensed;
   font-style: normal;
 }
+
 @supports (font-variation-settings: none) {
   .title {
     font-variation-settings: "wght" var(--text-wght), "wdth" var(--text-wdth), "slnt" var(--text-slnt);

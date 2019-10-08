@@ -9,11 +9,11 @@ workbox.googleAnalytics.initialize();
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "dce22cd1939e23bdfae183fd042b2faf"
+    "revision": "fcedff5a300689b1c16619b281c6796c"
   },
   {
     "url": "css/index.css",
-    "revision": "ed2bcbb36fdc49e336b6b89f86737047"
+    "revision": "09ec0906d5f5baa2f95019759ab208df"
   },
   {
     "url": "js/zenscroll.min.js",

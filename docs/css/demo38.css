@@ -1,8 +1,10 @@
 @import url("https://use.typekit.net/aet8yjj.css");
 body {
   background-color: #fbfbf6;
-  hyphens: none;
-  font-family: "bebas-neue", sans-serif;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  font-family: 'bebas-neue', sans-serif;
   text-transform: uppercase;
   display: flex;
   flex-flow: row;

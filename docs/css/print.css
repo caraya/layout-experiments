@@ -5,6 +5,7 @@
   font-stretch: normal;
   src: url("../fonts/PT_Serif-Web-Regular.woff") format("woff");
 }
+
 @font-face {
   font-family: "PT Serif";
   font-weight: 400;
@@ -12,6 +13,7 @@
   font-stretch: normal;
   src: url("../fonts/PT_Serif-Web-Italic.woff") format("woff");
 }
+
 @font-face {
   font-family: "PT Serif";
   font-weight: 700;
@@ -19,6 +21,7 @@
   font-stretch: normal;
   src: url("../fonts/PT_Serif-Web-Bold.WOFF") format("woff");
 }
+
 @font-face {
   font-family: "PT Serif";
   font-weight: 700;
@@ -26,6 +29,7 @@
   font-stretch: normal;
   src: url("../fonts/PT_Serif-Web-BoldItalic.WOFF") format("woff");
 }
+
 html {
   font-family: "PT Serif", serif;
 }
@@ -50,15 +54,19 @@ p {
   @footnote {
     counter-increment: footnote;
     float: bottom;
-    column-span: all;
+    -moz-column-span: all;
+         column-span: all;
     height: auto;
     border-top: 1px solid thin;
     font-size: 12pt;
   }
 }
+
 body[data-type=book] {
   color: cmyk(0%, 0%, 100%, 100%);
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
   font-size: 12pt;
 }
 
@@ -133,6 +141,7 @@ section[data-type=colophon] {
     content: normal;
   }
 }
+
 @page toc:left {
   @bottom-left-corner {
     content: counter(page, lower-roman);
@@ -141,6 +150,7 @@ section[data-type=colophon] {
     content: normal;
   }
 }
+
 @page foreword:right {
   @bottom-center {
     content: counter(page, lower-roman);
@@ -149,6 +159,7 @@ section[data-type=colophon] {
     content: normal;
   }
 }
+
 @page foreword:left {
   @bottom-left-corner {
     content: counter(page, lower-roman);
@@ -157,6 +168,7 @@ section[data-type=colophon] {
     content: normal;
   }
 }
+
 @page preface:right {
   @bottom-center {
     content: counter(page, lower-roman);
@@ -168,6 +180,7 @@ section[data-type=colophon] {
     content: normal;
   }
 }
+
 @page preface:left {
   @bottom-center {
     content: counter(page, lower-roman);
@@ -179,6 +192,7 @@ section[data-type=colophon] {
     content: normal;
   }
 }
+
 @page titlepage {
   @bottom-right-corner {
     content: normal;
@@ -187,6 +201,7 @@ section[data-type=colophon] {
     content: normal;
   }
 }
+
 @page dedication {
   page-break-before: always;
   @bottom-right-corner {
@@ -196,12 +211,14 @@ section[data-type=colophon] {
     content: normal;
   }
 }
+
 @page article {
   @bottom-center {
     vertical-align: middle;
     text-align: center;
   }
 }
+
 @page article:blank {
   @top-center {
     content: "This page is intentionally left blank";
@@ -213,6 +230,7 @@ section[data-type=colophon] {
     content: normal;
   }
 }
+
 @page article:right {
   @bottom-right-corner {
     content: counter(page);
@@ -221,6 +239,7 @@ section[data-type=colophon] {
     content: normal;
   }
 }
+
 @page article:left {
   @bottom-left-corner {
     content: counter(page);
@@ -229,6 +248,7 @@ section[data-type=colophon] {
     content: normal;
   }
 }
+
 span.footnote {
   float: footnote;
 }

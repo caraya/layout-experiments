@@ -1,7 +1,9 @@
 body {
   background-color: #fbfbf6;
   padding: 1em;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 .grid-container {
@@ -25,7 +27,7 @@ p:not(:first-of-type) {
 h1 {
   color: #e65f1d;
   text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.8);
-  font-family: "Marvin Visions", Helvetica, Arial, sans-serif;
+  font-family: 'Marvin Visions', Helvetica, Arial, sans-serif;
 }
 
 /*# sourceMappingURL=demo37.css.map */

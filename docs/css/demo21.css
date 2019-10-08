@@ -3,7 +3,9 @@ body {
   padding: 1em;
   font-size: var(--p-font-size-max);
   line-height: var(--p-line-height-max);
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 .grid-container {
@@ -24,11 +26,13 @@ body {
   --text-wdth: 100;
   --text-slnt: 0;
 }
+
 @supports (font-variation-settings: none) {
   .article-title {
     font-variation-settings: "wght" var(--text-wght), "wdth" var(--text-wdth), "slnt" var(--text-slnt);
   }
 }
+
 @supports not (font-variation-settings: none) {
   .article-title {
     font-weight: 700;
@@ -54,10 +58,9 @@ p:last-of-type {
     width: 90%;
     margin: 0 auto;
   }
-
   .content {
-    grid-column: 1/4;
-    grid-row: 1/-1;
+    grid-column: 1 / 4;
+    grid-row: 1 / -1;
   }
 }
 

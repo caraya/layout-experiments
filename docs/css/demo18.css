@@ -12,6 +12,7 @@ div {
   top: 50vh;
   left: 15vw;
 }
+
 .smoosh1:hover {
   --bg-color: orange;
 }
@@ -24,6 +25,7 @@ div {
   top: 20em;
   left: 45em;
 }
+
 .smoosh2:hover {
   --bg-color: pink;
 }
@@ -36,6 +38,7 @@ div {
   top: 5em;
   left: 35em;
 }
+
 .smoosh3:hover {
   --bg-color: lightgrey;
 }

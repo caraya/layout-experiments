@@ -3,7 +3,9 @@ body {
   padding: 1em;
   font-size: var(--p-font-size-max);
   line-height: var(--p-line-height-max);
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 .grid-container {
@@ -62,40 +64,36 @@ blockquote {
     font-stretch: extra-condensed;
     font-style: normal;
   }
-
   .question {
     font-weight: 700;
     font-stretch: 100;
     font-style: italic;
   }
-
   em, i {
     font-weight: 400;
     font-stretch: normal;
     font-style: italic;
   }
-
   strong, b {
     font-weight: 700;
     font-stretch: normal;
     font-style: normal;
   }
-
   strong em,
-em strong,
-i b,
-b i {
+  em strong,
+  i b,
+  b i {
     font-weight: 700;
     font-stretch: normal;
     font-style: italic;
   }
-
   blockquote {
     font-weight: 900;
     font-stretch: 100;
     font-style: normal;
   }
 }
+
 @media (max-width: 50rem) {
   .grid-container {
     display: grid;
@@ -104,16 +102,13 @@ b i {
     grid-gap: 1em 1em;
     margin: 0 auto;
   }
-
   .content {
     grid-column: 1/4;
     padding: 1em;
   }
-
   .float-left {
     float: none;
   }
-
   blockquote {
     font-size: 1rem;
     line-height: 1.2;

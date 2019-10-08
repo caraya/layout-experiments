@@ -1,30 +1,34 @@
 @font-face {
-  font-family: "Lekton";
+  font-family: 'Lekton';
   src: url("../../fonts/Lekton-Regular.woff2") format("woff2"), url("../../fonts/Lekton-Regular.woff") format("woff");
   font-display: swap;
   font-style: normal;
   font-weight: normal;
 }
+
 @font-face {
-  font-family: "Lekton";
+  font-family: 'Lekton';
   src: url("../../fonts/Lekton-Bold.woff2") format("woff2"), url("../../fonts/Lekton-Bold.woff") format("woff");
   font-display: swap;
   font-style: normal;
   font-weight: 700;
 }
+
 @font-face {
   src: url("../../fonts/Lekton-Italic.woff2") format("woff2"), url("../../fonts/Lekton-Italic.woff") format("woff");
   font-display: swap;
   font-style: italic;
   font-weight: normal;
 }
+
 @font-face {
-  font-family: "Marvin Visions";
+  font-family: 'Marvin Visions';
   src: url("../../fonts/MarvinVisionsBig-Bold.woff2");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
 }
+
 /* Set custom properties for each layout feature */
 :root {
   /* Breakpoint variables */
@@ -116,10 +120,12 @@ a:link {
   color: #555577;
   text-decoration: underline;
 }
+
 a:visited {
   color: #555577;
   text-decoration: underline;
 }
+
 a:hover {
   color: #bb4444;
 }
@@ -134,7 +140,7 @@ h2 + p {
 }
 
 body {
-  font-family: "Lekton", Helvetica, Arial, sans-serif;
+  font-family: 'Lekton', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
@@ -162,21 +168,23 @@ strong,
 button,
 p:first-line,
 p:first-letter {
-  font-family: "Lekton", Helvetica, Arial, sans-serif;
+  font-family: 'Lekton', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
 }
 
 ul li {
-  font-size: calc( var(--p-font-size-min) * 1rem);
+  font-size: calc(  var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
 }
 
 p {
   --text-ital: 0;
   transition: all linear 0.2s;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 /* Variations and variables */
@@ -184,17 +192,20 @@ p {
   font-size: calc( var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   p {
     line-height: calc(( var(--p-line-height-min) * 1em) + ( var(--p-line-height-max) - var(--p-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-large) - var(--bp-small))));
   }
 }
+
 @media (min-width: 60.25em) {
   p {
     font-size: calc(( var(--p-font-size-min) * 1em) + ( var(--p-font-size-max) - var(--p-font-size-min)) * ((100vw - ( var(--bp-large) * 1em)) / ( var(--bp-xlarge) - var(--bp-large))));
     line-height: var(--p-line-height-max);
   }
 }
+
 @media (min-width: 75em) {
   p {
     font-size: calc( var(--p-font-size-max) * 1em);
@@ -214,7 +225,7 @@ h3 {
 h4,
 h5,
 h6 {
-  font-family: "Lekton", Helvetica, Arial, sans-serif;
+  font-family: 'Lekton', Helvetica, Arial, sans-serif;
   font-weight: normal;
   transition: all linear 0.2s;
   --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
@@ -228,23 +239,27 @@ h1 {
   font-size: calc( var(--h1-font-size-min) * 1em);
   line-height: var(--h1-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   h1 {
     line-height: calc(( var(--h1-line-height-min) * 1em) + ( var(--h1-line-height-max) - var(--h1-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
     font-size: calc(( var(--h1-font-size-min) * 1em) + ( var(--h1-font-size-max) - var(--h1-font-size-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   h1 {
     --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m));
   }
 }
+
 @media screen and (min-width: 60.25em) {
   h1 {
     --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l));
     line-height: var(--h1-line-height-max);
   }
 }
+
 @media (min-width: 75em) {
   h1 {
     font-size: calc( var(--h1-font-size-max) * 1em);
@@ -260,17 +275,20 @@ h2 {
   font-size: calc( var(--h2-font-size-min) * 1em);
   line-height: var(--h2-line-height-min);
 }
+
 @media screen and (min-width: 24.15em) {
   h2 {
     line-height: calc(( var(--h2-line-height-min) * 1em) + ( var(--h2-line-height-max) - var(--h2-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
     font-size: calc(( var(--h2-font-size-min) * 1em) + ( var(--h2-font-size-max) - var(--h2-font-size-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   h2 {
     --text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-m));
   }
 }
+
 @media (min-width: 75em) {
   h2 {
     --text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-l));
@@ -283,22 +301,25 @@ h3 {
   /* Set --text-wght value multiplier */
   --text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-s));
   --text-ital: 1;
-  font-family: "Lekton", Helvetica, Arial, sans-serif;
+  font-family: 'Lekton', Helvetica, Arial, sans-serif;
   font-size: calc( var(--h2-font-size-min) * 1em);
   line-height: var(--h2-line-height-min);
   text-align: center;
 }
+
 @media screen and (min-width: 24.15em) {
   h3 {
     line-height: calc(( var(--h3-line-height-min) * 1em) + ( var(--h3-line-height-max) - var(--h3-line-height-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
     font-size: calc(( var(--h3-font-size-min) * 1em) + ( var(--h3-font-size-max) - var(--h3-font-size-min)) * ((100vw - ( var(--bp-small) * 1em)) / ( var(--bp-xlarge) - var(--bp-small))));
   }
 }
+
 @media screen and (min-width: 43.75em) {
   h3 {
     --text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-m));
   }
 }
+
 @media (min-width: 75em) {
   h3 {
     --text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-l));
@@ -346,6 +367,7 @@ h3 {
     font-variant-ligatures: discretionary-ligatures;
   }
 }
+
 .lekton-onum {
   --lekton-onum: "onum"on;
 }
@@ -356,6 +378,7 @@ h3 {
     font-variant-numeric: oldstyle-nums;
   }
 }
+
 .lekton-salt {
   --lekton-salt: "salt"on;
 }
@@ -370,6 +393,7 @@ h3 {
     font-variant-caps: small-caps;
   }
 }
+
 .lekton-ss01 {
   --lekton-ss01: "ss01"on;
 }
@@ -416,6 +440,7 @@ h3 {
     font-variant-caps: titling-caps;
   }
 }
+
 /* Apply current state of all custom properties
    whenever a class is being applied */
 .lekton-dlig,

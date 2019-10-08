@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Do font attributes and line height affect reading?</title>
+  <style>
+    @font-face {
+      font-family: Roboto;
+      src: url("../fonts/Roboto-min-VF.woff2");
+    }
+
+    /* Defaults */
+    :root {
+      --line-height: 1;
+      --font-weight: "wght" 100;
+      --font-width: "wdth" 100;
+      font-family: Roboto, sans-serif;
+      font-size: 100%;
+    }
+
+    .settings {
+      margin: 1em;
+    }
+
+    /* legend and sliders */
+    legend {
+      background-color: #000;
+      color: #fff;
+      padding: 3px 6px;
+    }
+
+    label {
+      margin-top: 1rem;
+      display: block;
+      font-size: .8rem;
+    }
+
+    .content {
+      /* Font related stuff I'm testing*/
+      line-height: var(--line-height);
+      font-variation-settings: var(--font-weight), var(--font-width);
+    }
+
+    /* Layout related*/
+
+    body {
+      display: grid;
+      grid-template-columns:  2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
+      grid-column-gap: 2vw;
+      grid-row-gap: 2vh;
+      align-content: start;
+    }
+
+    .settings {
+      grid-column: 2/3;
+      grid-row: 2;
+    }
+    .header {
+      grid-column: 4/8;
+      grid-row: 1/1;
+    }
+    .content {
+      grid-column: 4/8;
+      grid-row: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="settings">
+    <fieldset>
+      <legend>Font Settings: Roboto</legend>
+
+      <label for="robotoWeight">Weight</label>
+      <input type="range" id="robotoWeight" name="robotoWeight" min="400" max="900" value="400" step="0.1">
+      <p><strong>Weight</strong>: <span class="weightSlider"></span></p>
+
+      <label for="robotoWidth">Width</label>
+      <input type="range" id="robotoWidth" min="75" max="100" value="100" step="0.1">
+      <p><strong>Width</strong>: <span class="widthSlider"></span></p>
+
+      <label for="lineHeight">Line Height</label>
+      <input type="range" id="lineHeight" min="1" max="3" value="1" step="0.001" />
+      <p><strong>Line Height</strong>: <span class="lineHeightSlider"></span></p>
+    </fieldset>
+  </div>
+
+  <div class="header">
+    <h1>Do font and line height affect reading?</h1>
+    <p>I've created a small exercise to answer the question: Does font and line height affect reading? The idea is that, once the readers find their own sweet spot they'll be able to save them locally to their browser and then the settings will be restored the nect time they visit the page.</p>
+
+    <p>The text is taken from Columbia Journalism Review's <a href="https://www.cjr.org/first_person/beyond-the-truth-o-meter.php">Beyond the Truth-O-Meter</a> by Bill Adair</p>
+  </div>
+
+  <div class="content">
+      <p>When I sketched the first ideas for PolitiFact’s home page in 2007, I included a “Truth-O-Meter” to rate politicians’ statements from true to false.</p>
+
+      <p>The meter became an iconic feature of our fact-checking website that was highlighted on The Daily Show with Jon Stewart, the Today show, and hundreds of segments on cable news channels. I appeared so often on CNN and MSNBC that a lady once came up to me in an airport and said, “You’re the Truth-O-Meter guy!”</p>
+
+      <p>PolitiFact was among the first news sites dedicated to fact-checking, along with Snopes and FactCheck.org. The meter <a href="https://www.poynter.org/news/its-first-decade-politifact-helped-define-political-fact-checking-far-beyond-washington-dc">was innovative</a> because it summarized our conclusions in handy ratings. (We were soon joined by The Washington Post Fact Checker, which used a system of up to four Pinocchios to rate truthfulness.) Today, about 70 percent of the world’s 149 fact-checking organizations use rating systems like the Truth-O-Meter.</p>
+
+      <p>But I’ve evolved. It’s been 11 years since we launched PolitiFact, and I think it’s time to move beyond my beloved meter. I am heading a project at Duke University that is developing ways to automate fact-checking—including new ways to present the conclusions. I think the Truth-O-Meter’s ratings (which now range from True to Pants on Fire) are still effective for many readers. But I have come to realize that in our polarized environment, the meter I invented is not reaching everyone, and not reaching conservatives in particular.</p>
+
+      <p>Studies show a sharp partisan divide over our unique form of journalism. A <a href="https://www.americanpressinstitute.org/wp-content/uploads/2016/09/Estimating-Fact-Checkings-Effect.pdf">2016 study</a> by Brendan Nyhan and Jason Reifler found Republicans have less favorable views of fact-checking than Democrats. A <a href="https://drive.google.com/file/d/0BxoyrEbZxrAMNm9HV2tvcXFma1U/view">2017 Duke Reporters’ Lab study</a> that I co-authored with Rebecca Iannucci found a similar split: Liberal publications were likely to cite fact-checking favorably and use positive descriptions like “nonpartisan” and “watchdogs” while conservative outlets tended to be critical and use terms such as “left-leaning” and “biased.” We found conservatives often put the phrase in snarky quotes—“fact-checking”—to suggest it is not legitimate.</p>
+
+      <p>I conceived PolitiFact’s Truth-O-Meter as a convenient summary of in-depth journalism. The idea was that casual readers could glance at the politician, statement, and rating and get all they needed. Others could use the meter as an entry point to dig a little deeper and read the full article.</p>
+
+      <blockquote>
+        <p>The meter I invented is not reaching everyone, and not reaching conservatives in particular.</p>
+      </blockquote>
+
+    <p>But we found that a large share of our audience fixated on the meter, no matter how thorough the article was. That was especially true when they disagreed with the rating. The meter was so effective that people used it to hate us.</p>
+
+    <p>To understand the partisan divide, PolitiFact’s top editors recently visited Alabama, Oklahoma and West Virginia to talk with conservative readers about the Truth-O-Meter and how the process works. “In our one-on-one conversations, the stumbling blocks were always the ratings,” says Aaron Sharockman, PolitiFact’s executive director.</p>
+
+    <p>I suspect conservative readers’ concern about ratings is magnified by their long-held suspicion of the news media. The political fact-checking movement was born in the 1990s and picked up steam over the past decade when conservatives became increasingly distrustful of the mainstream media, a group they often reduced to an abbreviated snarl, “the MSM.” In the eyes of many conservatives, fact-checkers are no longer just lefties providing the news, they’re now self-proclaimed authorities deciding who is lying.</p>
+
+    <p>Needless to say, fact-checkers can’t afford to alienate conservatives—our nation can’t have a healthy political discourse if the two sides can’t agree on facts.</p>
+
+    <p>I left PolitiFact five years ago and came to Duke, where I teach journalism and lead the <a href="https://reporterslab.org/tech-and-check/">Tech & Check Cooperative</a>, an ambitious research project. We’ve gotten funding from the Knight Foundation, the Facebook Journalism Project, and the Craig Newmark Foundation to build apps for live fact-checking and to create bots that automate the tedious work of journalists.</p>
+
+    <p>One of the projects we’re funding is <a href="http://www.niemanlab.org/2018/04/truth-goggles-are-back-and-ready-for-the-next-era-of-fact-checking/">Truth Goggles</a>, which will experiment with new ways to present corrective information. After some initial experiments on the web, the developers plan to build apps for phones and video platforms as well as features that publishers can incorporate into their websites. </p>
+
+    <p>Including Truth Goggles in our project represents a big leap for me. For the past eight years, I’ve carried a PowerPoint on my laptop that showed my simple vision of the future of fact-checking. It had a guy watching a TV show that is interrupted by a campaign commercial. The Truth-O-Meter then pops up: False! In 2010, that’s what I thought the future would look like: The Truth-O-Meter would set people straight. But I now realize that the meter doesn’t work for everyone.</p>
+
+    <p>Dan Schultz, a partner of the Bad Idea Factory, the unorthodox company developing Truth Goggles (they <a href="https://biffud.com/">describe themselves</a> as “a collective of chaotic creatives using technology to make people thinking face emoji”), says it’s important to remember that when people consume information, they are often struggling to maintain their identity. That means they will become defensive if they think their political beliefs or core values are being attacked.</p>
+
+    <p>“When people feel defensive, they become less thoughtful,” says Schultz, who believes the Truth-O-Meter can sometimes be too blunt an instrument.</p>
+
+    <blockquote>
+      <p>When people consume information, they are often struggling to maintain their identity.</p>
+    </blockquote>
+
+    <p>To counter that, Schultz says Truth Goggles will be like customized lenses for each user. The Bad Idea Factory is developing questions to calculate a user’s needs: What are their biases? What makes them upset? Where are their blind spots—the information they may be ignoring, consciously or subconsciously? The answers will provide clues about how to present fact-checks so users won’t feel attacked, dismissed, or that their values are being disrespected.</p>
+
+    <p>The next step is to tailor the fact-check to the situation. Is the user watching a live speech of their favorite politician? Are they reading a trusted news source? Knowing the circumstances can help Truth Goggles adjust the “intervention” so it can be more effective.</p>
+
+    <p>For example, the presentation of the fact-check could be tailored to use or avoid certain phrases or evidence that the user is likely to viscerally dismiss. It might recognize the user’s shorter attention span during a speech or live event by keeping the information brief; it might respond to a user’s frustration by using humor or images. The user might react differently to fact-checks on their favorite politicians than to their least-favorite ones.</p>
+
+    <p>There are potential pitfalls to this approach. Schultz says the Truth Goggles team is working to avoid inadvertently creating echo chambers. “There is a clear line between empathy and pandering,” he said. “We are trying to create experiences where readers feel motivated to actually inspect their own beliefs. We absolutely need to challenge people’s worldviews but in a way that minimizes the risk of triggering defensiveness.”</p>
+
+    <p>Looking ahead to the future of automated fact-checking, I haven’t stopped loving my invention. I still believe the Truth-O-Meter will be valuable for many people. But I recognize it doesn’t work for everyone, and I’m open to other ways of telling the truth.</p>
+  </div>
+  <script>
+    // 1. Capture the slider we want to use
+    // 2. Get the value for that slider. We can retrieve by getting
+    // the value from the input element we captured
+    const weight = document.getElementById('robotoWeight');
+    const weightSlider = document.querySelector('.weightSlider');
+    weightSlider.innerHTML = weight.value;
+
+    const width = document.getElementById('robotoWidth');
+    const widthSlider = document.querySelector('.widthSlider');
+    widthSlider.innerHTML = width.value;
+
+    const lineHeight = document.getElementById('lineHeight');
+    const lineHeightSlider = document.querySelector('.lineHeightSlider');
+    lineHeightSlider.innerHTML = lineHeight.value;
+
+    // 3. Set the value of the slider as the value of the corresponding css element
+    // 4. Display the value under the corresponding slider
+
+    /**
+     * @name setRootVar
+     *
+     * @param {string} name
+     * @param {number} value
+     */
+    // function setRootVar(name, value) {
+    //   let rootStyles = ;
+    //   rootStyles.setProperty('--' + name, value);
+    // }
+
+    function hasLocalStorage() {
+      try {
+        localStorage.setItem(mod, mod);
+        localStorage.removeItem(mod);
+        return true;
+      } catch(e) {
+        console.log('Local Storage Not Supported');
+        return false;
+      }
+    }
+
+    weight.oninput = function() {
+      weightSlider.innerHTML = weight.value;
+      // setting the style
+      document.styleSheets[0].cssRules[1].style[1] = `"wght" ${weight.value}`;
+      // pushing it to local storage
+      localStorage.setItem('font-weight', `"wght" ${weight.value}`);
+    };
+
+    width.oninput = function() {
+      widthSlider.innerHTML = width.value;
+      // setRootVar('font-width', `"wdth" ${width.value}`);
+      localStorage.setItem('font-width', `"wdth" ${width.value}`);
+    };
+
+    lineHeight.oninput = function() {
+      lineHeightSlider.innerHTML = lineHeight.value;
+      // setRootVar('line-height', lineHeight.value);
+      localStorage.setItem('line-height', lineHeight.value);
+    };
+
+    // If we have local storage values then use them here to set
+    // the root values
+    // Test if we support a working localStorage
+    if (hasLocalStorage) {
+      if (localStorage.getItem('font-weight')) {
+        console.log(localStorage.getItem('font-weight'));
+        // setRootVar('font-weight', localStorage.getItem('font-weight'));
+      }
+
+      if (localStorage.getItem('font-width')) {
+        // setRootVar('font-width', localStorage.getItem('font-width'));
+      }
+
+      if (localStorage.getItem('line-height')) {
+        // setRootVar('line-height', localStorage.getItem('line-height'));
+      }
+    }
+</script>
+</body>
+
+</html>

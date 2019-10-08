@@ -3,25 +3,33 @@
   src: url("../../fonts/3849CD_0_0.woff2") format("woff2"), url("../../fonts/3849CD_0_0.woff") format("woff");
   font-style: normal;
   font-weight: bold;
-  font-display: swap; }
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Stone Humanist';
   src: url("../../fonts/3849CD_1_0.woff2") format("woff2"), url("../../fonts/3849CD_1_0.woff") format("woff");
   font-style: italic;
   font-weight: bold;
-  font-display: swap; }
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Stone Humanist';
   src: url("../../fonts/3849CD_2_0.woff2") format("woff2"), url("../../fonts/3849CD_2_0.woff") format("woff");
   font-style: normal;
   font-weight: normal;
-  font-display: swap; }
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Stone Humanist';
   src: url("../../fonts/3849CD_3_0.woff2") format("woff2"), url("../../fonts/3849CD_3_0.woff") format("woff");
   font-style: italic;
   font-weight: normal;
-  font-display: swap; }
+  font-display: swap;
+}
+
 /* Set custom properties for each layout feature */
 :root {
   /* Breakpoint variables */
@@ -105,61 +113,89 @@
   --marvin-visions-big-bold-aalt: "aalt"off;
   --marvin-visions-big-bold-salt: "salt"off;
   --marvin-visions-big-bold-ss01: "ss01"off;
-  --marvin-visions-big-bold-ss02: "ss02"off; }
+  --marvin-visions-big-bold-ss02: "ss02"off;
+}
 
 /* If class is applied, update custom property and
    apply modern font-variant-* when supported */
 .medium-aalt {
-  --stonehumanistitcstd-medium-aalt: "aalt"on; }
+  --stonehumanistitcstd-medium-aalt: "aalt"on;
+}
 
 .medium-c2sc {
-  --stonehumanistitcstd-medium-c2sc: "c2sc"on; }
+  --stonehumanistitcstd-medium-c2sc: "c2sc"on;
+}
 
 .medium-case {
-  --stonehumanistitcstd-medium-case: "case"on; }
+  --stonehumanistitcstd-medium-case: "case"on;
+}
 
 .medium-frac {
-  --stonehumanistitcstd-medium-frac: "frac"on; }
+  --stonehumanistitcstd-medium-frac: "frac"on;
+}
 
 @supports (font-variant-numeric: diagonal-fractions) {
   .medium-frac {
     --stonehumanistitcstd-medium-frac: "____";
-    font-variant-numeric: diagonal-fractions; } }
+    font-variant-numeric: diagonal-fractions;
+  }
+}
+
 .medium-lnum {
-  --stonehumanistitcstd-medium-lnum: "lnum"on; }
+  --stonehumanistitcstd-medium-lnum: "lnum"on;
+}
 
 @supports (font-variant-numeric: lining-nums) {
   .medium-lnum {
     --stonehumanistitcstd-medium-lnum: "____";
-    font-variant-numeric: lining-nums; } }
+    font-variant-numeric: lining-nums;
+  }
+}
+
 .medium-onum {
-  --stonehumanistitcstd-medium-onum: "onum"on; }
+  --stonehumanistitcstd-medium-onum: "onum"on;
+}
 
 @supports (font-variant-numeric: oldstyle-nums) {
   .medium-onum {
     --stonehumanistitcstd-medium-onum: "____";
-    font-variant-numeric: oldstyle-nums; } }
+    font-variant-numeric: oldstyle-nums;
+  }
+}
+
 .medium-ordn {
-  --stonehumanistitcstd-medium-ordn: "ordn"on; }
+  --stonehumanistitcstd-medium-ordn: "ordn"on;
+}
 
 @supports (font-variant-numeric: ordinal) {
   .medium-ordn {
     --stonehumanistitcstd-medium-ordn: "____";
-    font-variant-numeric: ordinal; } }
+    font-variant-numeric: ordinal;
+  }
+}
+
 .medium-smcp {
-  --stonehumanistitcstd-medium-smcp: "smcp"on; }
+  --stonehumanistitcstd-medium-smcp: "smcp"on;
+}
 
 @supports (font-variant-caps: small-caps) {
   .medium-smcp {
     --stonehumanistitcstd-medium-smcp: "____";
-    font-variant-caps: small-caps; } }
+    font-variant-caps: small-caps;
+  }
+}
+
 .medium-sups {
-  --stonehumanistitcstd-medium-sups: "sups"on; }
+  --stonehumanistitcstd-medium-sups: "sups"on;
+}
 
 @supports (font-variant-position: super) {
   .medium-sups {
     --stonehumanistitcstd-medium-sups: "____";
-    font-variant-position: super; } }
+    font-variant-position: super;
+  }
+}
+
 /* Apply current state of all custom properties
    whenever a class is being applied */
 .medium-aalt,
@@ -171,51 +207,74 @@
 .medium-ordn,
 .medium-smcp,
 .medium-sups {
-  font-feature-settings: var(--stonehumanistitcstd-medium-aalt), var(--stonehumanistitcstd-medium-c2sc), var(--stonehumanistitcstd-medium-case), var(--stonehumanistitcstd-medium-frac), var(--stonehumanistitcstd-medium-lnum), var(--stonehumanistitcstd-medium-onum), var(--stonehumanistitcstd-medium-ordn), var(--stonehumanistitcstd-medium-smcp), var(--stonehumanistitcstd-medium-sups); }
+  font-feature-settings: var(--stonehumanistitcstd-medium-aalt), var(--stonehumanistitcstd-medium-c2sc), var(--stonehumanistitcstd-medium-case), var(--stonehumanistitcstd-medium-frac), var(--stonehumanistitcstd-medium-lnum), var(--stonehumanistitcstd-medium-onum), var(--stonehumanistitcstd-medium-ordn), var(--stonehumanistitcstd-medium-smcp), var(--stonehumanistitcstd-medium-sups);
+}
 
 /* If class is applied, update custom property and
    apply modern font-variant-* when supported */
 .bold-aalt {
-  --stonehumanistitcstd-bold-aalt: "aalt"on; }
+  --stonehumanistitcstd-bold-aalt: "aalt"on;
+}
 
 .bold-case {
-  --stonehumanistitcstd-bold-case: "case"on; }
+  --stonehumanistitcstd-bold-case: "case"on;
+}
 
 .bold-frac {
-  --stonehumanistitcstd-bold-frac: "frac"on; }
+  --stonehumanistitcstd-bold-frac: "frac"on;
+}
 
 @supports (font-variant-numeric: diagonal-fractions) {
   .bold-frac {
     --stonehumanistitcstd-bold-frac: "____";
-    font-variant-numeric: diagonal-fractions; } }
+    font-variant-numeric: diagonal-fractions;
+  }
+}
+
 .bold-lnum {
-  --stonehumanistitcstd-bold-lnum: "lnum"on; }
+  --stonehumanistitcstd-bold-lnum: "lnum"on;
+}
 
 @supports (font-variant-numeric: lining-nums) {
   .bold-lnum {
     --stonehumanistitcstd-bold-lnum: "____";
-    font-variant-numeric: lining-nums; } }
+    font-variant-numeric: lining-nums;
+  }
+}
+
 .bold-onum {
-  --stonehumanistitcstd-bold-onum: "onum"on; }
+  --stonehumanistitcstd-bold-onum: "onum"on;
+}
 
 @supports (font-variant-numeric: oldstyle-nums) {
   .bold-onum {
     --stonehumanistitcstd-bold-onum: "____";
-    font-variant-numeric: oldstyle-nums; } }
+    font-variant-numeric: oldstyle-nums;
+  }
+}
+
 .bold-ordn {
-  --stonehumanistitcstd-bold-ordn: "ordn"on; }
+  --stonehumanistitcstd-bold-ordn: "ordn"on;
+}
 
 @supports (font-variant-numeric: ordinal) {
   .bold-ordn {
     --stonehumanistitcstd-bold-ordn: "____";
-    font-variant-numeric: ordinal; } }
+    font-variant-numeric: ordinal;
+  }
+}
+
 .bold-sups {
-  --stonehumanistitcstd-bold-sups: "sups"on; }
+  --stonehumanistitcstd-bold-sups: "sups"on;
+}
 
 @supports (font-variant-position: super) {
   .bold-sups {
     --stonehumanistitcstd-bold-sups: "____";
-    font-variant-position: super; } }
+    font-variant-position: super;
+  }
+}
+
 /* Apply current state of all custom properties
    whenever a class is being applied */
 .bold-aalt,
@@ -225,51 +284,74 @@
 .bold-onum,
 .bold-ordn,
 .bold-sups {
-  font-feature-settings: var(--stonehumanistitcstd-bold-aalt), var(--stonehumanistitcstd-bold-case), var(--stonehumanistitcstd-bold-frac), var(--stonehumanistitcstd-bold-lnum), var(--stonehumanistitcstd-bold-onum), var(--stonehumanistitcstd-bold-ordn), var(--stonehumanistitcstd-bold-sups); }
+  font-feature-settings: var(--stonehumanistitcstd-bold-aalt), var(--stonehumanistitcstd-bold-case), var(--stonehumanistitcstd-bold-frac), var(--stonehumanistitcstd-bold-lnum), var(--stonehumanistitcstd-bold-onum), var(--stonehumanistitcstd-bold-ordn), var(--stonehumanistitcstd-bold-sups);
+}
 
 /* If class is applied, update custom property and
    apply modern font-variant-* when supported */
 .bolditalic-aalt {
-  --stonehumanistitcstd-bolditalic-aalt: "aalt"on; }
+  --stonehumanistitcstd-bolditalic-aalt: "aalt"on;
+}
 
 .bolditalic-case {
-  --stonehumanistitcstd-bolditalic-case: "case"on; }
+  --stonehumanistitcstd-bolditalic-case: "case"on;
+}
 
 .bolditalic-frac {
-  --stonehumanistitcstd-bolditalic-frac: "frac"on; }
+  --stonehumanistitcstd-bolditalic-frac: "frac"on;
+}
 
 @supports (font-variant-numeric: diagonal-fractions) {
   .bolditalic-frac {
     --stonehumanistitcstd-bolditalic-frac: "____";
-    font-variant-numeric: diagonal-fractions; } }
+    font-variant-numeric: diagonal-fractions;
+  }
+}
+
 .bolditalic-lnum {
-  --stonehumanistitcstd-bolditalic-lnum: "lnum"on; }
+  --stonehumanistitcstd-bolditalic-lnum: "lnum"on;
+}
 
 @supports (font-variant-numeric: lining-nums) {
   .bolditalic-lnum {
     --stonehumanistitcstd-bolditalic-lnum: "____";
-    font-variant-numeric: lining-nums; } }
+    font-variant-numeric: lining-nums;
+  }
+}
+
 .bolditalic-onum {
-  --stonehumanistitcstd-bolditalic-onum: "onum"on; }
+  --stonehumanistitcstd-bolditalic-onum: "onum"on;
+}
 
 @supports (font-variant-numeric: oldstyle-nums) {
   .bolditalic-onum {
     --stonehumanistitcstd-bolditalic-onum: "____";
-    font-variant-numeric: oldstyle-nums; } }
+    font-variant-numeric: oldstyle-nums;
+  }
+}
+
 .bolditalic-ordn {
-  --stonehumanistitcstd-bolditalic-ordn: "ordn"on; }
+  --stonehumanistitcstd-bolditalic-ordn: "ordn"on;
+}
 
 @supports (font-variant-numeric: ordinal) {
   .bolditalic-ordn {
     --stonehumanistitcstd-bolditalic-ordn: "____";
-    font-variant-numeric: ordinal; } }
+    font-variant-numeric: ordinal;
+  }
+}
+
 .bolditalic-sups {
-  --stonehumanistitcstd-bolditalic-sups: "sups"on; }
+  --stonehumanistitcstd-bolditalic-sups: "sups"on;
+}
 
 @supports (font-variant-position: super) {
   .bolditalic-sups {
     --stonehumanistitcstd-bolditalic-sups: "____";
-    font-variant-position: super; } }
+    font-variant-position: super;
+  }
+}
+
 /* Apply current state of all custom properties
    whenever a class is being applied */
 .bolditalic-aalt,
@@ -279,51 +361,74 @@
 .bolditalic-onum,
 .bolditalic-ordn,
 .bolditalic-sups {
-  font-feature-settings: var(--stonehumanistitcstd-bolditalic-aalt), var(--stonehumanistitcstd-bolditalic-case), var(--stonehumanistitcstd-bolditalic-frac), var(--stonehumanistitcstd-bolditalic-lnum), var(--stonehumanistitcstd-bolditalic-onum), var(--stonehumanistitcstd-bolditalic-ordn), var(--stonehumanistitcstd-bolditalic-sups); }
+  font-feature-settings: var(--stonehumanistitcstd-bolditalic-aalt), var(--stonehumanistitcstd-bolditalic-case), var(--stonehumanistitcstd-bolditalic-frac), var(--stonehumanistitcstd-bolditalic-lnum), var(--stonehumanistitcstd-bolditalic-onum), var(--stonehumanistitcstd-bolditalic-ordn), var(--stonehumanistitcstd-bolditalic-sups);
+}
 
 /* If class is applied, update custom property and
    apply modern font-variant-* when supported */
 .mediumita-aalt {
-  --stonehumanistitcstd-mediumita-aalt: "aalt"on; }
+  --stonehumanistitcstd-mediumita-aalt: "aalt"on;
+}
 
 .mediumita-case {
-  --stonehumanistitcstd-mediumita-case: "case"on; }
+  --stonehumanistitcstd-mediumita-case: "case"on;
+}
 
 .mediumita-frac {
-  --stonehumanistitcstd-mediumita-frac: "frac"on; }
+  --stonehumanistitcstd-mediumita-frac: "frac"on;
+}
 
 @supports (font-variant-numeric: diagonal-fractions) {
   .mediumita-frac {
     --stonehumanistitcstd-mediumita-frac: "____";
-    font-variant-numeric: diagonal-fractions; } }
+    font-variant-numeric: diagonal-fractions;
+  }
+}
+
 .mediumita-lnum {
-  --stonehumanistitcstd-mediumita-lnum: "lnum"on; }
+  --stonehumanistitcstd-mediumita-lnum: "lnum"on;
+}
 
 @supports (font-variant-numeric: lining-nums) {
   .mediumita-lnum {
     --stonehumanistitcstd-mediumita-lnum: "____";
-    font-variant-numeric: lining-nums; } }
+    font-variant-numeric: lining-nums;
+  }
+}
+
 .mediumita-onum {
-  --stonehumanistitcstd-mediumita-onum: "onum"on; }
+  --stonehumanistitcstd-mediumita-onum: "onum"on;
+}
 
 @supports (font-variant-numeric: oldstyle-nums) {
   .mediumita-onum {
     --stonehumanistitcstd-mediumita-onum: "____";
-    font-variant-numeric: oldstyle-nums; } }
+    font-variant-numeric: oldstyle-nums;
+  }
+}
+
 .mediumita-ordn {
-  --stonehumanistitcstd-mediumita-ordn: "ordn"on; }
+  --stonehumanistitcstd-mediumita-ordn: "ordn"on;
+}
 
 @supports (font-variant-numeric: ordinal) {
   .mediumita-ordn {
     --stonehumanistitcstd-mediumita-ordn: "____";
-    font-variant-numeric: ordinal; } }
+    font-variant-numeric: ordinal;
+  }
+}
+
 .mediumita-sups {
-  --stonehumanistitcstd-mediumita-sups: "sups"on; }
+  --stonehumanistitcstd-mediumita-sups: "sups"on;
+}
 
 @supports (font-variant-position: super) {
   .mediumita-sups {
     --stonehumanistitcstd-mediumita-sups: "____";
-    font-variant-position: super; } }
+    font-variant-position: super;
+  }
+}
+
 /* Apply current state of all custom properties
    whenever a class is being applied */
 .mediumita-aalt,
@@ -333,43 +438,55 @@
 .mediumita-onum,
 .mediumita-ordn,
 .mediumita-sups {
-  font-feature-settings: var(--stonehumanistitcstd-mediumita-aalt), var(--stonehumanistitcstd-mediumita-case), var(--stonehumanistitcstd-mediumita-frac), var(--stonehumanistitcstd-mediumita-lnum), var(--stonehumanistitcstd-mediumita-onum), var(--stonehumanistitcstd-mediumita-ordn), var(--stonehumanistitcstd-mediumita-sups); }
+  font-feature-settings: var(--stonehumanistitcstd-mediumita-aalt), var(--stonehumanistitcstd-mediumita-case), var(--stonehumanistitcstd-mediumita-frac), var(--stonehumanistitcstd-mediumita-lnum), var(--stonehumanistitcstd-mediumita-onum), var(--stonehumanistitcstd-mediumita-ordn), var(--stonehumanistitcstd-mediumita-sups);
+}
 
 .clear {
-  clear: both; }
+  clear: both;
+}
 
 html {
   box-sizing: border-box;
   background-color: #fbfbf6;
   color: #3c3d31;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 a:link {
   color: #555577;
-  text-decoration: underline; }
+  text-decoration: underline;
+}
+
 a:visited {
   color: #555577;
-  text-decoration: underline; }
+  text-decoration: underline;
+}
+
 a:hover {
-  color: #bb4444; }
+  color: #bb4444;
+}
 
 img {
   height: auto;
-  width: 100%; }
+  width: 100%;
+}
 
 h2 + p {
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 body {
   font-family: "Stone Humanist", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital); }
+  font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
+}
 
 div,
 p,
@@ -396,31 +513,46 @@ p:first-letter {
   font-family: "Stone Humanist", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital); }
+  font-variation-settings: "wght" var(--text-wght), "ital" var(--text-ital);
+}
 
 ul li {
   font-size: calc(var(--p-font-size-min) * 1rem);
-  line-height: var(--p-line-height-min); }
+  line-height: var(--p-line-height-min);
+}
 
 p {
   --text-ital: 0;
   transition: all linear 0.2s;
-  hyphens: auto; }
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
 
 /* Variations and variables */
 p {
   font-size: calc(var(--p-font-size-min) * 1rem);
-  line-height: var(--p-line-height-min); }
-  @media screen and (min-width: 24.15em) {
-    p {
-      line-height: calc((var(--p-line-height-min) * 1em) + (var(--p-line-height-max) - var(--p-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-large) - var(--bp-small)))); } }
-  @media (min-width: 60.25em) {
-    p {
-      font-size: calc((var(--p-font-size-min) * 1em) + (var(--p-font-size-max) - var(--p-font-size-min)) * ((100vw - (var(--bp-large) * 1em)) / (var(--bp-xlarge) - var(--bp-large))));
-      line-height: var(--p-line-height-max); } }
-  @media (min-width: 75em) {
-    p {
-      font-size: calc(var(--p-font-size-max) * 1em); } }
+  line-height: var(--p-line-height-min);
+}
+
+@media screen and (min-width: 24.15em) {
+  p {
+    line-height: calc((var(--p-line-height-min) * 1em) + (var(--p-line-height-max) - var(--p-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-large) - var(--bp-small))));
+  }
+}
+
+@media (min-width: 60.25em) {
+  p {
+    font-size: calc((var(--p-font-size-min) * 1em) + (var(--p-font-size-max) - var(--p-font-size-min)) * ((100vw - (var(--bp-large) * 1em)) / (var(--bp-xlarge) - var(--bp-large))));
+    line-height: var(--p-line-height-max);
+  }
+}
+
+@media (min-width: 75em) {
+  p {
+    font-size: calc(var(--p-font-size-max) * 1em);
+  }
+}
 
 /* Generic header styles */
 h1,
@@ -429,7 +561,8 @@ h3 {
   font-family: "Stone Humanist", Helvetica, Arial, sans-serif;
   font-weight: normal;
   transition: all linear 0.2s;
-  --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s)); }
+  --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
+}
 
 h4,
 h5,
@@ -437,7 +570,8 @@ h6 {
   font-family: "Stone Humanist", Helvetica, Arial, sans-serif;
   font-weight: normal;
   transition: all linear 0.2s;
-  --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s)); }
+  --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s));
+}
 
 h1 {
   /* Set --text-wght value multiplier */
@@ -445,22 +579,35 @@ h1 {
   --text-ital: 0;
   font-family: 'Stone Humanist', Helvetica, Arial, sans-serif;
   font-size: calc(var(--h1-font-size-min) * 1em);
-  line-height: var(--h1-line-height-min); }
-  @media screen and (min-width: 24.15em) {
-    h1 {
-      line-height: calc((var(--h1-line-height-min) * 1em) + (var(--h1-line-height-max) - var(--h1-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
-      font-size: calc((var(--h1-font-size-min) * 1em) + (var(--h1-font-size-max) - var(--h1-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small)))); } }
-  @media screen and (min-width: 43.75em) {
-    h1 {
-      --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m)); } }
-  @media screen and (min-width: 60.25em) {
-    h1 {
-      --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l));
-      line-height: var(--h1-line-height-max); } }
-  @media (min-width: 75em) {
-    h1 {
-      font-size: calc(var(--h1-font-size-max) * 1em);
-      line-height: var(--h1-line-height-max); } }
+  line-height: var(--h1-line-height-min);
+}
+
+@media screen and (min-width: 24.15em) {
+  h1 {
+    line-height: calc((var(--h1-line-height-min) * 1em) + (var(--h1-line-height-max) - var(--h1-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
+    font-size: calc((var(--h1-font-size-min) * 1em) + (var(--h1-font-size-max) - var(--h1-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
+  }
+}
+
+@media screen and (min-width: 43.75em) {
+  h1 {
+    --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m));
+  }
+}
+
+@media screen and (min-width: 60.25em) {
+  h1 {
+    --text-wght: calc(var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l));
+    line-height: var(--h1-line-height-max);
+  }
+}
+
+@media (min-width: 75em) {
+  h1 {
+    font-size: calc(var(--h1-font-size-max) * 1em);
+    line-height: var(--h1-line-height-max);
+  }
+}
 
 h2 {
   /* Set --text-wght value multiplier */
@@ -468,19 +615,29 @@ h2 {
   --text-ital: 0;
   font-family: "Stone Humanist", Helvetica, Arial, sans-serif;
   font-size: calc(var(--h2-font-size-min) * 1em);
-  line-height: var(--h2-line-height-min); }
-  @media screen and (min-width: 24.15em) {
-    h2 {
-      line-height: calc((var(--h2-line-height-min) * 1em) + (var(--h2-line-height-max) - var(--h2-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
-      font-size: calc((var(--h2-font-size-min) * 1em) + (var(--h2-font-size-max) - var(--h2-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small)))); } }
-  @media screen and (min-width: 43.75em) {
-    h2 {
-      --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-m)); } }
-  @media (min-width: 75em) {
-    h2 {
-      --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-l));
-      font-size: calc(var(--h2-font-size-max) * 1em);
-      line-height: var(--h2-line-height-max); } }
+  line-height: var(--h2-line-height-min);
+}
+
+@media screen and (min-width: 24.15em) {
+  h2 {
+    line-height: calc((var(--h2-line-height-min) * 1em) + (var(--h2-line-height-max) - var(--h2-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
+    font-size: calc((var(--h2-font-size-min) * 1em) + (var(--h2-font-size-max) - var(--h2-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
+  }
+}
+
+@media screen and (min-width: 43.75em) {
+  h2 {
+    --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-m));
+  }
+}
+
+@media (min-width: 75em) {
+  h2 {
+    --text-wght: calc(var(--p-vf-wght) * var(--h2-vf-wght-multiplier-l));
+    font-size: calc(var(--h2-font-size-max) * 1em);
+    line-height: var(--h2-line-height-max);
+  }
+}
 
 h3 {
   /* Set --text-wght value multiplier */
@@ -489,33 +646,47 @@ h3 {
   font-family: "Stone Humanist", Helvetica, Arial, sans-serif;
   font-size: calc(var(--h2-font-size-min) * 1em);
   line-height: var(--h2-line-height-min);
-  text-align: center; }
-  @media screen and (min-width: 24.15em) {
-    h3 {
-      line-height: calc((var(--h3-line-height-min) * 1em) + (var(--h3-line-height-max) - var(--h3-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
-      font-size: calc((var(--h3-font-size-min) * 1em) + (var(--h3-font-size-max) - var(--h3-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small)))); } }
-  @media screen and (min-width: 43.75em) {
-    h3 {
-      --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-m)); } }
-  @media (min-width: 75em) {
-    h3 {
-      --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-l));
-      font-size: calc(var(--h3-font-size-max) * 1em);
-      line-height: var(--h3-line-height-max); } }
+  text-align: center;
+}
+
+@media screen and (min-width: 24.15em) {
+  h3 {
+    line-height: calc((var(--h3-line-height-min) * 1em) + (var(--h3-line-height-max) - var(--h3-line-height-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
+    font-size: calc((var(--h3-font-size-min) * 1em) + (var(--h3-font-size-max) - var(--h3-font-size-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
+  }
+}
+
+@media screen and (min-width: 43.75em) {
+  h3 {
+    --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-m));
+  }
+}
+
+@media (min-width: 75em) {
+  h3 {
+    --text-wght: calc(var(--p-vf-wght) * var(--h3-vf-wght-multiplier-l));
+    font-size: calc(var(--h3-font-size-max) * 1em);
+    line-height: var(--h3-line-height-max);
+  }
+}
 
 /* If class is applied, update custom property and
    apply modern font-variant-* when supported */
 .marvin-visions-big-bold-aalt {
-  --marvin-visions-big-bold-aalt: "aalt"on; }
+  --marvin-visions-big-bold-aalt: "aalt"on;
+}
 
 .marvin-visions-big-bold-salt {
-  --marvin-visions-big-bold-salt: "salt"on; }
+  --marvin-visions-big-bold-salt: "salt"on;
+}
 
 .marvin-visions-big-bold-ss01 {
-  --marvin-visions-big-bold-ss01: "ss01"on; }
+  --marvin-visions-big-bold-ss01: "ss01"on;
+}
 
 .marvin-visions-big-bold-ss02 {
-  --marvin-visions-big-bold-ss02: "ss02"on; }
+  --marvin-visions-big-bold-ss02: "ss02"on;
+}
 
 /* Apply current state of all custom properties
    whenever a class is being applied */
@@ -523,6 +694,7 @@ h3 {
 .marvin-visions-big-bold-salt,
 .marvin-visions-big-bold-ss01,
 .marvin-visions-big-bold-ss02 {
-  font-feature-settings: var(--marvin-visions-big-bold-aalt), var(--marvin-visions-big-bold-salt), var(--marvin-visions-big-bold-ss01), var(--marvin-visions-big-bold-ss02); }
+  font-feature-settings: var(--marvin-visions-big-bold-aalt), var(--marvin-visions-big-bold-salt), var(--marvin-visions-big-bold-ss01), var(--marvin-visions-big-bold-ss02);
+}
 
 /*# sourceMappingURL=typography-stoneHumanist.css.map */

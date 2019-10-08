@@ -1,8 +1,10 @@
 body {
   background-color: #fbfbf6;
   padding: 1em;
-  hyphens: auto;
-  line-height: 0.75;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  line-height: .75;
   box-sizing: margin-box;
 }
 
@@ -27,6 +29,7 @@ body {
   flex-flow: column nowrap;
   padding: 0;
 }
+
 .masthead .bottom {
   display: flex;
   flex-flow: row nowrap;
@@ -56,10 +59,11 @@ body {
     color: #bf4055;
     font-size: calc(1.15rem * 6);
     float: left;
-    line-height: 0.7;
-    margin: 0.125em 0.125em 0 0;
+    line-height: .7;
+    margin: .125em .125em 0 0;
   }
 }
+
 @supports (initial-letter: 3) or (-webkit-initial-letter: 3) {
   .intro::first-letter {
     color: #bf4055;
@@ -67,6 +71,7 @@ body {
     initial-letter: 3;
   }
 }
+
 .intro::first-line {
   color: #bf4055;
   font-size: 120%;
@@ -80,25 +85,22 @@ body {
     grid-gap: 1em 1em;
     margin: 0 auto;
   }
-
   .content {
     grid-column: 1/4;
     padding: 1em;
   }
-
   .float-left {
     float: none;
   }
-
   blockquote {
     font-size: 1rem;
     line-height: 1.2;
   }
-
   p {
     font-size: calc(var(--p-font-size-max) * 1rem);
   }
 }
+
 blockquote {
   --bq-line-height-min: 1.1;
   --bq-line-height-max: 1.1;
@@ -106,12 +108,14 @@ blockquote {
   --bq-font-size-max: 5;
   margin: 2em 0;
 }
+
 blockquote p {
   /* Set --text-x value */
   line-height: var(--bq-line-height-min);
   font-style: italic;
   font-size: calc(var(--bq-font-size-min) * 1.25em);
 }
+
 blockquote cite {
   display: block;
   font-size: calc(var(--bq-font-size-min) * 1.25em);

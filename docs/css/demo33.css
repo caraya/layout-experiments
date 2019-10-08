@@ -65,6 +65,10 @@ ul {
   margin-bottom: 1.2rem;
 }
 
+::-moz-selection {
+  background: #b4d5ff;
+}
+
 ::selection {
   background: #b4d5ff;
 }
@@ -91,12 +95,13 @@ ul {
     padding: 0;
   }
 }
+
 .entry-box__title {
   margin-bottom: 8px;
 }
 
 .entry-box__summary {
-  font-size: 0.75em;
+  font-size: .75em;
   margin-bottom: 0;
 }
 

@@ -3,11 +3,13 @@ body {
   padding: 1em;
   font-size: var(--p-font-size-max);
   line-height: var(--p-line-height-max);
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 .small {
-  font-size: 0.9rem;
+  font-size: .9rem;
 }
 
 .container {
@@ -16,18 +18,23 @@ body {
 }
 
 .columns {
-  columns: 2;
-  column-gap: 2em;
+  -moz-columns: 2;
+       columns: 2;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
 }
 
 .columns3 {
-  columns: 3;
-  column-gap: 2em;
+  -moz-columns: 3;
+       columns: 3;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
 }
 
 figure {
   margin: 3em 0;
 }
+
 figure img {
   width: 100%;
   height: auto;
@@ -35,17 +42,20 @@ figure img {
 
 @media screen and (max-width: 640px) {
   .columns,
-.columns3 {
-    columns: 1;
+  .columns3 {
+    -moz-columns: 1;
+         columns: 1;
   }
 }
+
 @media screen and (min-width: 641px) and (max-width: 800px) {
   .columns {
-    columns: 1;
+    -moz-columns: 1;
+         columns: 1;
   }
-
   .columns3 {
-    columns: 2;
+    -moz-columns: 2;
+         columns: 2;
   }
 }
 

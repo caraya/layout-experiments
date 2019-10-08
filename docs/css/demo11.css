@@ -2,6 +2,7 @@
   font-family: Roboto;
   src: url("../fonts/Roboto-min-VF.woff2");
 }
+
 /* Defaults */
 :root {
   --line-height: 1;
@@ -37,13 +38,13 @@ legend {
 }
 
 .output {
-  font: 1rem "Roboto", sans-serif;
+  font: 1rem 'Roboto', sans-serif;
 }
 
 label {
   margin-top: 1rem;
   display: block;
-  font-size: 0.8rem;
+  font-size: .8rem;
 }
 
 .container {
@@ -57,27 +58,29 @@ label {
 .narrow {
   border: 1px solid rebeccapurple;
   width: calc(15vw + 2.5em);
-  padding: 0.5em;
+  padding: .5em;
   margin: 0 auto;
 }
 
 .default {
   border: 1px solid rebeccapurple;
   width: calc(30vw + 2.5em);
-  padding: 0.5em;
+  padding: .5em;
   margin: 0 auto;
 }
 
 .wide {
   border: 1px solid rebeccapurple;
   width: calc(60vw + 2.5em);
-  padding: 0.5em;
+  padding: .5em;
   margin: 0 auto;
 }
 
 .columns {
-  column-width: 300px;
-  column-gap: 1em;
+  -moz-column-width: 300px;
+       column-width: 300px;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
 }
 
 /*# sourceMappingURL=demo11.css.map */

@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.25;
 }
 
@@ -38,7 +38,7 @@ body {
 }
 
 h2 {
-  font-family: "Inconsolata", monospace;
+  font-family: 'Inconsolata', monospace;
   font-size: 3vw;
   text-align: right;
   line-height: 1;
@@ -51,7 +51,7 @@ h2 {
 }
 
 .byline {
-  font-size: 0.75rem;
+  font-size: .75rem;
 }
 
 p {

@@ -4,7 +4,7 @@
   "description": "Experiment with web layouts and related technologies",
   "main": "index.js",
   "scripts": {
-    "workbox": "npx workbox injectManisfest ./workbox-config.js",
+    "workbox": "npx workbox injectManifest ./workbox-config.js",
     "sass": "gulp css",
     "publish": "gulp && npm run workbox"
   },

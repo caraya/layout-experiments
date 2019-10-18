@@ -9,7 +9,7 @@ workbox.googleAnalytics.initialize();
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "fcedff5a300689b1c16619b281c6796c"
+    "revision": "4d58f10859f20a4b2f5fe03ef1f7da78"
   },
   {
     "url": "css/index.css",

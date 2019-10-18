@@ -9,6 +9,6 @@ module.exports = {
     'pages/offline.html',
 
   ],
-  'swDest': 'sw.js',
   'swSrc': 'js/sw.js',
+  'swDest': 'docs/sw.js',
 };

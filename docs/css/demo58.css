@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@0,400..700&display=swap");
 :root {
-  --default-body-font: 'Crimson Pro', serif;
+  --default-body-font: 'Markazi Text', serif;
   --default-body-weight: 400;
-  --default-body-font-size: 1rem;
+  --default-body-font-size: 1;
   --default-body-line-height: 1.2;
   --default-heading-font: 'Hepta Slab', serif;
   box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
   background-color: rgba(241, 233, 210, 0.45);
   color: #224;
   font-family: var(--default-body-font);
-  font-size: 1.3em;
+  font-size: calc(var(--default-body-font-size) * 1.5rem);
   font-weight: var(--default-body-weight);
   line-height: var(--default-body-line-height);
 }
@@ -39,6 +39,10 @@ strong {
 
 em {
   font-weight: 250;
+}
+
+main > p:not(:first-child) {
+  text-indent: 2em;
 }
 
 .grid-container {
@@ -106,4 +110,4 @@ footer {
   margin-top: 0;
 }
 
-/*# sourceMappingURL=demo55.css.map */
+/*# sourceMappingURL=demo58.css.map */

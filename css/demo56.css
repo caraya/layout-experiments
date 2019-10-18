@@ -3,7 +3,7 @@
 :root {
   --default-body-font: 'Crimson Pro', serif;
   --default-body-weight: 400;
-  --default-body-font-size: 1rem;
+  --default-body-font-size: 1;
   --default-body-line-height: 1.2;
   --default-heading-font: 'Hepta Slab', serif;
   box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
   background-color: rgba(241, 233, 210, 0.45);
   color: #224;
   font-family: var(--default-body-font);
-  font-size: 1.3em;
+  font-size: calc(var(--default-body-font-size) * 1.5rem);
   font-weight: var(--default-body-weight);
   line-height: var(--default-body-line-height);
 }
@@ -106,4 +106,4 @@ footer {
   margin-top: 0;
 }
 
-/*# sourceMappingURL=demo55.css.map */
+/*# sourceMappingURL=demo56.css.map */

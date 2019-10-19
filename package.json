@@ -6,7 +6,8 @@
   "scripts": {
     "workbox": "npx workbox injectManifest ./workbox-config.js",
     "sass": "gulp css",
-    "publish": "gulp && npm run workbox"
+    "publish": "gulp && npm run workbox",
+    "production": "gulp && npm run workbox && firebase deploy"
   },
   "repository": "",
   "author": "carlos araya <carlos.araya@gmail.com>",

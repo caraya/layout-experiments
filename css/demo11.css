@@ -1,6 +1,9 @@
 @font-face {
   font-family: Roboto;
   src: url("../fonts/Roboto-min-VF.woff2");
+  font-weight: 250 900;
+  font-stretch: 75 100;
+  font-style: oblique 0 -12deg;
 }
 
 /* Defaults */

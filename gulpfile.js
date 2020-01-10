@@ -74,33 +74,31 @@ function processCSS() {
     }));
 };
 
-
-// Generate & Inline Critical-path CSS
-function criticalCSS() {
-  return src('src/*.html')
-    .pipe(critical({
-      base: 'src/',
-      inline: true,
-      css: ['src/css/main.css'],
-      minify: true,
-      extract: false,
-      ignore: ['font-face'],
-      dimensions: [{
-        width: 320,
-        height: 480,
-      }, {
-        width: 768,
-        height: 1024,
-      }, {
-        width: 1280,
-        height: 960,
-      }],
-    }))
-    .pipe($.size({
-      pretty: true,
-      title: 'Critical',
-    }))
-    .pipe(dest('docs'));
+/**
+ * @name processCSS
+ * @description Runs critical to create critical path CSS
+ */
+function criticalCSS(cb) {
+  critical.generate({
+    base: 'docs/',
+    html: '**/*.html',
+    inline: true,
+    minify: true,
+    extract: false,
+    css: ['css/**/*.css'],
+    ignore: ['font-face'],
+    dimensions: [{
+      width: 320,
+      height: 480,
+    }, {
+      width: 768,
+      height: 1024,
+    }, {
+      width: 1280,
+      height: 960,
+    }],
+  });
+  cb();
 };
 
 /**
@@ -197,7 +195,7 @@ function clean(cb) {
 function server() {
   browserSync.init({
     server: {
-      baseDir: './_site/',
+      baseDir: './docs/',
     },
     port: 3000,
   });
@@ -290,12 +288,12 @@ exports.createSass = createSass;
 exports.babel = babel7;
 exports.processCSS = processCSS;
 exports.css = series(createSass, processCSS);
-exports.critical = criticalCSS;
+exports.criticalCSS = criticalCSS;
 exports.eslint = eslint;
 exports.imagemin = imageminProcess;
 exports.guetzli = guetzli;
 exports.clean = clean;
-exports.browserSync = server;
+exports.serve = server;
 exports.copyFonts = copyFonts;
 exports.copyAll = copyAll;
 exports.default = series(createSass, processCSS, clean, copyFonts, copyAll);

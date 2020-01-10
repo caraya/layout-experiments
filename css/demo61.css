@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,400i,700i&display=swap");
+:root {
+  --default-font: 'Open Sans', sans-serif;
+  --default-font-size: 1;
+  --default-body-weight: 400;
+  --default-body-line-height: 1;
+  --default-background-color: rgba(241, 233, 210, .45);
+  --default-color: rgb(60, 61, 49);
+  --default-box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: var(--default-box-sizing);
+}
+
+body {
+  background-color: rgba(241, 233, 210, 0.45);
+  color: var(--default-color);
+  font-family: var(--default-font);
+  font-size: calc(var(--default-font-size) * 1.2rem);
+  font-weight: var(--default-body-weight);
+  line-height: calc(var(--default-body-line-height) * 1.4);
+}
+
+h1 {
+  font-family: var(--default-font);
+  font-size: 5rem;
+}
+
+h2 {
+  font-family: var(--default-font);
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+p {
+  margin-bottom: 0.5em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-weight: 400;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
+  grid-column-gap: 2vw;
+  grid-row-gap: 2vh;
+}
+
+header {
+  grid-column: 4/8;
+  grid-row: 1;
+}
+
+main {
+  grid-column: 4/8;
+  grid-row: 3;
+}
+
+aside {
+  grid-column: 4/8;
+  grid-row: 2;
+}
+
+.byline {
+  text-transform: uppercase;
+  font-size: 85%;
+}
+
+.clear {
+  display: flow-root;
+}
+
+a:link {
+  color: #555577;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #555577;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #bb4444;
+}
+
+/*# sourceMappingURL=demo61.css.map */

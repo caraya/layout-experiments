@@ -33,23 +33,27 @@ body {
 
 @supports (font-variation-settings: none) {
   .article-title {
-    font-variation-settings: "wght" var(--text-wght), "wdth" var(--text-wdth), "slnt" var(--text-slnt);
+    font-weight: 700;
+    font-variation-settings: "wdth" var(--text-wdth), "slnt" var(--text-slnt);
   }
 }
 
-p:first-of-type::first-letter {
-  color: #fe742f;
+.first_letter {
+  color: #990033;
   float: left;
-  font-size: 5em;
-  font-weight: bold;
-  margin: 0 0.15em 0 0;
+  font-family: Georgia;
+  font-size: 6em;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
 }
 
 @supports (initial-letter: 4) or (-webkit-initial-letter: 4) {
   p:first-of-type::first-letter {
     -webkit-initial-letter: 4;
     initial-letter: 4;
-    color: #fe742f;
+    color: #930;
     font-weight: bold;
     margin-right: 0.5em;
   }
@@ -66,9 +70,11 @@ p:not(:first-of-type) {
   padding-right: 1em;
 }
 
-.byline {
+.fonts-loaded h2.byline {
   color: #666;
-  font-size: var(--p-font-size-min);
+  --text-wght: 250;
+  font-size: calc(var(--p-font-size-max) * 1.25em);
+  font-weight: calc(var(--text-wght) * 1);
 }
 
 @media (max-width: 50rem) {

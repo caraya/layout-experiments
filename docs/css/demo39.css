@@ -1,0 +1,90 @@
+@import url("https://use.typekit.net/aet8yjj.css");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+body {
+  background-color: #fbfbf6;
+  font-family: Raleway, sans-serif;
+}
+
+.container {
+  margin-top: -1.25em;
+  background-color: #212342;
+  background: linear-gradient(to bottom, #212342 0%, #fff 100%);
+  color: white;
+  height: 100%;
+  width: 65%;
+  font-size: 18em;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-family: 'bebas-neue', sans-serif;
+  text-transform: uppercase;
+  line-height: .65em;
+  padding: .05em;
+}
+
+span {
+  position: relative;
+}
+
+.char1 {
+  z-index: 4;
+  text-shadow: -0.02em 0.02em 0.2em rgba(10, 10, 10, 0.8);
+  margin-left: -0.05em;
+}
+
+.char2 {
+  z-index: 3;
+  text-shadow: -0.02em 0.02em 0.2em rgba(10, 10, 10, 0.8);
+  margin-left: -0.025em;
+  top: 0.05em;
+}
+
+.char3 {
+  z-index: 9;
+  text-shadow: -0.02em 0.02em 0.05em rgba(10, 10, 10, 0.8);
+  margin-left: -0.05em;
+}
+
+.char4 {
+  z-index: 5;
+  text-shadow: 0.01em -0.01em 0.14em rgba(10, 10, 10, 0.8);
+  margin-left: -0.05em;
+  top: -0.01em;
+}
+
+.char5 {
+  z-index: 2;
+  text-shadow: -0.02em -0.02em 0.14em rgba(10, 10, 10, 0.8);
+  margin-left: -0.06em;
+  top: 0.02em;
+}
+
+.char6 {
+  z-index: 10;
+  text-shadow: -0.02em -0.02em 0.14em rgba(10, 10, 10, 0.8);
+  margin-left: -0.06em;
+  top: -0.02em;
+}
+
+.char7 {
+  z-index: 8;
+  text-shadow: -0.02em -0.02em 0.14em rgba(10, 10, 10, 0.8);
+  margin-left: -0.05em;
+}
+
+.char8 {
+  z-index: 6;
+  text-shadow: -0.02em -0.02em 0.14em rgba(10, 10, 10, 0.8);
+  margin-left: -0.08em;
+  top: -0.02em;
+}
+
+.char9 {
+  z-index: 7;
+  text-shadow: -0.02em -0.02em 0.14em rgba(10, 10, 10, 0.8);
+  margin-left: -0.08em;
+}
+
+/*# sourceMappingURL=demo39.css.map */

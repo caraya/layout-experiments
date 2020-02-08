@@ -1,0 +1,46 @@
+div {
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+}
+
+.smoosh1 {
+  --bg-color: rebeccapurple;
+  background: var(--bg-color);
+  transition: --bg-color 0.3s linear;
+  position: absolute;
+  top: 50vh;
+  left: 15vw;
+}
+
+.smoosh1:hover {
+  --bg-color: orange;
+}
+
+.smoosh2 {
+  --bg-color: teal;
+  background: var(--bg-color);
+  transition: --bg-color 0.3s linear;
+  position: absolute;
+  top: 20em;
+  left: 45em;
+}
+
+.smoosh2:hover {
+  --bg-color: pink;
+}
+
+.smoosh3 {
+  --bg-color: 1;
+  background: var(--bg-color);
+  transition: --bg-color 0.3s linear;
+  position: absolute;
+  top: 5em;
+  left: 35em;
+}
+
+.smoosh3:hover {
+  --bg-color: lightgrey;
+}
+
+/*# sourceMappingURL=demo18.css.map */

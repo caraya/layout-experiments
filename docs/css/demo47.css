@@ -1,0 +1,45 @@
+body {
+  background-color: #fbfbf6;
+  padding: 1em;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  line-height: .75;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 200px;
+  grid-gap: 1em 1em;
+  margin: 0 auto;
+}
+
+.content {
+  grid-column: 2/6;
+  grid-row: 1/10;
+  padding: 1em;
+}
+
+ul li {
+  list-style: none;
+}
+
+.directions {
+  margin: 0 4em;
+}
+
+.character {
+  text-transform: uppercase;
+  margin-bottom: -1em;
+}
+
+.action {
+  font-style: italic;
+}
+
+.dialogue {
+  white-space: pre-line;
+}
+
+/*# sourceMappingURL=demo47.css.map */

@@ -1,0 +1,39 @@
+body {
+  background-color: #fbfbf6;
+  padding: 1em;
+  font-size: var(--p-font-size-max);
+  line-height: var(--p-line-height-max);
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #663399;
+}
+
+.container p {
+  white-space: pre-line;
+}
+
+.title {
+  --text-wght: 700;
+  --text-wdth: 100;
+  --text-slnt: 0;
+  font-weight: 250;
+  font-stretch: extra-condensed;
+  font-style: normal;
+}
+
+@supports (font-variation-settings: none) {
+  .title {
+    font-variation-settings: "wght" var(--text-wght), "wdth" var(--text-wdth), "slnt" var(--text-slnt);
+  }
+}
+
+/*# sourceMappingURL=demo28.css.map */

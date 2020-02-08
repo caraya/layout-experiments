@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:400,400i,700,700i");
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.25;
+}
+
+.article-wrapper {
+  display: flex;
+}
+
+.poster-image {
+  position: fixed;
+  background-image: url("../images/Edificio_Diego_Portales_MinDefensa_2014_compressed.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 50vw;
+  flex: 0 0 50%;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.poster-image .caption {
+  color: white;
+  font-weight: normal;
+  font-size: 1.2em;
+  text-align: right;
+  margin: 0 20px 20px 50%;
+}
+
+.text {
+  padding: 100px 60px 60px;
+  margin-left: 50%;
+  z-index: 10;
+}
+
+h2 {
+  font-family: 'Inconsolata', monospace;
+  font-size: 3vw;
+  text-align: right;
+  line-height: 1;
+}
+
+.lead {
+  font-size: 1.5vw;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.byline {
+  font-size: .75rem;
+}
+
+p {
+  line-height: 1.3;
+}
+
+footer {
+  height: 5vh;
+}
+
+/*# sourceMappingURL=demo4.css.map */

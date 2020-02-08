@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Custom Properties</title>
+  <link rel="stylesheet" href="css/shared/typography-roboto-2.css">
+  <link rel="stylesheet" href="css/demo18.css">
+  <script>
+    if ('registerProperty' in CSS) {
+      CSS.registerProperty({
+        name: '--bg-color',
+        syntax: '<color>',
+        inherits: false,
+        initialValue: 'red'
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="smoosh1">Smoosh1</div>
+  <div class="smoosh2">Smoosh2</div>
+  <div class="smoosh3">Smoosh3</div>
+</body>
+<div class="smoosh1">Smoosh1</div>
+<div class="smoosh2">Smoosh2</div>
+<div class="smoosh3">Smoosh3</div>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+body {
+  background-color: #fbfbf6;
+  padding: 1em;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-flow: column;
+}
+
+.item {
+  display: flex;
+  flex-flow: row;
+  margin: 1em 0;
+}
+
+.description {
+  border: 1px solid black;
+  margin-left: 2em;
+  width: 100%;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+/*# sourceMappingURL=demo42.css.map */

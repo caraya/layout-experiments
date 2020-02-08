@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+@font-face {
+  font-family: 'Avenir';
+  src: url("../../fonts/AvenirNext_Variable.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: 75 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceSerif';
+  src: url("../../fonts/SourceSerifVariable-Roman.ttf.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url("../../fonts/jost-VF.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: 0 1;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../../fonts/Roboto-min-VF.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Marvin Visions';
+  src: url("../../fonts/MarvinVisionsBig-Bold.woff2"), url("../../fonts/MarvinVisionsBig-Bold.woff");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+
+body {
+  background-color: #fbfbf6;
+  padding: 1em;
+  font-family: Raleway, sans-serif;
+}
+
+h1 {
+  font-size: 8em;
+}
+
+p {
+  font-size: 4em;
+  font-weight: 700;
+}
+
+.example-wrapper {
+  border: 1px solid black;
+  margin: 2em auto;
+  padding: 1em;
+  max-width: 80%;
+}
+
+.marvin {
+  color: #e65f1d;
+  text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.8);
+  font-family: 'Marvin Visions', Helvetica, Arial, sans-serif;
+}
+
+.avenir {
+  color: #e65f1d;
+  text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.8);
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+.roboto {
+  color: #e65f1d;
+  text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.8);
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.source {
+  color: #e65f1d;
+  text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.8);
+  font-family: 'SourceSerif', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.jost {
+  color: #e65f1d;
+  text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.8);
+  font-family: 'Josst', sans-serif;
+}
+
+.source {
+  color: #e65f1d;
+  text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.8);
+  font-family: 'SourceSerif', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.raleway-heading {
+  color: #e65f1d;
+  text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.8);
+  font-family: 'Raleway', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*# sourceMappingURL=demo36.css.map */

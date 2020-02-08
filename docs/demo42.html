@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Machine Stops &mdash; </title>
+  <link rel="stylesheet" href="css/shared/typography-stoneHumanist.css">
+  <link rel="stylesheet" href="css/demo42.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Sorkin Storytelling Style</h1>
+
+    <p>I love the way Aaron Sorkin tells his stories. From the lang walk/talks in The West Wing to some amazing scenes and dialogue in The West Wing and The Newsroom I've always admired the way in which he structures a scene. Yes, I get that a lot of the work is the director's as he's the one blocking and giving the script life and the actors' who actually say what's on the script.</p>
+
+    <p>But whoever you want to point to as the creator of these scenes, I still choose to give credit to the writer who first created the idea and who put them into paper for the rest of the cast and crew to work with.</p>
+
+    <div class="content">
+
+      <div class="item">
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/hKTH1YXbO7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="description">
+          <h2>The Stackhouse Filibuster </h2>
+          <p>The West Wing &mdash; Season 2, Episode 17</p>
+
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/sjkmaQsSrNY?start=240" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="description">
+          <h2>What Kind of Day Has It Been</h2>
+          <p>The Newsroom &mdash; Season 3, Episode 6</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/9UANxKEXBGg?start=90" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="description">
+          <h2>Election Night: Part II </h2>
+          <p>The Newsroom &mdash; Season 2, Episode 9</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/p7MzsxkIwAg?start=72" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="description">
+          <h2>The 112th Congress</h2>
+          <p>The Newsroom &mdash; Season 1, Episode 3</p>
+        </div>
+      </div>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  <script src="js/fontfaceobserver.js"></script>
+  <script>
+    const stone = new FontFaceObserver('Stone Humanist');
+    const stoneBold = new FontFaceObserver('Stone Humanist', {
+      weight: 700,
+    });
+    const stoneItal = new FontFaceObserver('Stone Humanist', {
+      style: 'italic',
+    });
+    const stoneBI = new FontFaceObserver('Stone Humanist', {
+      weight: 700,
+      style: 'italic',
+    });
+
+    let html = document.documentElement;
+
+    html.classList.add('fonts-loading');
+
+    Promise.all([
+      stone.load(),
+      stoneBold.load(),
+      stoneItal.load(),
+      stoneBI.load(),
+    ]).then(() => {
+      html.classList.remove('fonts-loading');
+      html.classList.add('fonts-loaded');
+      console.log('All fonts have loaded.');
+    }).catch(() => {
+      html.classList.remove('fonts-loading');
+      html.classList.add('fonts-failed');
+      console.log('One or more fonts failed to load');
+    });
+
+  </script>
+</body>
+
+</html>

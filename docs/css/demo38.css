@@ -1,0 +1,52 @@
+@import url("https://use.typekit.net/aet8yjj.css");
+body {
+  background-color: #fbfbf6;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  font-family: 'bebas-neue', sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 15em);
+  grid-auto-rows: 100px;
+  margin: 5em 0;
+}
+
+.item {
+  padding: 0;
+  margin: 0;
+  font-size: 6em;
+}
+
+.item1 {
+  color: red;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.item2 {
+  color: lime;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.item3 {
+  color: blue;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.full-size {
+  padding: 0;
+  margin-top: 0;
+  font-size: 18em;
+}
+
+/*# sourceMappingURL=demo38.css.map */

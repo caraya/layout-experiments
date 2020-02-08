@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Lettering Example</title>
+  <!-- jQuery loading technique taken from the html5 boilerplate-->
+  <!-- load the script from jQuery CDN -->
+  <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!--
+    Test if jQuery is available, if not use document.write to dynamically
+    add the script locally
+  -->
+  <script>window.jQuery ||
+    document.write('<script src="/js/jquery-1.12.4.min.js"><\/script>')</script>
+  <!-- load lettering.js -->
+  <script src='js/jquery.lettering.js'></script>
+  <!-- Initialize lettering.js -->
+  <script>
+    $(document).ready(function() {
+      $('.myTitle').lettering();
+    });
+  </script>
+  <link rel='stylesheet' href='./css/demo39.css'>
+</head>
+<body>
+  <div class='container'>
+    <h1 class='myTitle'>Nightfall</h1>
+  </div>
+</body>
+</html>

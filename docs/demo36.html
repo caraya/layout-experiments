@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fonts in titles</title>
+  <link rel="stylesheet" href="css/demo36.css">
+</head>
+
+<body>
+    <h1>Fonts in titles</h1>
+
+    <div class='example-wrapper'>
+      <p>Marvin</p>
+      <h1 class="marvin">The machine that won the war</h1>
+    </div>
+
+    <div class='example-wrapper'>
+      <p>Avenir</p>
+      <h1 class="avenir">The machine that won the war</h1>
+    </div>
+
+    <div class='example-wrapper'>
+      <p>Source Serif</p>
+      <h1 class="source">The machine that won the war</h1>
+    </div>
+
+    <div class='example-wrapper'>
+      <p class="roboto-bold">Roboto</p>
+      <h1 class="roboto roboto-black">The machine that won the war</h1>
+    </div>
+
+    <div class='example-wrapper'>
+      <p>Jost</p>
+      <h1 class="jost">The machine that won the war</h1>
+    </div>
+
+    <div class='example-wrapper'>
+      <p>Raleway</p>
+      <h1 class="raleway-heading">The machine that won the war</h1>
+    </div>
+
+  <script src="js/fontfaceobserver.js"></script>
+  <script>
+    const avenir = new FontFaceObserver('Avenir');
+    const source = new FontFaceObserver('SourceSerif')
+    const roboto = new FontFaceObserver('Roboto');
+    const jost = new FontFaceObserver('Jost');
+    const marvin = new FontFaceObserver('Marvin Visions');
+    const raleway = new FontFaceObserver('Raleway', {
+      weight: 700,
+    });
+
+    let html = document.documentElement;
+
+    html.classList.add('fonts-loading');
+
+    Promise.all([
+      roboto.load(),
+      avenir.load(),
+      source.load(),
+      jost.load(),
+      marvin.load(),
+      raleway.load(),
+    ]).then(() => {
+      html.classList.remove('fonts-loading');
+      html.classList.add('fonts-loaded');
+      console.log('All fonts have loaded.');
+    }).catch(() => {
+      html.classList.remove('fonts-loading');
+      html.classList.add('fonts-failed');
+      console.log('One or more fonts failed to load');
+    });
+
+  </script>
+</body>
+
+</html>

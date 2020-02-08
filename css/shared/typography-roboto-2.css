@@ -5,9 +5,10 @@
  */
 @font-face {
   font-family: 'Roboto';
-  src: url("../../fonts/Roboto-min-VF.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  src: url("../../fonts/Roboto-min-VF.woff2") format("woff2-variations");
+  font-weight: 250 900;
+  font-style: slant 0deg 12deg;
+  font-stretch: 75% 100%;
   font-display: swap;
 }
 

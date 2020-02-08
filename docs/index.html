@@ -7,9 +7,9 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta name="theme-color" content="#fbf6ef"/>
 
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link href="/manifest.json" rel="manifest">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link href="./manifest.json" rel="manifest">
 
   <title>Layout Experiments</title>
 
@@ -595,7 +595,7 @@
   <script>performance.measure('analytics', 'begin analytics', 'end analytics');</script>
 
   <script>performance.mark('begin zenscroll');</script>
-  <script async src="/js/zenscroll.min.js"></script>
+  <script async src="./js/zenscroll.min.js"></script>
   <script>performance.mark('end zenscroll');</script>
   <script>performance.measure('zenscroll', 'begin zenscroll', 'end zenscroll');</script>
 
@@ -607,7 +607,7 @@
     // Use the window load event to keep the page load performant
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('./sw.js', {
-        scope: '/'
+        scope: '/layout-experiments/'
       });
       console.log('Service Worker registered');
     });
@@ -618,7 +618,7 @@
   <script>performance.measure('sw-workbox', 'begin sw-workbox', 'end sw-workbox');</script>
 
   <script>performance.mark('begin ffo');</script>
-  <script src="js/fontfaceobserver.standalone.js"></script>
+  <script src="./js/fontfaceobserver.standalone.js"></script>
   <script>
     const roboto = new FontFaceObserver('Roboto');
 

@@ -3,7 +3,7 @@
 
 'use strict';
 // Require Gulp first
-const {series, src, dest} = require('gulp');
+const gulp = require('gulp');
 //  packageJson = require('./package.json'),
 // Load plugins
 const $ = require('gulp-load-plugins')({
@@ -11,7 +11,7 @@ const $ = require('gulp-load-plugins')({
 });
 // Static Web Server stuff
 const browserSync = require('browser-sync');
-// const bsReload = browserSync.reload();
+// const bsReload = .reload();
 // postcss
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -40,15 +40,15 @@ const del = require('del');
  * @see {@link http://sass-lang.com|SASS}
  * @see {@link http://sass-compatibility.github.io/|SASS Feature Compatibility}
  */
-function createSass() {
-  return src('sass/**/*.scss')
+gulp.task('sass', () => {
+  return gulp.src('sass/**/*.scss')
   .pipe(sourcemaps.init())
   .pipe(sass({
     outputStyle: 'expanded',
   })
   .on('error', sass.logError))
-  .pipe(dest('./css'));
-};
+  .pipe(gulp.dest('./css'));
+});
 
 /**
  * @name processCSS
@@ -60,25 +60,25 @@ function createSass() {
  *
  * @see {@link https://github.com/postcss/autoprefixer|autoprefixer}
  */
-function processCSS() {
+gulp.task('processCSS', () => {
   // What processors/plugins to use with PostCSS
   const PROCESSORS = [autoprefixer()];
-  return src('css/**/*.css')
+  return gulp.src('css/**/*.css')
     .pipe($.sourcemaps.init())
     .pipe(postcss(PROCESSORS))
     .pipe($.sourcemaps.write('.'))
-    .pipe(dest('css'))
+    .pipe(gulp.dest('css'))
     .pipe($.size({
       pretty: true,
       title: 'processCSS',
     }));
-};
+});
 
 /**
- * @name processCSS
+ * @name critical
  * @description Runs critical to create critical path CSS
  */
-function criticalCSS(cb) {
+gulp.task('critical', (cb) => {
   critical.generate({
     base: 'docs/',
     html: '**/*.html',
@@ -99,10 +99,10 @@ function criticalCSS(cb) {
     }],
   });
   cb();
-};
+});
 
 /**
- * @name babel7
+ * @name babel
  * @description Transpiles ES6 to ES5 using Babel. As Node and browsers
  * support more of the spec natively this will move to supporting
  * ES2016 and later transpilation
@@ -113,26 +113,26 @@ function criticalCSS(cb) {
  * @see {@link http://babeljs.io/docs/learn-es2015/|Learn ES2015}
  * @see {@link http://www.ecma-international.org/ecma-262/6.0/|ECMAScript 2015 specification}
  */
-function babel7() {
-  return src('src/js/**/*.js')
+gulp.task('babel', () => {
+  return gulp.src('src/js/**/*.js')
     .pipe(babel({
       presets: ['@babel/preset-env'],
     }))
-    .pipe(dest('dist'));
-}
+    .pipe(gulp.dest('dist'));
+});
 
 /**
  * @name eslint
  * @description Runs eslint on all javascript files
  */
-function eslint() {
-  return src([
-      'src/js/**/*.js',
+gulp.task('eslint', () => {
+  return gulp.src([
+      'gulp.src/js/**/*.js',
     ])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
-};
+});
 
 /**
  * @name imagemin
@@ -146,8 +146,8 @@ function eslint() {
  * @see {@link https://github.com/postcss/autoprefixer|Autoprefixer}
  * @see {@link processImages}
  */
-function imageminProcess() {
-  return src('images/**/*.{jpg,png,gif.svg}')
+gulp.task('imagemin', () => {
+  return gulp.src('images/**/*.{jpg,png,gif.svg}')
     .pipe($.imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.optipng({optimizationLevel: 5}),
@@ -160,49 +160,53 @@ function imageminProcess() {
       imageminMozjpeg({quality: 85}),
       imageminWebp({quality: 85}),
     ]))
-    .pipe(dest('images'))
+    .pipe(gulp.dest('images'))
     .pipe($.size({
       pretty: true,
       title: 'imagemin',
     }));
-};
+});
 
 // Guetzli is an experimental jpeg encoder from Google.
 // I'm running it as a separate task to test whether it
 // works better than mozjpeg and under what circumstances
-function guetzli() {
-  return src('src/images/originals/**/*.jpg')
+gulp.task('guetzli', () => {
+  return gulp.src('gulp.src/images/originals/**/*.jpg')
   .pipe(imagemin([
     imageminGuetzli({
         quality: 85,
     }),
   ]))
-  .pipe(dest('dist'));
-}
+  .pipe(gulp.dest('dist'));
+});
 
 /**
  * @name clean
  * @description deletes specified files
  */
-function clean(cb) {
+gulp.task('clean', (cb) => {
   return del([
     'docs',
   ]);
   cb();
-};
+});
 
 // BrowserSync
-function server() {
+gulp.task('serve', () => {
   browserSync.init({
     server: {
-      baseDir: './docs/',
+      baseDir: './docs',
     },
     port: 3000,
   });
-}
 
-function copyFonts() {
-  return src([
+  gulp.watch('js/**/*.js', gulp.series('babel'));
+  gulp.watch('sass/**/*.scss', gulp.series('css'));
+  gulp.watch('**/*.html'), gulp.series('copyHtml');
+});
+
+gulp.task('copyFonts', () => {
+  return gulp.src([
       'fonts/Roboto-min-VF.woff2',
       'fonts/AvenirNext_Variable.woff2',
       'fonts/SourceSerifVariable-Roman.ttf.woff2',
@@ -259,16 +263,16 @@ function copyFonts() {
       'fonts/RecoletaMedium.woff2',
       'fonts/RecoletaMedium.woff',
     ])
-    .pipe(dest('./docs/fonts'));
-};
+    .pipe(gulp.dest('./docs/fonts'));
+});
 
-function copyAll() {
-  return src([
+gulp.task('copyAssets', () => {
+  return gulp.src([
       '*.html',
+      'sw.js',
       'css/**/*.{map,css}',
       'js/**/*.js',
       '!js/sw.js',
-      'sw.js',
       'favicon.ico',
       'images/**/*.{png,jpg,jpeg,webp,gif.svg}',
       'manifest.json',
@@ -280,20 +284,39 @@ function copyAll() {
     ], {
       base: './',
     })
-    .pipe(dest('./docs'));
-};
+    .pipe(gulp.dest('./docs'));
+});
 
-// exports
-exports.createSass = createSass;
-exports.babel = babel7;
-exports.processCSS = processCSS;
-exports.css = series(createSass, processCSS);
-exports.criticalCSS = criticalCSS;
-exports.eslint = eslint;
-exports.imagemin = imageminProcess;
-exports.guetzli = guetzli;
-exports.clean = clean;
-exports.serve = server;
-exports.copyFonts = copyFonts;
-exports.copyAll = copyAll;
-exports.default = series(createSass, processCSS, clean, copyFonts, copyAll);
+gulp.task('copyHtml', () => {
+  return gulp.src([
+      '*.html',
+      'pages/*.html',
+    ], {
+      base: './',
+    })
+    .pipe(gulp.dest('./docs'));
+});
+
+
+gulp.task('css',
+  gulp.series(
+    'sass',
+    'processCSS'
+  )
+);
+
+gulp.task('copyAll',
+  gulp.parallel(
+    'copyFonts',
+    'copyAssets',
+    'copyHtml'
+  )
+);
+
+gulp.task('default',
+    gulp.series(
+      'sass',
+      'processCSS',
+      'copyAll',
+    )
+);

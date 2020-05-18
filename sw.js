@@ -1,33 +1,11 @@
-/* eslint required-jsdoc: "off", max-len: "off", require-jsdoc: "off" */
-importScripts(
-    'https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js');
+/* eslint require-jsdoc: "off",  max-len: "off" */
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js');
 
 // Initialize offline analytics
 workbox.googleAnalytics.initialize();
 
 // Place holder for precached assets
-workbox.precaching.precacheAndRoute([
-  {
-    "url": "index.html",
-    "revision": "4d58f10859f20a4b2f5fe03ef1f7da78"
-  },
-  {
-    "url": "css/index.css",
-    "revision": "09ec0906d5f5baa2f95019759ab208df"
-  },
-  {
-    "url": "js/zenscroll.min.js",
-    "revision": "b6075f76c2f71bae72e7a544f61a0919"
-  },
-  {
-    "url": "pages/404.html",
-    "revision": "40acdc63b1e48c67fd1e32be262d6cc4"
-  },
-  {
-    "url": "pages/offline.html",
-    "revision": "f761dd08b66768c2d9a20131b080f457"
-  }
-]);
+workbox.precaching.precacheAndRoute([{"revision":"8ac1c0bcaba9b4ad0ddd52b1b29faa06","url":"index.html"},{"revision":"09ec0906d5f5baa2f95019759ab208df","url":"css/index.css"},{"revision":"b6075f76c2f71bae72e7a544f61a0919","url":"js/zenscroll.min.js"},{"revision":"40acdc63b1e48c67fd1e32be262d6cc4","url":"pages/404.html"},{"revision":"f761dd08b66768c2d9a20131b080f457","url":"pages/offline.html"}]);
 
 // Cache strategies definitions
 // HTML caching strategy

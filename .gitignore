@@ -11,3 +11,4 @@ scratch-sources/
 .vscode
 misc
 greensock-js-with-customease/**/*.*
+js/sw-orig.js

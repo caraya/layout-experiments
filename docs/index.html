@@ -26,8 +26,8 @@
 
   <script>performance.mark('stylesheets start blocking');</script>
   <!-- Stylesheets -->
-  <link href="css/shared/typography-roboto-2.css" rel="stylesheet">
-  <link href="css/index.css" rel="stylesheet">
+  <link href="./css/shared/typography-roboto-2.css" rel="stylesheet">
+  <link href="./css/index.css" rel="stylesheet">
   <script>performance.mark('stylesheets end blocking');</script>
   <script>performance.measure('stylesheets', 'stylesheets start blocking', 'stylesheets end blocking');</script>
 </head>
@@ -348,6 +348,12 @@
         <dd>The inspiration for Rush's Red Barchetta, the story was first published in Road and Track in 1973.</dd>
         <dd>In this layout I've played a little with font weight to make the foont a little lighter and easier to read.</dd>
         <dd><strong>In memory of Neil Peart (1952 - 2020)</strong></dd>
+
+        <dt><a href="demo66.html">Girlfriend in a Coma &mdash; Emily V. Gordon</a></dt>
+        <dd>Sometimes the worst situatuibs can bring the best in us and the best for us.</dd>
+
+        <dt><a href="demo67.html">Neruda entre nosotros &mdash; Julio Cortazar</a></dt>
+        <dd>An interesing essay about Neruda.</dd>
       </dl>
 
       <h2 id="tools">Tools</h2>
@@ -607,7 +613,7 @@
     // Use the window load event to keep the page load performant
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('./sw.js', {
-        scope: '/layout-experiments/'
+        scope: '/'
       });
       console.log('Service Worker registered');
     });

@@ -10,5 +10,5 @@ module.exports = {
 
   ],
   'swSrc': 'js/sw.js',
-  'swDest': 'docs/sw.js',
+  'swDest': 'sw.js',
 };

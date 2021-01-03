@@ -607,7 +607,7 @@
 
   <script>performance.mark('begin sw-workbox');</script>
   <!-- Load service Worker if available -->
-  <script>
+  <script type="module">
 
   if ('serviceWorker' in navigator) {
     // Use the window load event to keep the page load performant
@@ -647,5 +647,13 @@
   </script>
   <script>performance.mark('end ffo');</script>
   <script>performance.measure('font face observer', 'begin ffo', 'end ffo');</script>
+
+  <script async type='module'>
+    import {getCLS, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
+
+    getCLS(console.log);
+    getFID(console.log);
+    getLCP(console.log);
+  </script>
 </body>
 </html>

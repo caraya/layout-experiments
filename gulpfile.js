@@ -200,9 +200,9 @@ gulp.task('serve', () => {
     port: 3000,
   });
 
-  gulp.watch('js/**/*.js', gulp.series('babel'));
-  gulp.watch('sass/**/*.scss', gulp.series('css'));
-  gulp.watch('**/*.html'), gulp.series('copyHtml');
+  // gulp.watch('js/**/*.js', gulp.series('babel'));
+  // gulp.watch('sass/**/*.scss', gulp.series('css'));
+  // gulp.watch('*.html'), gulp.series('copyHtml');
 });
 
 gulp.task('copyFonts', () => {
@@ -262,6 +262,7 @@ gulp.task('copyFonts', () => {
       'fonts/RecoletaBold.woff',
       'fonts/RecoletaMedium.woff2',
       'fonts/RecoletaMedium.woff',
+      'fonts/Recursive_VF_1.053-subset.woff2',
     ])
     .pipe(gulp.dest('./docs/fonts'));
 });

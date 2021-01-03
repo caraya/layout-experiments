@@ -7,8 +7,7 @@ module.exports = {
     'js/zenscroll.min.js',
     'pages/404.html',
     'pages/offline.html',
-
   ],
-  'swSrc': 'js/sw.js',
+  'swSrc': 'js/sw2.js',
   'swDest': 'sw.js',
 };

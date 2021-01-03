@@ -1,25 +1,22 @@
 /* eslint require-jsdoc: "off",  max-len: "off", new-cap: "off" */
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.0.2/workbox-sw.js');
 
-
-const {precacheAndRoute} = workbox.precaching;
-const {registerRoute, setDefaultHandler, setCatchHandler} = workbox.routing;
+const {registerRoute} = workbox.routing;
 const {StaleWhileRevalidate, CacheFirst} = workbox.strategies;
 const {CacheableResponsePlugin} = workbox.cacheableResponse;
-const {ExpirationPlugin} = workbox.expiration;
-// const {googleAnalytics} = workbox.google-analytics;
-
-// // Load google analytics plugin
-// googleAnalytics.initialize();
+const {ExpirationPlugin} = workbox.expirationPlugin;
 
 // Precache insertion point
-precacheAndRoute([{"revision":"aed5a5427c49cf34a07d681d66ee3072","url":"index.html"},{"revision":"09ec0906d5f5baa2f95019759ab208df","url":"css/index.css"},{"revision":"b6075f76c2f71bae72e7a544f61a0919","url":"js/zenscroll.min.js"},{"revision":"40acdc63b1e48c67fd1e32be262d6cc4","url":"pages/404.html"},{"revision":"f761dd08b66768c2d9a20131b080f457","url":"pages/offline.html"}]);
+workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
+
+// Load google analytics plugin
+workbox.googleAnalytics.initialize();
 
 registerRoute(({url}) => url.endsWith(['html', 'htm', 'php']),
   new CacheFirst({
     cacheName: 'Content',
     plugins: [
-      new ExpirationPlugin({
+      ExpirationPlugin({
         maxAgeSeconds: 30 * 24 * 60 * 60,
         maxEntries: 30,
         purgeOnQuotaError: true,
@@ -32,7 +29,7 @@ registerRoute(({url}) => url.endsWith('css'),
   new StaleWhileRevalidate({
     cacheName: 'CSS Styles',
     plugins: [
-      new ExpirationPlugin({
+      ExpirationPlugin({
         magAgeSeconds: 30 * 24 * 60 * 60,
         maxEntries: 30,
         purgeOnQuotaError: true,
@@ -58,17 +55,30 @@ registerRoute(({url}) => url.endsWith(['js', 'mjs']),
 );
 
 registerRoute(({url}) => {
-    url.origin === 'https://fonts.googleapis.com/' ||
-    url.origin === 'https://fonts.gstatic.com';
+  url.origin === 'https://fonts.googleapis.com/' ||
+  url.origin === 'https://fonts.gstatic.com';
   },
   new CacheFirst({
-    cacheName: 'Google Fonts',
+  cacheName: 'Google Fonts',
     plugins: [
       new CacheableResponsePlugin({
         statuses: [0, 200],
       }),
       new ExpirationPlugin({
-        maxAgeSeconds: 120 * 24 * 60 * 60,
+          maxAgeSeconds: 180 * 24 * 60 * 60,
+          maxEntries: 50,
+          purgeOnQuotaError: true,
+      }),
+    ],
+  })
+);
+
+registerRoute(({url}) => url.endsWith(['woff', 'woff2', 'ttf', 'otf']),
+  new CacheFirst({
+    cacheName: 'Local Fonts',
+    plugins: [
+      new ExpirationPlugin({
+        maxAgeSeconds: 180 * 24 * 60 * 60,
         maxEntries: 50,
         purgeOnQuotaError: true,
       }),
@@ -76,31 +86,18 @@ registerRoute(({url}) => {
   })
 );
 
-
-registerRoute(({url}) => url.endsWith([
-  'png',
-  'jpg',
-  'webp',
-  'avif',
-  'heic',
-  'svg']),
+registerRoute(({url}) => url.endsWith(['png', 'jpg', 'jpeg', 'svg', 'gif', 'webp', 'avif', 'heic', 'heif']),
   new CacheFirst({
-    cacheName: 'scripts',
+    cacheName: 'Local Images',
     plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200],
-      }),
       new ExpirationPlugin({
-        maxAgeSeconds: 30 * 24 * 60 * 60,
-        maxEntries: 30,
+        maxAgeSeconds: 180 * 24 * 60 * 60,
+        maxEntries: 50,
         purgeOnQuotaError: true,
       }),
     ],
   })
 );
-
-// Set default caching strategy for everything else.
-setDefaultHandler(new StaleWhileRevalidate());
 
 setCatchHandler(({event}) => {
   switch (event.request.destination) {

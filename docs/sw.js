@@ -13,9 +13,9 @@ const {ExpirationPlugin} = workbox.expiration;
 // googleAnalytics.initialize();
 
 // Precache insertion point
-precacheAndRoute([{"revision":"aed5a5427c49cf34a07d681d66ee3072","url":"index.html"},{"revision":"09ec0906d5f5baa2f95019759ab208df","url":"css/index.css"},{"revision":"b6075f76c2f71bae72e7a544f61a0919","url":"js/zenscroll.min.js"},{"revision":"40acdc63b1e48c67fd1e32be262d6cc4","url":"pages/404.html"},{"revision":"f761dd08b66768c2d9a20131b080f457","url":"pages/offline.html"}]);
+precacheAndRoute([{"revision":"ac233ab1fc3793f1960809ed455ea699","url":"index.html"},{"revision":"09ec0906d5f5baa2f95019759ab208df","url":"css/index.css"},{"revision":"b6075f76c2f71bae72e7a544f61a0919","url":"js/zenscroll.min.js"},{"revision":"40acdc63b1e48c67fd1e32be262d6cc4","url":"pages/404.html"},{"revision":"f761dd08b66768c2d9a20131b080f457","url":"pages/offline.html"}]);
 
-registerRoute(({url}) => url.endsWith(['html', 'htm', 'php']),
+registerRoute(({url}) => url.pathname.endsWith(['html', 'htm', 'php']),
   new CacheFirst({
     cacheName: 'Content',
     plugins: [

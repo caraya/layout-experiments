@@ -1,11 +1,12 @@
 {
   "name": "Web Layout Experiments",
   "short_name": "experiments",
+  "dir": "ltr",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
   "display_override": ["tabbed", "minimal-ui"],
-  "Scope": ".",
+  "scope": ".",
   "start_url": "index.html",
   "icons": [{
       "src": "images/icons/icon-72x72.png",

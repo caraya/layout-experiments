@@ -16,8 +16,7 @@ const browserSync = require('browser-sync');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 // SASS
-const sass = require('gulp-sass');
-sass.compiler = require('node-sass');
+const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 // Critical CSS
 const critical = require('critical');

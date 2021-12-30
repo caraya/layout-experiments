@@ -16,11 +16,11 @@ const browserSync = require('browser-sync');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 // SASS
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
 const sourcemaps = require('gulp-sourcemaps');
 // Critical CSS
 const critical = require('critical');
-
 // Utilities
 const del = require('del');
 
@@ -37,12 +37,12 @@ const del = require('del');
  */
 gulp.task('sass', () => {
   return gulp.src('sass/**/*.scss')
-      .pipe(sourcemaps.init())
-      .pipe(sass({
-        outputStyle: 'expanded',
-      })
-          .on('error', sass.logError))
-      .pipe(gulp.dest('./css'));
+  .pipe(sourcemaps.init())
+  .pipe(sass({
+    outputStyle: 'expanded',
+  })
+  .on('error', sass.logError))
+  .pipe(gulp.dest('./css'));
 });
 
 /**
@@ -56,17 +56,17 @@ gulp.task('sass', () => {
  * @see {@link https://github.com/postcss/autoprefixer|autoprefixer}
  */
 gulp.task('processCSS', () => {
-// What processors/plugins to use with PostCSS
+  // What processors/plugins to use with PostCSS
   const PROCESSORS = [autoprefixer()];
   return gulp.src('css/**/*.css')
-      .pipe($.sourcemaps.init())
-      .pipe(postcss(PROCESSORS))
-      .pipe($.sourcemaps.write('.'))
-      .pipe(gulp.dest('css'))
-      .pipe($.size({
-        pretty: true,
-        title: 'processCSS',
-      }));
+    .pipe($.sourcemaps.init())
+    .pipe(postcss(PROCESSORS))
+    .pipe($.sourcemaps.write('.'))
+    .pipe(gulp.dest('css'))
+    .pipe($.size({
+      pretty: true,
+      title: 'processCSS',
+    }));
 });
 
 /**
@@ -110,10 +110,10 @@ gulp.task('critical', (cb) => {
  */
 gulp.task('babel', () => {
   return gulp.src('src/js/**/*.js')
-      .pipe(babel({
-        presets: ['@babel/preset-env'],
-      }))
-      .pipe(gulp.dest('dist'));
+    .pipe(babel({
+      presets: ['@babel/preset-env'],
+    }))
+    .pipe(gulp.dest('dist'));
 });
 
 /**
@@ -122,11 +122,57 @@ gulp.task('babel', () => {
  */
 gulp.task('eslint', () => {
   return gulp.src([
-    'gulp.src/js/**/*.js',
-  ])
-      .pipe(eslint())
-      .pipe(eslint.format())
-      .pipe(eslint.failAfterError());
+      'gulp.src/js/**/*.js',
+    ])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
+
+/**
+ * @name imagemin
+ * @description Reduces image file sizes. Doubly important if
+ * we'll choose to play with responsive images.
+ *
+ * Imagemin will compress jpg (using mozilla's mozjpeg),
+ * SVG (using SVGO) GIF and PNG images but WILL NOT create multiple
+ * versions for use with responsive images
+ *
+ * @see {@link https://github.com/postcss/autoprefixer|Autoprefixer}
+ * @see {@link processImages}
+ */
+gulp.task('imagemin', () => {
+  return gulp.src('images/**/*.{jpg,png,gif.svg}')
+    .pipe($.imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo({
+        plugins: [
+          {removeViewBox: false},
+          {cleanupIDs: false},
+        ],
+      }),
+      imageminMozjpeg({quality: 85}),
+      imageminWebp({quality: 85}),
+    ]))
+    .pipe(gulp.dest('images'))
+    .pipe($.size({
+      pretty: true,
+      title: 'imagemin',
+    }));
+});
+
+// Guetzli is an experimental jpeg encoder from Google.
+// I'm running it as a separate task to test whether it
+// works better than mozjpeg and under what circumstances
+gulp.task('guetzli', () => {
+  return gulp.src('gulp.src/images/originals/**/*.jpg')
+  .pipe(imagemin([
+    imageminGuetzli({
+        quality: 85,
+    }),
+  ]))
+  .pipe(gulp.dest('dist'));
 });
 
 /**
@@ -149,69 +195,72 @@ gulp.task('serve', () => {
     port: 3000,
   });
 
-// gulp.watch('js/**/*.js', gulp.series('babel'));
-// gulp.watch('sass/**/*.scss', gulp.series('css'));
-// gulp.watch('*.html'), gulp.series('copyHtml');
+  // gulp.watch('js/**/*.js', gulp.series('babel'));
+  // gulp.watch('sass/**/*.scss', gulp.series('css'));
+  // gulp.watch('*.html'), gulp.series('copyHtml');
 });
 
 gulp.task('copyFonts', () => {
   return gulp.src([
-    'fonts/**/*.woff2',
-  ])
-  .pipe(gulp.dest('./docs/fonts'));
+      'fonts/*.woff2',
+    ], {
+      base: './',
+      allowEmpty: true,
+    })
+    .pipe(gulp.dest('./docs/fonts'));
 });
 
 gulp.task('copyAssets', () => {
   return gulp.src([
-    '*.html',
-    'sw.js',
-    'css/**/*.{map,css}',
-    'js/**/*.js',
-    '!js/sw.js',
-    'favicon.ico',
-    'images/**/*.{png,jpg,jpeg,webp,gif.svg}',
-    'manifest.json',
-    'pages/*.html',
-    '!scratch-sources/',
-    '!sass/**/*',
-    '!node_modules/**/*',
-    '!workbox-config.js',
-  ], {
-    base: './',
-  })
-      .pipe(gulp.dest('./docs'));
+      '*.html',
+      'sw.js',
+      'css/**/*.{map,css}',
+      'js/**/*.js',
+      '!js/sw.js',
+      'favicon.ico',
+      'images/**/*.{png,jpg,jpeg,webp,gif.svg}',
+      'manifest.json',
+      'pages/*.html',
+      '!scratch-sources/',
+      '!sass/**/*',
+      '!node_modules/**/*',
+      '!workbox-config.js',
+    ], {
+      base: './',
+    })
+    .pipe(gulp.dest('./docs'));
 });
 
 gulp.task('copyHtml', () => {
   return gulp.src([
-    '*.html',
-    'pages/*.html',
-  ], {
-    base: './',
-  })
-      .pipe(gulp.dest('./docs'));
+      '*.html',
+      'pages/*.html',
+    ], {
+      base: './',
+    })
+    .pipe(gulp.dest('./docs'));
 });
 
 
 gulp.task('css',
-    gulp.series(
-        'sass',
-        'processCSS',
-    ),
+  gulp.series(
+    'sass',
+    'processCSS',
+  ),
 );
 
 gulp.task('copyAll',
-    gulp.parallel(
-        'copyFonts',
-        'copyAssets',
-        'copyHtml',
-    ),
+  gulp.parallel(
+    'copyFonts',
+    'copyAssets',
+    'copyHtml',
+  ),
 );
 
 gulp.task('default',
     gulp.series(
-        'sass',
-        'processCSS',
-        'copyAll',
+      'sass',
+      'processCSS',
+      'copyAll',
     ),
 );

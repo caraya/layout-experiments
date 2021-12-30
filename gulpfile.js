@@ -16,16 +16,11 @@ const browserSync = require('browser-sync');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 // SASS
-const sass = require('gulp-sass');
-sass.compiler = require('node-sass');
+const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 // Critical CSS
 const critical = require('critical');
-// Imagemin and Plugins
-const imagemin = require('gulp-imagemin');
-const imageminMozjpeg = require('imagemin-mozjpeg');
-const imageminGuetzli = require('imagemin-guetzli');
-const imageminWebp = require('imagemin-webp');
+
 // Utilities
 const del = require('del');
 
@@ -42,12 +37,12 @@ const del = require('del');
  */
 gulp.task('sass', () => {
   return gulp.src('sass/**/*.scss')
-  .pipe(sourcemaps.init())
-  .pipe(sass({
-    outputStyle: 'expanded',
-  })
-  .on('error', sass.logError))
-  .pipe(gulp.dest('./css'));
+      .pipe(sourcemaps.init())
+      .pipe(sass({
+        outputStyle: 'expanded',
+      })
+          .on('error', sass.logError))
+      .pipe(gulp.dest('./css'));
 });
 
 /**
@@ -61,17 +56,17 @@ gulp.task('sass', () => {
  * @see {@link https://github.com/postcss/autoprefixer|autoprefixer}
  */
 gulp.task('processCSS', () => {
-  // What processors/plugins to use with PostCSS
+// What processors/plugins to use with PostCSS
   const PROCESSORS = [autoprefixer()];
   return gulp.src('css/**/*.css')
-    .pipe($.sourcemaps.init())
-    .pipe(postcss(PROCESSORS))
-    .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('css'))
-    .pipe($.size({
-      pretty: true,
-      title: 'processCSS',
-    }));
+      .pipe($.sourcemaps.init())
+      .pipe(postcss(PROCESSORS))
+      .pipe($.sourcemaps.write('.'))
+      .pipe(gulp.dest('css'))
+      .pipe($.size({
+        pretty: true,
+        title: 'processCSS',
+      }));
 });
 
 /**
@@ -115,10 +110,10 @@ gulp.task('critical', (cb) => {
  */
 gulp.task('babel', () => {
   return gulp.src('src/js/**/*.js')
-    .pipe(babel({
-      presets: ['@babel/preset-env'],
-    }))
-    .pipe(gulp.dest('dist'));
+      .pipe(babel({
+        presets: ['@babel/preset-env'],
+      }))
+      .pipe(gulp.dest('dist'));
 });
 
 /**
@@ -127,57 +122,11 @@ gulp.task('babel', () => {
  */
 gulp.task('eslint', () => {
   return gulp.src([
-      'gulp.src/js/**/*.js',
-    ])
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
-
-/**
- * @name imagemin
- * @description Reduces image file sizes. Doubly important if
- * we'll choose to play with responsive images.
- *
- * Imagemin will compress jpg (using mozilla's mozjpeg),
- * SVG (using SVGO) GIF and PNG images but WILL NOT create multiple
- * versions for use with responsive images
- *
- * @see {@link https://github.com/postcss/autoprefixer|Autoprefixer}
- * @see {@link processImages}
- */
-gulp.task('imagemin', () => {
-  return gulp.src('images/**/*.{jpg,png,gif.svg}')
-    .pipe($.imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-      imagemin.svgo({
-        plugins: [
-          {removeViewBox: false},
-          {cleanupIDs: false},
-        ],
-      }),
-      imageminMozjpeg({quality: 85}),
-      imageminWebp({quality: 85}),
-    ]))
-    .pipe(gulp.dest('images'))
-    .pipe($.size({
-      pretty: true,
-      title: 'imagemin',
-    }));
-});
-
-// Guetzli is an experimental jpeg encoder from Google.
-// I'm running it as a separate task to test whether it
-// works better than mozjpeg and under what circumstances
-gulp.task('guetzli', () => {
-  return gulp.src('gulp.src/images/originals/**/*.jpg')
-  .pipe(imagemin([
-    imageminGuetzli({
-        quality: 85,
-    }),
-  ]))
-  .pipe(gulp.dest('dist'));
+    'gulp.src/js/**/*.js',
+  ])
+      .pipe(eslint())
+      .pipe(eslint.format())
+      .pipe(eslint.failAfterError());
 });
 
 /**
@@ -200,124 +149,124 @@ gulp.task('serve', () => {
     port: 3000,
   });
 
-  // gulp.watch('js/**/*.js', gulp.series('babel'));
-  // gulp.watch('sass/**/*.scss', gulp.series('css'));
-  // gulp.watch('*.html'), gulp.series('copyHtml');
+// gulp.watch('js/**/*.js', gulp.series('babel'));
+// gulp.watch('sass/**/*.scss', gulp.series('css'));
+// gulp.watch('*.html'), gulp.series('copyHtml');
 });
 
 gulp.task('copyFonts', () => {
   return gulp.src([
-      'fonts/Roboto-min-VF.woff2',
-      'fonts/AvenirNext_Variable.woff2',
-      'fonts/SourceSerifVariable-Roman.ttf.woff2',
-      'fonts/Roboto-min-VF-subset-demo21.woff2',
-      'fonts/jost-VF.woff2',
-      'fonts/WorkSans-Regular.woff2',
-      'fonts/WorkSans-Bold.woff2',
-      'fonts/MetaVariableDemo-Set.woff2',
-      'fonts/NeueMontreal-Bold.woff',
-      'fonts/NeueMontreal-Bold.woff2',
-      'fonts/Fuji-Bold.woff',
-      'fonts/Fuji-Bold.woff2',
-      'fonts/Fuji-Light.woff',
-      'fonts/Fuji-Light.woff2',
-      'fonts/RoslindaleText-Bold.woff2',
-      'fonts/RoslindaleText-Italic.woff2',
-      'fonts/RoslindaleText-Regular.woff2',
-      'fonts/skolarlatinweb-light-webfont.woff',
-      'fonts/skolarlatinweb-light-webfont.woff2',
-      'fonts/skolarlatinweb-lightitalic-webfont.woff',
-      'fonts/skolarlatinweb-lightitalic-webfont.woff2',
-      'fonts/skolarlatinweb-semibold-webfont.woff',
-      'fonts/skolarlatinweb-semibold-webfont.woff2',
-      'fonts/skolarlatinweb-semibolditalic-webfont.woff',
-      'fonts/skolarlatinweb-semibolditalic-webfont.woff2',
-      'fonts/3849CD_3_0.woff2',
-      'fonts/3849CD_3_0.woff',
-      'fonts/3849CD_2_0.woff2',
-      'fonts/3849CD_2_0.woff',
-      'fonts/3849CD_1_0.woff2',
-      'fonts/3849CD_1_0.woff',
-      'fonts/3849CD_0_0.woff2',
-      'fonts/3849CD_0_0.woff',
-      'fonts/MarvinVisionsBig-Bold.woff',
-      'fonts/MarvinVisionsBig-Bold.woff2',
-      'fonts/Lekton-Bold.woff2',
-      'fonts/Lekton-Italic.woff2',
-      'fonts/Lekton-Regular.woff2',
-      'fonts/Lekton-Bold.woff',
-      'fonts/Lekton-Italic.woff',
-      'fonts/Lekton-Regular.woff',
-      'fonts/CutiveMono-Regular.woff',
-      'fonts/CutiveMono-Regular.woff2',
-      'fonts/hermann-bold-italic.woff',
-      'fonts/hermann-bold-italic.woff2',
-      'fonts/hermann-bold.woff',
-      'fonts/hermann-bold.woff2',
-      'fonts/hermann-italic.woff',
-      'fonts/hermann-italic.woff2',
-      'fonts/hermann-regular.woff',
-      'fonts/hermann-regular.woff2',
-      'fonts/RecoletaBold.woff2',
-      'fonts/RecoletaBold.woff',
-      'fonts/RecoletaMedium.woff2',
-      'fonts/RecoletaMedium.woff',
-      'fonts/Recursive_VF_1.053-subset.woff2',
-    ])
-    .pipe(gulp.dest('./docs/fonts'));
+    'fonts/Roboto-min-VF.woff2',
+    'fonts/AvenirNext_Variable.woff2',
+    'fonts/SourceSerifVariable-Roman.ttf.woff2',
+    'fonts/Roboto-min-VF-subset-demo21.woff2',
+    'fonts/jost-VF.woff2',
+    'fonts/WorkSans-Regular.woff2',
+    'fonts/WorkSans-Bold.woff2',
+    'fonts/MetaVariableDemo-Set.woff2',
+    'fonts/NeueMontreal-Bold.woff',
+    'fonts/NeueMontreal-Bold.woff2',
+    'fonts/Fuji-Bold.woff',
+    'fonts/Fuji-Bold.woff2',
+    'fonts/Fuji-Light.woff',
+    'fonts/Fuji-Light.woff2',
+    'fonts/RoslindaleText-Bold.woff2',
+    'fonts/RoslindaleText-Italic.woff2',
+    'fonts/RoslindaleText-Regular.woff2',
+    'fonts/skolarlatinweb-light-webfont.woff',
+    'fonts/skolarlatinweb-light-webfont.woff2',
+    'fonts/skolarlatinweb-lightitalic-webfont.woff',
+    'fonts/skolarlatinweb-lightitalic-webfont.woff2',
+    'fonts/skolarlatinweb-semibold-webfont.woff',
+    'fonts/skolarlatinweb-semibold-webfont.woff2',
+    'fonts/skolarlatinweb-semibolditalic-webfont.woff',
+    'fonts/skolarlatinweb-semibolditalic-webfont.woff2',
+    'fonts/3849CD_3_0.woff2',
+    'fonts/3849CD_3_0.woff',
+    'fonts/3849CD_2_0.woff2',
+    'fonts/3849CD_2_0.woff',
+    'fonts/3849CD_1_0.woff2',
+    'fonts/3849CD_1_0.woff',
+    'fonts/3849CD_0_0.woff2',
+    'fonts/3849CD_0_0.woff',
+    'fonts/MarvinVisionsBig-Bold.woff',
+    'fonts/MarvinVisionsBig-Bold.woff2',
+    'fonts/Lekton-Bold.woff2',
+    'fonts/Lekton-Italic.woff2',
+    'fonts/Lekton-Regular.woff2',
+    'fonts/Lekton-Bold.woff',
+    'fonts/Lekton-Italic.woff',
+    'fonts/Lekton-Regular.woff',
+    'fonts/CutiveMono-Regular.woff',
+    'fonts/CutiveMono-Regular.woff2',
+    'fonts/hermann-bold-italic.woff',
+    'fonts/hermann-bold-italic.woff2',
+    'fonts/hermann-bold.woff',
+    'fonts/hermann-bold.woff2',
+    'fonts/hermann-italic.woff',
+    'fonts/hermann-italic.woff2',
+    'fonts/hermann-regular.woff',
+    'fonts/hermann-regular.woff2',
+    'fonts/RecoletaBold.woff2',
+    'fonts/RecoletaBold.woff',
+    'fonts/RecoletaMedium.woff2',
+    'fonts/RecoletaMedium.woff',
+    'fonts/Recursive_VF_1.053-subset.woff2',
+  ])
+      .pipe(gulp.dest('./docs/fonts'));
 });
 
 gulp.task('copyAssets', () => {
   return gulp.src([
-      '*.html',
-      'sw.js',
-      'css/**/*.{map,css}',
-      'js/**/*.js',
-      '!js/sw.js',
-      'favicon.ico',
-      'images/**/*.{png,jpg,jpeg,webp,gif.svg}',
-      'manifest.json',
-      'pages/*.html',
-      '!scratch-sources/',
-      '!sass/**/*',
-      '!node_modules/**/*',
-      '!workbox-config.js',
-    ], {
-      base: './',
-    })
-    .pipe(gulp.dest('./docs'));
+    '*.html',
+    'sw.js',
+    'css/**/*.{map,css}',
+    'js/**/*.js',
+    '!js/sw.js',
+    'favicon.ico',
+    'images/**/*.{png,jpg,jpeg,webp,gif.svg}',
+    'manifest.json',
+    'pages/*.html',
+    '!scratch-sources/',
+    '!sass/**/*',
+    '!node_modules/**/*',
+    '!workbox-config.js',
+  ], {
+    base: './',
+  })
+      .pipe(gulp.dest('./docs'));
 });
 
 gulp.task('copyHtml', () => {
   return gulp.src([
-      '*.html',
-      'pages/*.html',
-    ], {
-      base: './',
-    })
-    .pipe(gulp.dest('./docs'));
+    '*.html',
+    'pages/*.html',
+  ], {
+    base: './',
+  })
+      .pipe(gulp.dest('./docs'));
 });
 
 
 gulp.task('css',
-  gulp.series(
-    'sass',
-    'processCSS'
-  )
+    gulp.series(
+        'sass',
+        'processCSS',
+    ),
 );
 
 gulp.task('copyAll',
-  gulp.parallel(
-    'copyFonts',
-    'copyAssets',
-    'copyHtml'
-  )
+    gulp.parallel(
+        'copyFonts',
+        'copyAssets',
+        'copyHtml',
+    ),
 );
 
 gulp.task('default',
     gulp.series(
-      'sass',
-      'processCSS',
-      'copyAll',
-    )
+        'sass',
+        'processCSS',
+        'copyAll',
+    ),
 );

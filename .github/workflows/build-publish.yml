@@ -40,5 +40,5 @@ jobs:
         known_hosts: unnecessary
 
     - name: Deploy with rsync
-      run: rsync -avz "$PWD" --exclude={'node_modules','.git'} ${{ secrets.SSH_USER }}@vps43745.dreamhostps.com:layout-experiments.rivendellweb
+      run: rsync -avz "$PWD" --exclude={'node_modules','.git'} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}
 

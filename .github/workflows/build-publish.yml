@@ -25,6 +25,7 @@ jobs:
     - name: Build
       run: |
         npm install
+        npx update-browserslist-db@latest
         gulp
 
     - name: Adding Known Hosts
@@ -39,5 +40,5 @@ jobs:
         known_hosts: unnecessary
 
     - name: Deploy with rsync
-      run: rsync -avz build/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}
+      run: rsync -avz --exclude={node_modules,.editorconfig,.eslintrc.json.gitignore,.github,gulpfile.js,package-lock.json,package.json,prepros.config,workbox-config.js} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}
 

@@ -13,7 +13,26 @@ const {ExpirationPlugin} = workbox.expiration;
 // googleAnalytics.initialize();
 
 // Precache insertion point
-precacheAndRoute([{"revision":"ac233ab1fc3793f1960809ed455ea699","url":"index.html"},{"revision":"09ec0906d5f5baa2f95019759ab208df","url":"css/index.css"},{"revision":"b6075f76c2f71bae72e7a544f61a0919","url":"js/zenscroll.min.js"},{"revision":"40acdc63b1e48c67fd1e32be262d6cc4","url":"pages/404.html"},{"revision":"f761dd08b66768c2d9a20131b080f457","url":"pages/offline.html"}]);
+precacheAndRoute([
+  {
+    'revision': 'ac233ab1fc3793f1960809ed455ea699',
+    'url': 'index.html',
+  },
+  {
+    'revision': '09ec0906d5f5baa2f95019759ab208df',
+    'url': 'css/index.css',
+  },
+  {
+    'revision': 'b6075f76c2f71bae72e7a544f61a0919',
+    'url': 'js/zenscroll.min.js',
+  },
+  {
+    'revision': '40acdc63b1e48c67fd1e32be262d6cc4',
+    'url': 'pages/404.html',
+  },
+  {
+    'revision': 'f761dd08b66768c2d9a20131b080f457',
+    'url': 'pages/offline.html'}]);
 
 registerRoute(({url}) => url.pathname.endsWith(['html', 'htm', 'php']),
   new CacheFirst({
@@ -28,7 +47,7 @@ registerRoute(({url}) => url.pathname.endsWith(['html', 'htm', 'php']),
   })
 );
 
-registerRoute(({url}) => url.endsWith('css'),
+registerRoute(({url}) => url.pathname.endsWith('css'),
   new StaleWhileRevalidate({
     cacheName: 'CSS Styles',
     plugins: [
@@ -41,7 +60,7 @@ registerRoute(({url}) => url.endsWith('css'),
   })
 );
 
-registerRoute(({url}) => url.endsWith(['js', 'mjs']),
+registerRoute(({url}) => url.pathname.replaceendsWith(['js', 'mjs']),
   new CacheFirst({
     cacheName: 'scripts',
     plugins: [
@@ -77,7 +96,7 @@ registerRoute(({url}) => {
 );
 
 
-registerRoute(({url}) => url.endsWith([
+registerRoute(({url}) => url.pathname.replaceendsWith([
   'png',
   'jpg',
   'webp',

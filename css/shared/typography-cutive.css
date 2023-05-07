@@ -141,7 +141,6 @@ p {
   --text-ital: 0;
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -279,5 +278,9 @@ h3 {
     line-height: var(--h3-line-height-max);
   }
 }
+
+/*# sourceMappingURL=typography-cutive.css.map */
+
+/*# sourceMappingURL=typography-cutive.css.map */
 
 /*# sourceMappingURL=typography-cutive.css.map */

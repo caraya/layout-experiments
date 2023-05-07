@@ -2,7 +2,6 @@ body {
   background-color: #fbfbf6;
   padding: 1em;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
   line-height: .75;
 }
@@ -41,5 +40,9 @@ ul li {
 .dialogue {
   white-space: pre-line;
 }
+
+/*# sourceMappingURL=demo47.css.map */
+
+/*# sourceMappingURL=demo47.css.map */
 
 /*# sourceMappingURL=demo47.css.map */

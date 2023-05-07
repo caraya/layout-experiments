@@ -29,8 +29,7 @@
     grid-column: 1 / 1;
     grid-row: 5 / 10;
     text-align: end;
-    -ms-writing-mode: sideways-lr;
-        writing-mode: sideways-lr;
+    writing-mode: sideways-lr;
   }
 }
 
@@ -51,5 +50,9 @@
 .content ul li {
   font-size: 1rem;
 }
+
+/*# sourceMappingURL=demo3.css.map */
+
+/*# sourceMappingURL=demo3.css.map */
 
 /*# sourceMappingURL=demo3.css.map */

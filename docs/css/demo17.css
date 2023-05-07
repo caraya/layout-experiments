@@ -33,8 +33,11 @@ body {
 .japanese-content {
   grid-column: -2 / -6;
   grid-row: 6 / 16;
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
 }
+
+/*# sourceMappingURL=demo17.css.map */
+
+/*# sourceMappingURL=demo17.css.map */
 
 /*# sourceMappingURL=demo17.css.map */

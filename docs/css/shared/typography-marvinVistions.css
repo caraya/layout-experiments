@@ -90,7 +90,6 @@ p {
   --text-ital: 0;
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -261,5 +260,9 @@ h3 {
 .marvin-visions-big-bold-ss02 {
   font-feature-settings: var(--marvin-visions-big-bold-aalt), var(--marvin-visions-big-bold-salt), var(--marvin-visions-big-bold-ss01), var(--marvin-visions-big-bold-ss02);
 }
+
+/*# sourceMappingURL=typography-marvinVistions.css.map */
+
+/*# sourceMappingURL=typography-marvinVistions.css.map */
 
 /*# sourceMappingURL=typography-marvinVistions.css.map */

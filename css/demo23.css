@@ -4,7 +4,6 @@ body {
   font-size: var(--p-font-size-max);
   line-height: var(--p-line-height-max);
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -58,5 +57,9 @@ figure img {
          columns: 2;
   }
 }
+
+/*# sourceMappingURL=demo23.css.map */
+
+/*# sourceMappingURL=demo23.css.map */
 
 /*# sourceMappingURL=demo23.css.map */

@@ -168,7 +168,6 @@ h2 + p {
   --text-ital: 0;
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -442,7 +441,6 @@ h2 + p {
   --text-ital: 0;
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -590,5 +588,9 @@ h2 + p {
     line-height: var(--h3-line-height-max);
   }
 }
+
+/*# sourceMappingURL=typography-avenir.css.map */
+
+/*# sourceMappingURL=typography-avenir.css.map */
 
 /*# sourceMappingURL=typography-avenir.css.map */

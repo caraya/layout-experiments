@@ -7,7 +7,7 @@
     "workbox": "npx workbox injectManifest ./workbox-config.js",
     "sass": "gulp css",
     "publish": "gulp && npm run workbox",
-    "production": "gulp && npm run workbox && firebase deploy"
+    "production": "gulp && npm run workbox"
   },
   "repository": "",
   "author": "carlos araya <carlos.araya@gmail.com>",
@@ -21,7 +21,6 @@
     "autoprefixer": "^10.4.12",
     "browser-sync": "^2.29.1",
     "connect-history-api-fallback": "^2.0.0",
-    "del": "^6.1.1",
     "eslint": "^8.24.0",
     "eslint-config-google": "^0.14.0",
     "gulp": "^4.0.2",
@@ -41,5 +40,8 @@
     "sass": "^1.55.0",
     "workbox-cli": "^6.5.4",
     "workbox-core": "^6.5.4"
+  },
+  "dependencies": {
+    "del": "^6.1.1"
   }
 }

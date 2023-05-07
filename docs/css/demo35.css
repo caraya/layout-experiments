@@ -2,7 +2,6 @@ body {
   background-color: #fbfbf6;
   padding: 1em;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -73,5 +72,9 @@ blockquote cite {
   font-size: calc(var(--bq-font-size-min) * 1.25em);
   text-align: right;
 }
+
+/*# sourceMappingURL=demo35.css.map */
+
+/*# sourceMappingURL=demo35.css.map */
 
 /*# sourceMappingURL=demo35.css.map */

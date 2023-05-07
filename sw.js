@@ -1,40 +1,15 @@
 /* eslint require-jsdoc: "off",  max-len: "off", new-cap: "off" */
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.0.2/workbox-sw.js');
 
-
 const {precacheAndRoute} = workbox.precaching;
 const {registerRoute, setDefaultHandler, setCatchHandler} = workbox.routing;
 const {StaleWhileRevalidate, CacheFirst} = workbox.strategies;
 const {CacheableResponsePlugin} = workbox.cacheableResponse;
 const {ExpirationPlugin} = workbox.expiration;
-// const {googleAnalytics} = workbox.google-analytics;
 
-// // Load google analytics plugin
-// googleAnalytics.initialize();
+precacheAndRoute([{"revision":"6ab3301f6c5382944ebe169ec72dcc01","url":"index.html"},{"revision":"96a4d2b8881cdc86c2d55ecdfb88a537","url":"css/index.css"},{"revision":"b6075f76c2f71bae72e7a544f61a0919","url":"js/zenscroll.min.js"},{"revision":"40acdc63b1e48c67fd1e32be262d6cc4","url":"pages/404.html"},{"revision":"f761dd08b66768c2d9a20131b080f457","url":"pages/offline.html"}]);
 
-// Precache insertion point
-precacheAndRoute([
-  {
-    'revision': 'ac233ab1fc3793f1960809ed455ea699',
-    'url': 'index.html',
-  },
-  {
-    'revision': '09ec0906d5f5baa2f95019759ab208df',
-    'url': 'css/index.css',
-  },
-  {
-    'revision': 'b6075f76c2f71bae72e7a544f61a0919',
-    'url': 'js/zenscroll.min.js',
-  },
-  {
-    'revision': '40acdc63b1e48c67fd1e32be262d6cc4',
-    'url': 'pages/404.html',
-  },
-  {
-    'revision': 'f761dd08b66768c2d9a20131b080f457',
-    'url': 'pages/offline.html'}]);
-
-registerRoute(({url}) => url.pathname.endsWith(['html', 'htm', 'php']),
+registerRoute(({url}) => url.endsWith(['html', 'htm', 'php']),
   new CacheFirst({
     cacheName: 'Content',
     plugins: [
@@ -47,7 +22,7 @@ registerRoute(({url}) => url.pathname.endsWith(['html', 'htm', 'php']),
   })
 );
 
-registerRoute(({url}) => url.pathname.endsWith('css'),
+registerRoute(({url}) => url.endsWith('css'),
   new StaleWhileRevalidate({
     cacheName: 'CSS Styles',
     plugins: [
@@ -60,7 +35,8 @@ registerRoute(({url}) => url.pathname.endsWith('css'),
   })
 );
 
-registerRoute(({url}) => url.pathname.replaceendsWith(['js', 'mjs']),
+registerRoute(({url}) => url.endsWith('js') ||
+url.endsWith('mjs'),
   new CacheFirst({
     cacheName: 'scripts',
     plugins: [
@@ -96,7 +72,7 @@ registerRoute(({url}) => {
 );
 
 
-registerRoute(({url}) => url.pathname.replaceendsWith([
+registerRoute(({url}) => url.endsWith([
   'png',
   'jpg',
   'webp',
@@ -104,7 +80,7 @@ registerRoute(({url}) => url.pathname.replaceendsWith([
   'heic',
   'svg']),
   new CacheFirst({
-    cacheName: 'scripts',
+    cacheName: 'images',
     plugins: [
       new CacheableResponsePlugin({
         statuses: [0, 200],

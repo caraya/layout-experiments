@@ -4,7 +4,6 @@ body {
   font-size: var(--p-font-size-max);
   line-height: var(--p-line-height-max);
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -114,5 +113,9 @@ blockquote {
     line-height: 1.2;
   }
 }
+
+/*# sourceMappingURL=demo20.css.map */
+
+/*# sourceMappingURL=demo20.css.map */
 
 /*# sourceMappingURL=demo20.css.map */

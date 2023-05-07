@@ -4,7 +4,6 @@ body {
   font-size: var(--p-font-size-max);
   line-height: var(--p-line-height-max);
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -34,5 +33,9 @@ body {
     font-variation-settings: "wght" var(--text-wght), "wdth" var(--text-wdth), "slnt" var(--text-slnt);
   }
 }
+
+/*# sourceMappingURL=demo27.css.map */
+
+/*# sourceMappingURL=demo27.css.map */
 
 /*# sourceMappingURL=demo27.css.map */

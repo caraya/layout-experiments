@@ -196,7 +196,6 @@ h2 + p {
   --text-slnt: 0;
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -807,7 +806,6 @@ h2 + p {
   --text-slnt: 0;
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -955,5 +953,9 @@ h2 + p {
   font-weight: bold;
   --text-wght: 700;
 }
+
+/*# sourceMappingURL=typography-demo21.css.map */
+
+/*# sourceMappingURL=typography-demo21.css.map */
 
 /*# sourceMappingURL=typography-demo21.css.map */

@@ -199,7 +199,6 @@ h2 + p {
   --text-slnt: 0;
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -636,7 +635,6 @@ h2 + p {
   --text-slnt: 0;
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -772,5 +770,9 @@ h2 + p {
     line-height: var(--h3-line-height-max);
   }
 }
+
+/*# sourceMappingURL=typography-roboto-2.css.map */
+
+/*# sourceMappingURL=typography-roboto-2.css.map */
 
 /*# sourceMappingURL=typography-roboto-2.css.map */

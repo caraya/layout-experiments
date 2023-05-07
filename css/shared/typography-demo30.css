@@ -142,7 +142,6 @@ p:first-letter {
 p {
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -280,5 +279,9 @@ h3 {
     line-height: var(--h3-line-height-max);
   }
 }
+
+/*# sourceMappingURL=typography-demo30.css.map */
+
+/*# sourceMappingURL=typography-demo30.css.map */
 
 /*# sourceMappingURL=typography-demo30.css.map */

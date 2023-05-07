@@ -4,7 +4,6 @@ body {
   font-size: var(--p-font-size-max);
   line-height: var(--p-line-height-max);
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -63,5 +62,9 @@ p:last-of-type {
     grid-row: 1 / -1;
   }
 }
+
+/*# sourceMappingURL=demo21.css.map */
+
+/*# sourceMappingURL=demo21.css.map */
 
 /*# sourceMappingURL=demo21.css.map */

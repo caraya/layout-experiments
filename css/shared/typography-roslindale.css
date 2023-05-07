@@ -182,7 +182,6 @@ p {
   --text-ital: 0;
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -257,5 +256,9 @@ h3 {
   line-height: var(--h2-line-height-min);
   text-align: center;
 }
+
+/*# sourceMappingURL=typography-roslindale.css.map */
+
+/*# sourceMappingURL=typography-roslindale.css.map */
 
 /*# sourceMappingURL=typography-roslindale.css.map */

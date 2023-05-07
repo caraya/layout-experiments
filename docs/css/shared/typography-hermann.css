@@ -187,7 +187,6 @@ p {
   --text-ital: 0;
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -539,5 +538,9 @@ h3 {
 .hermann-zero {
   font-feature-settings: var(--hermann-aalt), var(--hermann-c2sc), var(--hermann-case), var(--hermann-dlig), var(--hermann-dnom), var(--hermann-frac), var(--hermann-hlig), var(--hermann-lnum), var(--hermann-numr), var(--hermann-onum), var(--hermann-ordn), var(--hermann-pnum), var(--hermann-salt), var(--hermann-sinf), var(--hermann-smcp), var(--hermann-ss01), var(--hermann-ss02), var(--hermann-ss03), var(--hermann-ss04), var(--hermann-ss05), var(--hermann-ss06), var(--hermann-ss07), var(--hermann-ss08), var(--hermann-sups), var(--hermann-tnum), var(--hermann-zero);
 }
+
+/*# sourceMappingURL=typography-hermann.css.map */
+
+/*# sourceMappingURL=typography-hermann.css.map */
 
 /*# sourceMappingURL=typography-hermann.css.map */

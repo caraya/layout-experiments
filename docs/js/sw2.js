@@ -1,18 +1,12 @@
 /* eslint require-jsdoc: "off",  max-len: "off", new-cap: "off" */
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.0.2/workbox-sw.js');
 
-
 const {precacheAndRoute} = workbox.precaching;
 const {registerRoute, setDefaultHandler, setCatchHandler} = workbox.routing;
 const {StaleWhileRevalidate, CacheFirst} = workbox.strategies;
 const {CacheableResponsePlugin} = workbox.cacheableResponse;
 const {ExpirationPlugin} = workbox.expiration;
-// const {googleAnalytics} = workbox.google-analytics;
 
-// // Load google analytics plugin
-// googleAnalytics.initialize();
-
-// Precache insertion point
 precacheAndRoute(self.__WB_MANIFEST);
 
 registerRoute(({url}) => url.endsWith(['html', 'htm', 'php']),
@@ -41,7 +35,8 @@ registerRoute(({url}) => url.endsWith('css'),
   })
 );
 
-registerRoute(({url}) => url.endsWith(['js', 'mjs']),
+registerRoute(({url}) => url.endsWith('js') ||
+url.endsWith('mjs'),
   new CacheFirst({
     cacheName: 'scripts',
     plugins: [
@@ -85,7 +80,7 @@ registerRoute(({url}) => url.endsWith([
   'heic',
   'svg']),
   new CacheFirst({
-    cacheName: 'scripts',
+    cacheName: 'images',
     plugins: [
       new CacheableResponsePlugin({
         statuses: [0, 200],

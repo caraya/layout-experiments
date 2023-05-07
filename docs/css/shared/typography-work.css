@@ -196,7 +196,6 @@ h2 + p {
   --text-slnt: 0;
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
   font-size: calc(var(--p-font-size-min) * 1rem);
   line-height: var(--p-line-height-min);
@@ -790,5 +789,9 @@ h2 + p {
     line-height: var(--h3-line-height-max);
   }
 }
+
+/*# sourceMappingURL=typography-work.css.map */
+
+/*# sourceMappingURL=typography-work.css.map */
 
 /*# sourceMappingURL=typography-work.css.map */

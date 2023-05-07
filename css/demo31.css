@@ -2,7 +2,6 @@ body {
   background-color: #fbfbf6;
   padding: 1em;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -41,7 +40,6 @@ p {
 
 h1 {
   -webkit-hyphens: none;
-      -ms-hyphens: none;
           hyphens: none;
 }
 
@@ -72,5 +70,9 @@ p:not(:first-of-type) {
     font-size: calc(var(--p-font-size-max) * 1rem);
   }
 }
+
+/*# sourceMappingURL=demo31.css.map */
+
+/*# sourceMappingURL=demo31.css.map */
 
 /*# sourceMappingURL=demo31.css.map */

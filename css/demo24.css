@@ -4,7 +4,6 @@ body {
   font-size: var(--p-font-size-max);
   line-height: var(--p-line-height-min);
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -99,5 +98,9 @@ p:not(:first-of-type) {
     }
   }
 }
+
+/*# sourceMappingURL=demo24.css.map */
+
+/*# sourceMappingURL=demo24.css.map */
 
 /*# sourceMappingURL=demo24.css.map */

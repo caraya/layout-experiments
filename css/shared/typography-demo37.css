@@ -183,7 +183,6 @@ p {
   --text-ital: 0;
   transition: all linear 0.2s;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -459,5 +458,9 @@ h3 {
 .lekton-titl {
   font-feature-settings: var(--lekton-dlig), var(--lekton-onum), var(--lekton-salt), var(--lekton-smcp), var(--lekton-ss01), var(--lekton-ss02), var(--lekton-ss03), var(--lekton-ss04), var(--lekton-ss05), var(--lekton-ss06), var(--lekton-ss07), var(--lekton-ss08), var(--lekton-swsh), var(--lekton-titl);
 }
+
+/*# sourceMappingURL=typography-demo37.css.map */
+
+/*# sourceMappingURL=typography-demo37.css.map */
 
 /*# sourceMappingURL=typography-demo37.css.map */

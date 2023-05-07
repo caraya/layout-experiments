@@ -65,7 +65,6 @@ p {
 body[data-type=book] {
   color: cmyk(0%, 0%, 100%, 100%);
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
   font-size: 12pt;
 }
@@ -336,5 +335,9 @@ section[data-type=article] p:not(:first-of-type) {
 }
 
 /*# sourceMappingURL=article.css.map */
+
+/*# sourceMappingURL=print.css.map */
+
+/*# sourceMappingURL=print.css.map */
 
 /*# sourceMappingURL=print.css.map */

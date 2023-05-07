@@ -4,7 +4,6 @@ body {
   font-size: var(--p-font-size-max);
   line-height: var(--p-line-height-max);
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
 }
 
@@ -39,12 +38,15 @@ body {
 
 h1 {
   -webkit-hyphens: none;
-      -ms-hyphens: none;
           hyphens: none;
 }
 
 p:not(:first-of-type) {
   text-indent: 2em;
 }
+
+/*# sourceMappingURL=demo29.css.map */
+
+/*# sourceMappingURL=demo29.css.map */
 
 /*# sourceMappingURL=demo29.css.map */

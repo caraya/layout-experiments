@@ -40,5 +40,5 @@ jobs:
         known_hosts: unnecessary
 
     - name: Deploy with rsync
-      run: rsync -avz --delete ./docs/ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.DESTINATION_PATH }}
+      run: rsync -avz build/ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}
 

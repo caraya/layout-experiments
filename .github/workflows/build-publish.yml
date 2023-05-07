@@ -40,5 +40,5 @@ jobs:
         known_hosts: unnecessary
 
     - name: Deploy with rsync
-      run: rsync -avz --exclude='node_modules' --exclude='gulpfile.js' --exclude='package-lock.json' --exclude='package.json' --exclude='workbox-config.js'} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}
+      run: rsync -avz ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}
 

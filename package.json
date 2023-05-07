@@ -21,7 +21,6 @@
     "autoprefixer": "^10.4.12",
     "browser-sync": "^2.29.1",
     "connect-history-api-fallback": "^2.0.0",
-    "critical": "^5.0.2",
     "del": "^7.0.0",
     "eslint": "^8.24.0",
     "eslint-config-google": "^0.14.0",

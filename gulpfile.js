@@ -18,8 +18,6 @@ const autoprefixer = require('autoprefixer');
 // SASS
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
-// Critical CSS
-const critical = require('critical');
 // Utilities
 const del = require('del');
 
@@ -66,33 +64,6 @@ gulp.task('processCSS', () => {
         pretty: true,
         title: 'processCSS',
       }));
-});
-
-/**
- * @name critical
- * @description Runs critical to create critical path CSS
- */
-gulp.task('critical', (cb) => {
-  critical.generate({
-    base: 'docs/',
-    html: '**/*.html',
-    inline: true,
-    minify: true,
-    extract: false,
-    css: ['css/**/*.css'],
-    ignore: ['font-face'],
-    dimensions: [{
-      width: 320,
-      height: 480,
-    }, {
-      width: 768,
-      height: 1024,
-    }, {
-      width: 1280,
-      height: 960,
-    }],
-  });
-  cb();
 });
 
 /**

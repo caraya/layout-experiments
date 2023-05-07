@@ -40,12 +40,5 @@ jobs:
         known_hosts: unnecessary
 
     - name: Deploy with rsync
-      uses: burnett01/rsync-deployments@5.2.1
-      with:
-        switches: -avzr --delete
-        path: docs/
-        remote_path: ${{ secrets.DESTINATION_PATH }}
-        remote_host: ${{ secrets.SSH_HOST }}
-        remote_user: ${{ secrets.SSH_USERNAME }}
-        remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+      run: rsync -avz --delete ./docs/ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.DESTINATION_PATH }}
 

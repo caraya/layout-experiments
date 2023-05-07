@@ -4,14 +4,14 @@
  * Requires font-face observer to be loaded before this script
  * */
 
-const roboto = new FontFaceObserver('Avenir');
+const avenir = new FontFaceObserver('Avenir');
 
 let html = document.documentElement;
 
 html.classList.add('fonts-loading');
 
 Promise.all([
-  roboto.load(),
+  avenir.load(),
 ]).then(() => {
   html.classList.remove('fonts-loading');
   html.classList.add('fonts-loaded');

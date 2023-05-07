@@ -1,0 +1,41 @@
+name: Checkout and Build
+on:
+  push:
+    branches: [
+      main
+    ]
+  pull_request:
+    branches: [
+      main
+    ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Use Node.js 16.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+
+    - uses: actions/checkout@v3
+
+    - name: Build
+      run: |
+        npm install
+        gulp
+
+    - name: Adding Known Hosts
+      run: |
+        mkdir ~/.ssh/
+        ssh-keyscan -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
+
+    - name: Install SSH Key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        known_hosts: unnecessary
+
+    - name: Deploy with rsync
+      run: rsync -avz build/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}

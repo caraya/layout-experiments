@@ -2,7 +2,7 @@
 @import url("https://hello.myfonts.net/count/3849cd");
 @font-face {
   font-family: 'Stone Humanist';
-  src: url("../../fonts/3849CD_0_0.woff2") format("woff2"), url("../../fonts/3849CD_0_0.woff") format("woff");
+  src: url("../../fonts/3849CD_0_0.woff2") format("woff2") format("woff");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: 'Stone Humanist';
-  src: url("../../fonts/3849CD_2_0.woff2") format("woff2"), url("../../fonts/3849CD_2_0.woff") format("woff");
+  src: url("../../fonts/3849CD_2_0.woff2") format("woff2");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -34,7 +34,7 @@
 
 @font-face {
   font-family: 'Marvin Visions';
-  src: url("../../fonts/MarvinVisionsBig-Bold.woff2"), url("../../fonts/MarvinVisionsBig-Bold.woff");
+  src: url("../../fonts/MarvinVisionsBig-Bold.woff2");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
@@ -705,6 +705,8 @@ h3 {
 .marvin-visions-big-bold-ss02 {
   font-feature-settings: var(--marvin-visions-big-bold-aalt), var(--marvin-visions-big-bold-salt), var(--marvin-visions-big-bold-ss01), var(--marvin-visions-big-bold-ss02);
 }
+
+/*# sourceMappingURL=typography-demo34.css.map */
 
 /*# sourceMappingURL=typography-demo34.css.map */
 

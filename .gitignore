@@ -3,7 +3,6 @@ node_modules/
 **/.DS_STORE
 firebase.json
 sass/
-fonts
 WIP/
 firebase-debug.log
 .firebase

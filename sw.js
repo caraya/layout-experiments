@@ -7,7 +7,7 @@ const {StaleWhileRevalidate, CacheFirst} = workbox.strategies;
 const {CacheableResponsePlugin} = workbox.cacheableResponse;
 const {ExpirationPlugin} = workbox.expiration;
 
-precacheAndRoute([{"revision":"6ab3301f6c5382944ebe169ec72dcc01","url":"index.html"},{"revision":"96a4d2b8881cdc86c2d55ecdfb88a537","url":"css/index.css"},{"revision":"b6075f76c2f71bae72e7a544f61a0919","url":"js/zenscroll.min.js"},{"revision":"40acdc63b1e48c67fd1e32be262d6cc4","url":"pages/404.html"},{"revision":"f761dd08b66768c2d9a20131b080f457","url":"pages/offline.html"}]);
+precacheAndRoute([{"revision":"6ab3301f6c5382944ebe169ec72dcc01","url":"index.html"},{"revision":"69b92e8de7fc46b9cd094dd28973f8dc","url":"css/index.css"},{"revision":"b6075f76c2f71bae72e7a544f61a0919","url":"js/zenscroll.min.js"},{"revision":"40acdc63b1e48c67fd1e32be262d6cc4","url":"pages/404.html"},{"revision":"f761dd08b66768c2d9a20131b080f457","url":"pages/offline.html"}]);
 
 registerRoute(({url}) => url.endsWith(['html', 'htm', 'php']),
   new CacheFirst({
